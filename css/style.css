@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper1 {
+  max-width: 1764px;
+}
+
+.wrapper2 {
+  max-width: 1095px;
+}
+
+.title {
+  font-family: Arial;
+  font-size: 50px;
+}
+
+.text {
+  font-size: 22px;
+}
+
+.list {
+  list-style-type: decimal;
+  font-family: arial;
+}
+
+.text-section::first-line {
+  font-weight: bold;
+  margin-bottom: 1px;
+}
