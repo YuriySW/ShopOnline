@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-
+/* 
 @font-face {
   font-family: 'Droid Serif';
   src: local('Droid Serif'), local('Droid-Serif-Regular'), local('Droid-Serif'), local('Droid Serif Regular'),
@@ -16,6 +16,30 @@
     url('../fonts/DroidSerif-Bold.woff') format('woff');
   font-weight: 700;
   font-display: swap;
+} */
+
+.container {
+  margin: 100px 75px 90px 75px;
+}
+
+.section {
+  width: 1096px;
+}
+
+.text {
+  margin-top: 0;
+}
+
+.text:last-child {
+  margin: 0;
+}
+
+.title-h2 {
+  margin: 0;
+}
+
+.link-tit {
+  margin: 0;
 }
 
 .body {
@@ -24,27 +48,24 @@
   font-size: 16px;
   font-weight: 400;
   color: black;
+  margin: 0;
 }
 
 .title {
   font-size: 50px;
+  margin-top: 0;
 }
 
-.header {
-  max-width: 1764px;
-}
-
-.main {
-  max-width: 1095px;
-}
 .text {
   font-size: 24px;
 }
 
 .list {
   list-style-type: decimal;
+  padding: 0;
+  list-style-position: inside;
 }
 
-.text-section::first-line {
-  font-weight: 700;
+.link {
+  text-decoration: none;
 }
