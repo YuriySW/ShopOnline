@@ -18,37 +18,6 @@
   font-display: swap;
 } */
 
-.menu {
-  padding-bottom: 23px;
-  padding-top: 17px;
-}
-
-.section {
-  width: 1096px;
-}
-
-.section-top {
-  margin-bottom: 33px;
-}
-
-.text {
-  font-size: 22px;
-  margin-bottom: 33px;
-  margin-top: 0;
-}
-
-.text:last-child {
-  margin: 0;
-}
-
-.title-h2 {
-  margin: 0;
-}
-
-.link-tit {
-  margin: 0;
-}
-
 .body {
   /* font-family: 'Droid Serif', serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -60,10 +29,43 @@
   color: black;
 }
 
+.container {
+  width: 1096px;
+}
+
+.text {
+  font-size: 22px;
+}
+
+.text-indent {
+  margin-top: 0;
+  margin-bottom: 33px;
+}
+
+.text-no-indent {
+  margin: 0;
+}
+
 .title {
+  margin: 0;
+}
+
+.title-main {
   font-size: 50px;
   margin-top: 0;
   margin-bottom: 60px;
+}
+
+.sub-title {
+  font-weight: inherit;
+}
+
+.link-tit {
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
 }
 
 .list {
@@ -73,16 +75,12 @@
   list-style-position: inside;
 }
 
-.link {
-  text-decoration: none;
+.menu {
+  padding-bottom: 23px;
+  padding-top: 17px;
 }
 
 .img {
   padding-bottom: 50px;
   padding-top: 27px;
-}
-
-.title-buttom {
-  margin: 0;
-  font-weight: inherit;
 }
