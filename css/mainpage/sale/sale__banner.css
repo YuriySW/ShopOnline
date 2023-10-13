@@ -1,0 +1,36 @@
+.sale__banner {
+  display: block;
+}
+
+.sale__banner-1024,
+.sale__banner-768,
+.sale__banner-320 {
+  display: none;
+}
+
+@media (max-width: 1220px) {
+  .sale__banner {
+    display: none;
+  }
+  .sale__banner-1024 {
+    display: block;
+  }
+}
+
+@media (max-width: 860px) {
+  .sale__banner-1024 {
+    display: none;
+  }
+  .sale__banner-768 {
+    display: block;
+  }
+}
+
+@media (max-width: 730px) {
+  .sale__banner-768 {
+    display: none;
+  }
+  .sale__banner-320 {
+    display: block;
+  }
+}

@@ -1,4 +1,5 @@
 @import 'style.css';
+@import 'normalize.css';
 @import 'main/__title/main__title.css';
 @import 'main/__text/main__text.css';
 @import 'main/navigation/navigation.css';
@@ -9,4 +10,3 @@
 @import 'main/section/section.css';
 @import 'main/section/__subtitle/section__subtitle.css';
 @import 'main/section/__text/section__text.css';
-

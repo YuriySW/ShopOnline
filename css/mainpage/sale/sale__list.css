@@ -1,0 +1,45 @@
+.sale__list {
+  display: grid;
+  grid-template-columns: repeat(6, 245px) span;
+  grid-template-rows: repeat(4, 245px) span;
+  gap: 60px;
+  padding-top: 60px;
+}
+
+@media (max-width: 1620px) {
+  .sale__list {
+    gap: 40px;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 1320px) {
+  .sale__list {
+    gap: 30px;
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 1290px) {
+  .sale__list {
+    gap: 24px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 860px) {
+  .sale__list {
+    grid-template-columns: repeat(2, 140px) 220px 140px span;
+    grid-template-rows: repeat(2, 140px) repeat(4, 60px) 337px span;
+    gap: 20px;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 730px) {
+  .sale__list {
+    grid-template-columns: repeat(2, 130px) span;
+    grid-template-rows: 130px 118px 280px 118px 118px 130px 130px 123px span;
+    padding-top: 20px;
+  }
+}

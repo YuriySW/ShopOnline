@@ -1,0 +1,91 @@
+.sale__img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.sale__img_adaptive {
+  display: none;
+}
+
+@media (max-width: 1220px) {
+  .sale__book,
+  .sale__watch,
+  .sale__red-sneaker,
+  .sale__two-sneakers,
+  .sale__gift-ideas,
+  .sale__laptop,
+  .sale__2022,
+  .sale__dress,
+  .sale__spray,
+  .sale__balls {
+    display: none;
+  }
+  .sale__book-1024,
+  .sale__watch-1024,
+  .sale__red-sneaker-1024,
+  .sale__two-sneakers-1024,
+  .sale__gift-ideas-1024,
+  .sale__laptop-1024,
+  .sale__2022-1024,
+  .sale__dress-1024,
+  .sale__spray-1024,
+  .sale__balls-1024 {
+    display: block;
+  }
+}
+
+@media (max-width: 860px) {
+  .sale__book-1024,
+  .sale__watch-1024,
+  .sale__red-sneaker-1024,
+  .sale__two-sneakers-1024,
+  .sale__gift-ideas-1024,
+  .sale__laptop-1024,
+  .sale__2022-1024,
+  .sale__dress-1024,
+  .sale__spray-1024,
+  .sale__balls-1024 {
+    display: none;
+  }
+  .sale__book-768,
+  .sale__watch-768,
+  .sale__red-sneaker-768,
+  .sale__two-sneakers-768,
+  .sale__gift-ideas-768,
+  .sale__laptop-768,
+  .sale__2022-768,
+  .sale__dress-768,
+  .sale__spray-768,
+  .sale__balls-768 {
+    display: block;
+  }
+}
+
+@media (max-width: 730px) {
+  .sale__book-768,
+  .sale__watch-768,
+  .sale__red-sneaker-768,
+  .sale__two-sneakers-768,
+  .sale__gift-ideas-768,
+  .sale__laptop-768,
+  .sale__2022-768,
+  .sale__dress-768,
+  .sale__spray-768,
+  .sale__balls-768 {
+    display: none;
+  }
+
+  .sale__book-320,
+  .sale__watch-320,
+  .sale__red-sneaker-320,
+  .sale__two-sneakers-320,
+  .sale__gift-ideas-320,
+  .sale__laptop-320,
+  .sale__2022-320,
+  .sale__dress-320,
+  .sale__spray-320,
+  .sale__balls-320 {
+    display: block;
+  }
+}
