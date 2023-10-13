@@ -2,6 +2,10 @@
   padding-top: 27px;
 }
 
+.title {
+  display: none;
+}
+
 .header {
   display: grid;
   /* grid-template-columns: 313px 250px 854px 354px; */
