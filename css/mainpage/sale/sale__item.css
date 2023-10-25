@@ -126,6 +126,13 @@
   }
 }
 
+@media (max-width: 992px) {
+  .sale__item:hover {
+    transform: none;
+    transition: none;
+  }
+}
+
 @media (max-width: 860px) {
   .sale__item-book {
     grid-column: 1/2;
