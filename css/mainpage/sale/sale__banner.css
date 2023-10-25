@@ -7,13 +7,98 @@
 .sale__banner-320 {
   display: none;
 }
+.banner-wrap {
+  position: relative;
+}
+.banner-text {
+  position: absolute;
+  left: 112px;
+  top: 145px;
 
+  color: #fff;
+  font-family: 'Lato';
+  font-size: 3.65vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 91px */
+}
+
+.end-promotion {
+  position: absolute;
+  left: 46.5%;
+  right: 50%;
+  top: 70%;
+  bottom: 30%;
+  /* top: 336px; */
+  max-width: 134px;
+  width: 100%;
+  color: #fff;
+  font-family: 'Lato';
+  font-size: 0.83vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 20.8px */
+}
+
+.timer {
+  position: absolute;
+  top: 75%;
+  right: 63%;
+  left: 36.5%;
+  max-width: 500px;
+  width: 100%;
+  color: #fff;
+  font-family: 'Lato';
+  font-size: 1.67vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 41.6px */
+  word-spacing: 30px;
+}
+.timer-num {
+  color: #fff;
+  font-family: 'Lato';
+  font-size: 3.13vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 78px */
+  margin-right: 6px;
+}
+@media (max-width: 1370px) {
+  .banner-text {
+    left: 80px;
+    top: 80px;
+    max-width: 350px;
+    font-size: 3.91vw;
+  }
+}
 @media (max-width: 1220px) {
   .sale__banner {
     display: none;
   }
   .sale__banner-1024 {
     display: block;
+  }
+  .end-promotion {
+    font-size: 1.56vw;
+    left: 43.7%;
+    right: 50%;
+    top: 62.5%;
+    bottom: 30%;
+    max-width: 150px;
+  }
+
+  .timer {
+    word-spacing: 20px;
+    font-size: 1.95vw;
+    top: 72%;
+    left: 33.5%;
+    max-width: 400px;
+  }
+
+  .timer-num {
+    margin-right: 5px;
+    font-size: 3.91vw;
   }
 }
 
@@ -24,6 +109,28 @@
   .sale__banner-768 {
     display: block;
   }
+  .banner-text {
+    left: 80px;
+    top: 64px;
+    max-width: 352px;
+    font-size: 3.91vw;
+  }
+  .end-promotion {
+    top: 67%;
+  }
+
+  .timer {
+    word-spacing: 10px;
+    font-size: 2.08vw;
+    top: 75%;
+    left: 33.5%;
+    max-width: 300px;
+  }
+
+  .timer-num {
+    margin-right: 3px;
+    font-size: 3.91vw;
+  }
 }
 
 @media (max-width: 730px) {
@@ -32,5 +139,35 @@
   }
   .sale__banner-320 {
     display: block;
+  }
+  .banner-text {
+    left: 29px;
+    top: 64px;
+    max-width: none;
+    font-size: 6.88vw;
+  }
+  .end-promotion {
+    font-size: 2.5vw;
+    left: 39%;
+    right: 61%;
+    top: 80%;
+  }
+  .timer {
+    word-spacing: 8px;
+    font-size: 3.75vw;
+    top: 85%;
+    left: 21%;
+    max-width: 350px;
+  }
+
+  .timer-num {
+    margin-right: 0;
+    font-size: 6.25vw;
+  }
+}
+
+@media (max-width: 730px) {
+  .timer {
+    max-width: max-content;
   }
 }

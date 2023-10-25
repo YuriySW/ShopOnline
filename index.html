@@ -9,9 +9,9 @@
     <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
-    <header class="head">
+    <header class="header">
       <h1 class="title">Новогодняя распродажа</h1>
-      <div class="container header">
+      <div class="container holder">
         <img src="logo.svg" alt="logo" class="logo" />
         <svg class="menu-btn" width="151" height="54" viewBox="0 0 151 54" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="151" height="54" rx="10" fill="#3670C7" />
@@ -31,6 +31,7 @@
 
         <form class="search-input" name="search" action="https://jsonplaceholder.typicode.com/posts" method="POST">
           <input class="input" type="search" placeholder="Я ищу..." name="search-input" required />
+
           <button class="search-btn" type="submit">
             <!-- <img src="image/icon/search.svg" alt="" class="search-but" /> -->
             <svg class="search-but" width="101" height="54" viewBox="0 0 101 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -163,61 +164,101 @@
     </header>
     <main class="sale">
       <div class="container">
-        <img src="image/banner.jpg" alt="banner" class="sale__banner sale__img" />
-        <img src="image/banner-1024.jpg" alt="banner" class="sale__banner-1024 sale__img" />
-        <img src="image/banner-768.jpg" alt="banner" class="sale__banner-768 sale__img" />
-        <img src="image/banner-320.jpg" alt="banner" class="sale__banner-320 sale__img" />
-
+        <div class="banner-wrap">
+          <p class="banner-text">-50% на все ноутбуки</p>
+          <p class="end-promotion">До конца акции:</p>
+          <time class="timer" datetime="3d 8h 43m"><span class="timer-num">3</span>дня <span class="timer-num">8</span>часов <span class="timer-num">43</span>минуты</time>
+          <img src="image/banner.jpg" alt="banner" class="sale__banner sale__img" />
+          <img src="image/banner-1024.jpg" alt="banner" class="sale__banner-1024 sale__img" />
+          <img src="image/banner-768.jpg" alt="banner" class="sale__banner-768 sale__img" />
+          <img src="image/banner-320.jpg" alt="banner" class="sale__banner-320 sale__img" />
+        </div>
         <ul class="sale__list">
           <li class="sale__item sale__item-book">
+            <div class="sale__text-book-wrap">
+              <p class="sale__text-book-word">Книга &ndash;</p>
+              <p class="sale__text-book">лучший подарок</p>
+            </div>
             <img src="image/book.jpg" alt="" class="sale__book sale__img" />
             <img src="image/book-1024.jpg" alt="" class="sale__book-1024 sale__img sale__img_adaptive" />
             <img src="image/book-768.jpg" alt="" class="sale__book-768 sale__img sale__img_adaptive" />
             <img src="image/book-320.jpg" alt="" class="sale__book-320 sale__img sale__img_adaptive" />
           </li>
           <li class="sale__item sale__item-watch">
+            <p class="sale__text-watch">Время скидок!</p>
+            <div class="sale__discount sale__discount-watch">
+              <p class="sale__discount-text">-25%</p>
+            </div>
             <img src="image/watch.jpg" alt="" class="sale__watch sale__img" />
             <img src="image/watch-1024.jpg" alt="" class="sale__watch-1024 sale__img sale__img_adaptive" />
             <img src="image/watch-768.jpg" alt="" class="sale__watch-768 sale__img sale__img_adaptive" />
             <img src="image/watch-320.jpg" alt="" class="sale__watch-320 sale__img sale__img_adaptive" />
           </li>
           <li class="sale__item sale__item-red-sneaker">
+            <div class="sale__discount sale__discount-red-sneakers">
+              <p class="sale__discount-text">-45%</p>
+            </div>
             <img src="image/red-sneaker.jpg" alt="" class="sale__red-sneaker sale__img" />
             <img src="image/red-sneaker-1024.jpg" alt="" class="sale__red-sneaker-1024 sale__img sale__img_adaptive" />
             <img src="image/red-sneaker-768.jpg" alt="" class="sale__red-sneaker-768 sale__img sale__img_adaptive" />
             <img src="image/red-sneaker-320.jpg" alt="" class="sale__red-sneaker-320 sale__img sale__img_adaptive" />
           </li>
           <li class="sale__item sale__item-two-sneakers">
+            <div class="sale__two-sneakers-text-wrap">
+              <p class="sale__two-sneakers-text">Вторая пара кроссовок</p>
+              <p class="sale__two-sneakers-text-sub">в подарок!</p>
+            </div>
             <img src="image/two-sneakers.jpg" alt="" class="sale__two-sneakers sale__img" />
             <img src="image/two-sneakers-1024.jpg" alt="" class="sale__two-sneakers-1024 sale__img sale__img_adaptive" />
             <img src="image/two-sneakers-768.jpg" alt="" class="sale__two-sneakers-768 sale__img sale__img_adaptive" />
             <img src="image/two-sneakers-320.jpg" alt="" class="sale__two-sneakers-320 sale__img sale__img_adaptive" />
           </li>
           <li class="sale__item sale__item-gift-ideas">
+            <div class="sale__gift-ideas-text-wrap">
+              <p class="sale__gift-ideas-text">Идеи новогодних</p>
+              <p class="sale__gift-ideas-text">подарков</p>
+            </div>
             <img src="image/gift-ideas.jpg" alt="" class="sale__gift-ideas sale__img" />
             <img src="image/gift-ideas-1024.jpg" alt="" class="sale__gift-ideas-1024 sale__img sale__img_adaptive" />
             <img src="image/gift-ideas-768.jpg" alt="" class="sale__gift-ideas-768 sale__img sale__img_adaptive" />
             <img src="image/gift-ideas-320.jpg" alt="" class="sale__gift-ideas-320 sale__img sale__img_adaptive" />
           </li>
           <li class="sale__item sale__item-laptop">
+            <p class="sale__text-laptop">Выгодно в декабре!</p>
+            <div class="sale__discount sale__discount-laptop">
+              <p class="sale__discount-text">-15%</p>
+            </div>
             <img src="image/laptop.jpg" alt="" class="sale__laptop sale__img" />
             <img src="image/laptop-1024.jpg" alt="" class="sale__laptop-1024 sale__img sale__img_adaptive" />
             <img src="image/laptop-768.jpg" alt="" class="sale__laptop-768 sale__img sale__img_adaptive" />
             <img src="image/laptop-320.jpg" alt="" class="sale__laptop-320 sale__img sale__img_adaptive" />
           </li>
           <li class="sale__item sale__item-2022">
+            <div class="sale__2022-text-wrap">
+              <p class="sale__2022-text">Новогодние украшения</p>
+            </div>
             <img src="image/2022.jpg" alt="" class="sale__2022 sale__img" />
             <img src="image/2022-1024.jpg" alt="" class="sale__2022-1024 sale__img sale__img_adaptive" />
             <img src="image/2022-768.jpg" alt="" class="sale__2022-768 sale__img sale__img_adaptive" />
             <img src="image/2022-320.jpg" alt="" class="sale__2022-320 sale__img sale__img_adaptive" />
           </li>
           <li class="sale__item sale__item-dress">
+            <div class="sale__discount sale__discount-dress">
+              <p class="sale__discount-text">-55%</p>
+            </div>
             <img src="image/dress.jpg" alt="" class="sale__dress sale__img" />
             <img src="image/dress-1024.jpg" alt="" class="sale__dress-1024 sale__img sale__img_adaptive" />
             <img src="image/dress-768.jpg" alt="" class="sale__dress-768 sale__img sale__img_adaptive" />
             <img src="image/dress-320.jpg" alt="" class="sale__dress-320 sale__img sale__img_adaptive" />
           </li>
           <li class="sale__item sale__item-spray">
+            <div class="sale__spray-text-wrap">
+              <p class="sale__spray-text">На бытовую</p>
+              <p class="sale__spray-text">химию</p>
+            </div>
+            <div class="sale__discount sale__discount-spray">
+              <p class="sale__discount-text">-25%</p>
+            </div>
             <img src="image/spray.jpg" alt="" class="sale__spray sale__img" />
             <img src="image/spray-1024.jpg" alt="" class="sale__spray-1024 sale__img sale__img_adaptive" />
             <img src="image/spray-768.jpg" alt="" class="sale__spray-768 sale__img sale__img_adaptive" />

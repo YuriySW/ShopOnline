@@ -1,0 +1,56 @@
+.sale__2022-text-wrap {
+  position: absolute;
+  border-radius: 20px;
+  background: #fff;
+  padding: 32px 41px 32px 42px;
+  left: 2.6vw;
+  bottom: 2.6vw;
+}
+
+.sale__2022-text {
+  color: #f91155;
+
+  font-family: 'Lato';
+  font-size: 2.08vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 48px */
+  text-transform: uppercase;
+}
+
+@media (max-width: 1220px) {
+  .sale__2022-text {
+    font-size: 2.93vw;
+  }
+  .sale__2022-text-wrap {
+    padding: 24px 46px 23px 47px;
+    left: 2.93vw;
+    bottom: 4.11vw;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 830px) {
+  .sale__2022-text-wrap {
+    border-radius: 12px;
+    padding: 22px 33px 22px 34px;
+    left: 3.39vw;
+  }
+  .sale__2022-text {
+    font-size: 2.6vw;
+  }
+}
+
+@media (max-width: 730px) {
+  .sale__2022-text-wrap {
+    border-radius: 8px;
+    padding: 7px 0 9px 0;
+    text-align: center;
+    left: 4.69vw;
+    right: 4.69vw;
+    bottom: 3.23vw;
+  }
+  .sale__2022-text {
+    font-size: 3.75vw;
+  }
+}

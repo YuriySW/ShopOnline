@@ -1,0 +1,54 @@
+.sale__gift-ideas-text-wrap {
+  position: absolute;
+  top: 5.42vw;
+  left: 1.56vw;
+  right: 9.38vw;
+  bottom: 1.56vw;
+}
+
+.sale__gift-ideas-text {
+  color: #fff;
+  font-family: 'Lato';
+  font-size: 2.08vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 52px */
+}
+
+@media (max-width: 1220px) {
+  .sale__gift-ideas-text {
+    font-size: 2.93vw;
+  }
+  .sale__gift-ideas-text-wrap {
+    top: 10.74vw;
+    left: 1.95vw;
+    right: 18.26vw;
+    bottom: 1.95vw;
+  }
+}
+
+@media (max-width: 860px) {
+  .sale__gift-ideas-text-wrap {
+    top: 10.68vw;
+    left: 2.6vw;
+    right: 18.75vw;
+    bottom: 2.6vw;
+  }
+  .sale__gift-ideas-text {
+    font-size: 2.08vw;
+    line-height: 120%;
+  }
+}
+
+@media (max-width: 730px) {
+  .sale__gift-ideas-text {
+    font-size: 3.75vw;
+    display: inline;
+  }
+  .sale__gift-ideas-text-wrap {
+    top: 27.5vw;
+    left: 3.13vw;
+    right: 27.81vw;
+    bottom: 5vw;
+  }
+}

@@ -2,6 +2,33 @@
   transform: scale(1.06);
   transition: 0.5s;
 }
+.sale__item {
+  position: relative;
+}
+
+/* .sale__item-red-sneaker {
+  grid-column: span 2;
+}
+
+.sale__item-two-sneakers {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.sale__item-gift-ideas {
+  grid-column: span 2;
+}
+
+.sale__item-laptop {
+  grid-column: span 2;
+}
+
+.sale__item-2022 {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+.sale__item-dress {
+  grid-row: span 2;
+} */
 
 .sale__item-book {
   grid-row: 1;

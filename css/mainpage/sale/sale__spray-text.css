@@ -1,0 +1,57 @@
+.sale__spray-text-wrap {
+  position: absolute;
+  top: 7.66vw;
+  left: 1.04vw;
+  bottom: 1.04vw;
+}
+.sale__discount-spray {
+  top: 1.04vw;
+  left: 1.04vw;
+}
+.sale__spray-text {
+  color: #fff;
+  font-family: 'Lato';
+  font-size: 1.56vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 39px */
+}
+
+@media (max-width: 1370px) {
+  .sale__spray-text-wrap {
+    top: 08.73vw;
+    bottom: 1.46vw;
+  }
+}
+
+@media (max-width: 1220px) {
+  .sale__spray-text-wrap {
+    top: 17.29vw;
+    left: 1.95vw;
+    bottom: 1.95vw;
+  }
+  .sale__spray-text {
+    display: inline;
+    font-size: 1.95vw;
+  }
+}
+
+@media (max-width: 860px) {
+  .sale__spray-text-wrap {
+    top: 11.46vw;
+  }
+  .sale__spray-text {
+    display: block;
+    font-size: 2.08vw;
+  }
+}
+
+@media (max-width: 730px) {
+  .sale__spray-text {
+    font-size: 3.75vw;
+    display: inline;
+  }
+  .sale__spray-text-wrap {
+    top: 33.13vw;
+  }
+}

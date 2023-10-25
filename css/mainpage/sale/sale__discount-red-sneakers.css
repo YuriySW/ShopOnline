@@ -1,0 +1,18 @@
+.sale__discount-red-sneakers {
+  top: 1.04vw;
+  left: 1.04vw;
+}
+
+@media (max-width: 1220px) {
+  .sale__discount-red-sneakers {
+    top: 0.98vw;
+    left: 0.98vw;
+  }
+}
+
+@media (max-width: 730px) {
+  .sale__discount-red-sneakers {
+    top: 1.56vw;
+    left: 1.56vw;
+  }
+}

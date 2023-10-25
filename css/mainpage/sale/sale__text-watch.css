@@ -1,0 +1,81 @@
+.sale__text-watch {
+  position: absolute;
+  color: #fff;
+  font-family: 'Lato';
+  font-size: 1.56vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 39px */
+  top: 4.06vw;
+  left: 0.73vw;
+  right: 1.3vw;
+  bottom: 6.67vw;
+}
+
+.sale__discount-watch {
+  top: 7.14vw;
+  left: 7.14vw;
+  bottom: 1.04vw;
+  right: 1.04vw;
+}
+
+@media (max-width: 1460px) {
+  .sale__discount-watch {
+    top: 6.5vw;
+    left: 6.14vw;
+  }
+}
+
+@media (max-width: 1220px) {
+  .sale__discount-watch {
+    top: 11.62vw;
+    left: 11.62vw;
+    bottom: 0.98vw;
+    right: 0.98vw;
+  }
+  .sale__text-watch {
+    font-size: 2.34vw;
+    top: 5.66vw;
+    left: 1.39vw;
+  }
+}
+
+@media (max-width: 860px) {
+  .sale__discount-watch {
+    top: 10.62vw;
+    left: 10.62vw;
+    bottom: 0.98vw;
+    right: 0.98vw;
+  }
+  .sale__text-watch {
+    font-size: 2.08vw;
+    top: 2.15vw;
+    left: 0.65vw;
+  }
+}
+
+@media (max-width: 730px) {
+  .sale__discount-watch {
+    top: 30.7vw;
+    left: 30.7vw;
+  }
+  .sale__text-watch {
+    font-size: 4.19vw;
+    top: 3.84vw;
+    left: 05.7vw;
+  }
+}
+
+@media (max-width: 430px) {
+  .sale__discount-watch {
+    top: 23.44vw;
+    left: 23.44vw;
+    bottom: 1.56vw;
+    right: 1.56vw;
+  }
+  .sale__text-watch {
+    top: 8.75vw;
+    left: 3.13vw;
+    font-size: 3.75vw;
+  }
+}

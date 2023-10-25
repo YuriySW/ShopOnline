@@ -1,0 +1,11 @@
+.sale__discount-dress {
+  right: 1.04vw;
+  bottom: 1.04vw;
+}
+
+@media (max-width: 730px) {
+  .sale__discount-dress {
+    right: 3.13vw;
+    bottom: 3.13vw;
+  }
+}

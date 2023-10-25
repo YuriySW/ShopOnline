@@ -4,16 +4,14 @@
 
 @font-face {
   font-family: 'Lato';
-  src: local('Lato Regular'), local('Lato-Regular'), url('../fonts/DroidSerif.woff2') format('woff2'),
-    url('../fonts/lato-regular.woff') format('woff');
+  src: local('Lato Regular'), local('Lato-Regular'), url('../fonts/lato-regular.woff2') format('woff2'), url('../fonts/lato-regular.woff') format('woff');
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: local('Lato Bold'), local('Lato-Bold'), url('../fonts/lato-bold.woff2') format('woff2'),
-    url('../fonts/lato-bold.woff') format('woff');
+  src: local('Lato Bold'), local('Lato-Bold'), url('../fonts/lato-bold.woff2') format('woff2'), url('../fonts/lato-bold.woff') format('woff');
   font-weight: 700;
   font-display: swap;
 }
@@ -49,16 +47,15 @@ svg {
   font-family: 'Lato', Helvetica, sans-serif;
   margin: 0;
   color: black;
-  
 }
 
-.wrapper{
+.wrapper {
   padding: 0 30px;
   margin: 0 auto;
 }
 
-.main{
-  padding: 100px 0 ;
+.main {
+  padding: 100px 0;
 }
 
 .container {

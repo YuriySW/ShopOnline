@@ -1,0 +1,62 @@
+.sale__text-laptop {
+  position: absolute;
+  color: #fff;
+  font-family: 'Lato';
+  font-size: 2.08vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 14.4px */
+  /* top: 8.33vw; */
+  left: 1.56vw;
+  right: 7.66vw;
+  bottom: 1.56vw;
+}
+
+.sale__discount-laptop {
+  top: 7.14vw;
+  right: 1.04vw;
+  bottom: 1.04vw;
+}
+
+@media (max-width: 1420px) {
+  .sale__discount-laptop {
+    top: 6.14vw;
+  }
+}
+
+@media (max-width: 1220px) {
+  .sale__text-laptop {
+    left: 1.95vw;
+    bottom: 1.95vw;
+    top: 15.43vw;
+    font-size: 2.93vw;
+  }
+  .sale__discount-laptop {
+    top: 11.62vw;
+    right: 0.98vw;
+    bottom: 0.98vw;
+  }
+}
+
+@media (max-width: 860px) {
+  .sale__text-laptop {
+    font-size: 2.08vw;
+    top: 14.15vw;
+    left: 3.61vw;
+    bottom: 2.61vw;
+  }
+}
+
+@media (max-width: 730px) {
+  .sale__text-laptop {
+    font-size: 3.75vw;
+    top: 27.5vw;
+    left: 3.13vw;
+    bottom: 5vw;
+  }
+  .sale__discount-laptop {
+    top: 19.69vw;
+    right: 1.56vw;
+    bottom: 1.56vw;
+  }
+}
