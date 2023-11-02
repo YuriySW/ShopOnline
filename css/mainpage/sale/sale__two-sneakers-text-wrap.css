@@ -1,11 +1,15 @@
+.sale__item-two-sneakers {
+  background-image: url(../../../image/two-sneakers.jpg);
+  padding: 18.23vw 1.04vw 0 1.04vw;
+  /* min-height: 28.65vw; */
+}
+
 .sale__two-sneakers-text-wrap {
-  position: absolute;
   background-color: #38c0eb;
   border-radius: 20px;
-  padding: 26px 24px 26px 23px;
-  bottom: 1.15vw;
-  left: 1.04vw;
-  right: 1.04vw;
+  padding: 1.49vw 1.25vw 1.75vw 1.2vw;
+
+  /* padding: 26px 28px 26px 23px; */
 }
 
 .sale__two-sneakers-text {
@@ -15,6 +19,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 48px */
+  max-width: 24vw;
 }
 .sale__two-sneakers-text-sub {
   color: #fff;
@@ -28,39 +33,52 @@
 @media (max-width: 1220px) {
   .sale__two-sneakers-text {
     font-size: 2.93vw;
+    max-width: 33.15vw;
   }
   .sale__two-sneakers-text-sub {
     font-size: 3.91vw;
   }
+  .sale__two-sneakers-text-wrap {
+    padding: 2.83vw 2.44vw 2.83vw 2.44vw;
+  }
+  .sale__item-two-sneakers {
+    padding: 29.62vw 2.15vw 2.15vw 2.15vw;
+    min-height: 44.73vw;
+  }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 770px) {
   .sale__two-sneakers-text-wrap {
-    padding: 16px 28px;
+    padding: 2.08vw 3.65vw 2.08vw 3.65vw;
     border-radius: 12px;
   }
   .sale__two-sneakers-text {
-    display: inline-block;
+    max-width: none;
     font-size: 2.08vw;
   }
   .sale__two-sneakers-text-sub {
-    display: inline-block;
     font-size: 3.39vw;
+  }
+  .sale__item-two-sneakers {
+    background-image: url(../../../image/two-sneakers-768.jpg);
+    padding: 40.23vw 1.3vw 1.3vw 1.3vw;
   }
 }
 
 @media (max-width: 730px) {
   .sale__two-sneakers-text-wrap {
-    padding: 9px 25px;
-    bottom: 3.13vw;
-    left: 3.13vw;
-    right: 3.13vw;
     border-radius: 8px;
+    padding: 2.81vw 7.81vw 2.81vw 7.81vw;
   }
   .sale__two-sneakers-text {
     font-size: 3.75vw;
+    text-align: center;
   }
   .sale__two-sneakers-text-sub {
     font-size: 5vw;
+  }
+  .sale__item-two-sneakers {
+    background-image: url(../../../image/two-sneakers-320.jpg);
+    padding: 79.13vw 3.13vw 3.13vw 3.13vw;
   }
 }

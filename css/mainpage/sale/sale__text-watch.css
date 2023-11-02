@@ -1,15 +1,18 @@
+.sale__item-watch {
+  background-image: url(../../../image/watch.jpg);
+
+  /* min-height: 12.76vw; */
+
+  padding: 4.06vw 1.3vw 6.67vw 0.8vw;
+}
+
 .sale__text-watch {
-  position: absolute;
   color: #fff;
   font-family: 'Lato';
   font-size: 1.56vw;
   font-style: normal;
   font-weight: 700;
   line-height: 130%; /* 39px */
-  top: 4.06vw;
-  left: 0.73vw;
-  right: 1.3vw;
-  bottom: 6.67vw;
 }
 
 .sale__discount-watch {
@@ -19,9 +22,9 @@
   right: 1.04vw;
 }
 
-@media (max-width: 1460px) {
+@media (max-width: 1556px) {
   .sale__discount-watch {
-    top: 6.5vw;
+    top: 5.9vw;
     left: 6.14vw;
   }
 }
@@ -35,12 +38,16 @@
   }
   .sale__text-watch {
     font-size: 2.34vw;
-    top: 5.66vw;
-    left: 1.39vw;
+    /* min-height: 21.19vw; */
+  }
+
+  .sale__item-watch {
+    padding-top: 5.66vw;
+    padding-left: 1.39vw;
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 770px) {
   .sale__discount-watch {
     top: 10.62vw;
     left: 10.62vw;
@@ -49,8 +56,10 @@
   }
   .sale__text-watch {
     font-size: 2.08vw;
-    top: 2.15vw;
-    left: 0.65vw;
+  }
+  /* ///////////////////////////////////////////////////// */
+  .sale__item-watch {
+    padding: 2.15vw 3.26vw 13.54vw 0.65vw;
   }
 }
 
@@ -61,8 +70,9 @@
   }
   .sale__text-watch {
     font-size: 4.19vw;
-    top: 3.84vw;
-    left: 05.7vw;
+  }
+  .sale__item-watch {
+    padding: 8.75vw 11.56vw 26.88vw 3.13vw;
   }
 }
 
@@ -74,8 +84,6 @@
     right: 1.56vw;
   }
   .sale__text-watch {
-    top: 8.75vw;
-    left: 3.13vw;
     font-size: 3.75vw;
   }
 }

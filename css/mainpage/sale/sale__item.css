@@ -4,6 +4,10 @@
 }
 .sale__item {
   position: relative;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
 }
 
 /* .sale__item-red-sneaker {
@@ -78,6 +82,9 @@
 }
 
 @media (max-width: 1220px) {
+  .sale__item {
+    border-radius: 16px;
+  }
   .sale__item-book {
     grid-row: 1;
   }
@@ -133,7 +140,10 @@
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 770px) {
+  .sale__item {
+    border-radius: 12px;
+  }
   .sale__item-book {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -186,6 +196,9 @@
 }
 
 @media (max-width: 730px) {
+  .sale__item {
+    border-radius: 8px;
+  }
   .sale__item-book {
     grid-column: 1/2;
     grid-row: 1/2;

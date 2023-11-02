@@ -1,9 +1,10 @@
-.sale__spray-text-wrap {
-  position: absolute;
-  top: 7.66vw;
-  left: 1.04vw;
-  bottom: 1.04vw;
+.sale__item-spray {
+  background-image: url(../../../image/spray.jpg);
+
+  /* min-height: 12.76vw; */
+  padding: 7.66vw 2.5vw 1.04vw 1.04vw;
 }
+
 .sale__discount-spray {
   top: 1.04vw;
   left: 1.04vw;
@@ -17,18 +18,9 @@
   line-height: 130%; /* 39px */
 }
 
-@media (max-width: 1370px) {
-  .sale__spray-text-wrap {
-    top: 08.73vw;
-    bottom: 1.46vw;
-  }
-}
-
 @media (max-width: 1220px) {
-  .sale__spray-text-wrap {
-    top: 17.29vw;
-    left: 1.95vw;
-    bottom: 1.95vw;
+  .sale__item-spray {
+    padding: 17.29vw 1.86vw 1.95vw 1.95vw;
   }
   .sale__spray-text {
     display: inline;
@@ -36,13 +28,14 @@
   }
 }
 
-@media (max-width: 860px) {
-  .sale__spray-text-wrap {
-    top: 11.46vw;
-  }
+@media (max-width: 770px) {
   .sale__spray-text {
     display: block;
     font-size: 2.08vw;
+  }
+  .sale__item-spray {
+    background-image: url(../../../image/spray-768.jpg);
+    padding: 11.46vw 3.39vw 1.82vw 1.82vw;
   }
 }
 
@@ -53,5 +46,8 @@
   }
   .sale__spray-text-wrap {
     top: 33.13vw;
+  }
+  .sale__item-spray {
+    padding: 33.13vw 3.13vw 3.13vw 2.81vw;
   }
 }

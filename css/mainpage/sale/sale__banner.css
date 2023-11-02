@@ -1,20 +1,16 @@
-.sale__banner {
-  display: block;
-}
-
-.sale__banner-1024,
-.sale__banner-768,
-.sale__banner-320 {
-  display: none;
-}
 .banner-wrap {
-  position: relative;
+  background-image: url(../../../image/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 25vw;
+  border-radius: 20px;
+  padding-top: 7.55vw;
+  padding-bottom: 2.08vw;
 }
-.banner-text {
-  position: absolute;
-  left: 112px;
-  top: 145px;
 
+.banner-text {
+  padding-left: 5.83vw;
+  margin-bottom: 5.21vw;
   color: #fff;
   font-family: 'Lato';
   font-size: 3.65vw;
@@ -24,29 +20,19 @@
 }
 
 .end-promotion {
-  position: absolute;
-  left: 46.5%;
-  right: 50%;
-  top: 70%;
-  bottom: 30%;
-  /* top: 336px; */
-  max-width: 134px;
-  width: 100%;
+  text-align: center;
   color: #fff;
   font-family: 'Lato';
   font-size: 0.83vw;
   font-style: normal;
   font-weight: 700;
   line-height: 130%; /* 20.8px */
+  margin-bottom: 5px;
 }
 
 .timer {
-  position: absolute;
-  top: 75%;
-  right: 63%;
-  left: 36.5%;
-  max-width: 500px;
-  width: 100%;
+  display: block;
+  text-align: center;
   color: #fff;
   font-family: 'Lato';
   font-size: 1.67vw;
@@ -64,36 +50,29 @@
   line-height: 130%; /* 78px */
   margin-right: 6px;
 }
-@media (max-width: 1370px) {
-  .banner-text {
-    left: 80px;
-    top: 80px;
-    max-width: 350px;
-    font-size: 3.91vw;
-  }
-}
+
 @media (max-width: 1220px) {
-  .sale__banner {
-    display: none;
+  .banner-wrap {
+    background-image: url(../../../image/banner-1024.jpg);
+    padding-top: 8.11vw;
+    padding-bottom: 3.52vw;
+    border-radius: 16px;
   }
-  .sale__banner-1024 {
-    display: block;
+  .banner-text {
+    max-width: 39.06vw;
+    font-size: 3.91vw;
+    margin-bottom: 1.17vw;
+    padding-left: 8.81vw;
   }
+
   .end-promotion {
     font-size: 1.56vw;
-    left: 43.7%;
-    right: 50%;
-    top: 62.5%;
-    bottom: 30%;
-    max-width: 150px;
+    margin-bottom: 1.21vw;
   }
 
   .timer {
     word-spacing: 20px;
     font-size: 1.95vw;
-    top: 72%;
-    left: 33.5%;
-    max-width: 400px;
   }
 
   .timer-num {
@@ -103,28 +82,25 @@
 }
 
 @media (max-width: 860px) {
-  .sale__banner-1024 {
-    display: none;
+  .banner-wrap {
+    background-image: url(../../../image/banner-768.jpg);
+    padding-top: 8.63vw;
+    padding-bottom: 3.91vw;
   }
-  .sale__banner-768 {
-    display: block;
-  }
+
   .banner-text {
-    left: 80px;
-    top: 64px;
-    max-width: 352px;
     font-size: 3.91vw;
+    max-width: none;
+    margin-bottom: 11.88vw;
+    padding-left: 10.42vw;
   }
   .end-promotion {
-    top: 67%;
+    margin-bottom: 1.3vw;
   }
 
   .timer {
     word-spacing: 10px;
     font-size: 2.08vw;
-    top: 75%;
-    left: 33.5%;
-    max-width: 300px;
   }
 
   .timer-num {
@@ -134,40 +110,28 @@
 }
 
 @media (max-width: 730px) {
-  .sale__banner-768 {
-    display: none;
+  .banner-wrap {
+    background-image: url(../../../image/banner-320.jpg);
+    padding-top: 15.63vw;
+    padding-bottom: 9.38vw;
+    border-radius: 8px;
   }
-  .sale__banner-320 {
-    display: block;
-  }
+
   .banner-text {
-    left: 29px;
-    top: 64px;
-    max-width: none;
     font-size: 6.88vw;
+    padding-left: 9.38vw;
+    margin-bottom: 59.06vw;
   }
   .end-promotion {
     font-size: 2.5vw;
-    left: 39%;
-    right: 61%;
-    top: 80%;
   }
   .timer {
     word-spacing: 8px;
     font-size: 3.75vw;
-    top: 85%;
-    left: 21%;
-    max-width: 350px;
   }
 
   .timer-num {
     margin-right: 0;
     font-size: 6.25vw;
-  }
-}
-
-@media (max-width: 730px) {
-  .timer {
-    max-width: max-content;
   }
 }

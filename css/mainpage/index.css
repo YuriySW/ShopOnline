@@ -9,7 +9,7 @@
 @import 'sale/sale__banner.css';
 @import 'sale/sale__list.css';
 @import 'sale/sale__item.css';
-@import 'sale/sale__img.css';
+
 @import 'sale/sale__text-book.css';
 @import 'sale/sale__discount.css';
 @import 'sale/sale__text-watch.css';
@@ -20,3 +20,4 @@
 @import 'sale/sale__discount-dress.css';
 @import 'sale/sale__spray-text.css';
 @import 'sale/sale__2022-text-wrap.css';
+@import 'sale/sale__item-balls.css';

@@ -1,15 +1,17 @@
+.sale__item-2022 {
+  background-image: url(../../../image/2022.jpg);
+  padding: 20.05vw 24.32vw 2.6vw 2.6vw;
+  /* min-height: 28.65vw; */
+}
+
 .sale__2022-text-wrap {
-  position: absolute;
   border-radius: 20px;
   background: #fff;
-  padding: 32px 41px 32px 42px;
-  left: 2.6vw;
-  bottom: 2.6vw;
+  padding: 1.67vw 2.14vw 1.67vw 2.19vw;
 }
 
 .sale__2022-text {
   color: #f91155;
-
   font-family: 'Lato';
   font-size: 2.08vw;
   font-style: normal;
@@ -24,33 +26,39 @@
   }
   .sale__2022-text-wrap {
     padding: 24px 46px 23px 47px;
-    left: 2.93vw;
-    bottom: 4.11vw;
+
     border-radius: 16px;
+  }
+  .sale__item-2022 {
+    padding: 28.91vw 38.77vw 3.81vw 2.93vw;
   }
 }
 
-@media (max-width: 830px) {
+@media (max-width: 770px) {
   .sale__2022-text-wrap {
     border-radius: 12px;
-    padding: 22px 33px 22px 34px;
-    left: 3.39vw;
+    padding: 2.86vw 4.3vw 2.86vw 4.43vw;
+    text-align: center;
   }
   .sale__2022-text {
     font-size: 2.6vw;
+  }
+  .sale__item-2022 {
+    background-image: url(../../../image/2022-768.jpg);
+    padding: 31.64vw 42.58vw 3.39vw 3.39vw;
   }
 }
 
 @media (max-width: 730px) {
   .sale__2022-text-wrap {
     border-radius: 8px;
-    padding: 7px 0 9px 0;
+    padding: 2.19vw 0 2.81vw 0;
     text-align: center;
-    left: 4.69vw;
-    right: 4.69vw;
-    bottom: 3.23vw;
   }
   .sale__2022-text {
     font-size: 3.75vw;
+  }
+  .sale__item-2022 {
+    padding: 25.94vw 4.69vw 3.13vw 4.69vw;
   }
 }
