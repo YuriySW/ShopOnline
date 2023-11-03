@@ -28,6 +28,12 @@
   }
 }
 
+@media (max-width: 920px) {
+  .sale__item-spray {
+    padding-top: 14.29vw;
+  }
+}
+
 @media (max-width: 770px) {
   .sale__spray-text {
     display: block;

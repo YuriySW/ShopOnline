@@ -47,6 +47,12 @@
   }
 }
 
+@media (max-width: 920px) {
+  .sale__discount-watch {
+    top: 10.62vw;
+  }
+}
+
 @media (max-width: 770px) {
   .sale__discount-watch {
     top: 10.62vw;
