@@ -1,6 +1,8 @@
 .sale__item-two-sneakers {
   background-image: url(../../../image/two-sneakers.jpg);
-  padding: 18.23vw 1.04vw 0 1.04vw;
+  padding: 1.04vw;
+  display: flex;
+  align-items: flex-end;
   /* min-height: 28.65vw; */
 }
 
@@ -42,7 +44,7 @@
     padding: 2.83vw 2.44vw 2.83vw 2.44vw;
   }
   .sale__item-two-sneakers {
-    padding: 29.62vw 2.15vw 0 2.15vw;
+    padding: 2.15vw;
     min-height: 44.73vw;
   }
 }
@@ -61,7 +63,7 @@
   }
   .sale__item-two-sneakers {
     background-image: url(../../../image/two-sneakers-768.jpg);
-    padding: 40.23vw 1.3vw 1.3vw 1.3vw;
+    padding: 1.3vw;
   }
 }
 
@@ -79,6 +81,9 @@
   }
   .sale__item-two-sneakers {
     background-image: url(../../../image/two-sneakers-320.jpg);
-    padding: 79.13vw 3.13vw 3.13vw 3.13vw;
+    /* padding: 79.13vw 3.13vw 3.13vw 3.13vw; */
+    padding: 3.13vw;
+    min-height: 87.5vw;
+    justify-content: center;
   }
 }

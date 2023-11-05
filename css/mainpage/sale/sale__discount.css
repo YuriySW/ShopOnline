@@ -8,13 +8,33 @@
 }
 
 .sale__discount-text {
-  color: var(--1, #fff);
+  color: #fff;
   font-family: 'Lato';
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: 130%; /* 39px */
   text-align: center;
+}
+
+.sale__discount_rb {
+  right: 20px;
+  bottom: 20px;
+}
+.sale__discount_lt {
+  left: 20px;
+  top: 20px;
+}
+
+@media (max-width: 1420px) {
+  .sale__discount_rb {
+    right: 10px;
+    bottom: 10px;
+  }
+  .sale__discount_lt {
+    left: 10px;
+    top: 10px;
+  }
 }
 
 @media (max-width: 935px) {
@@ -36,5 +56,13 @@
   }
   .sale__discount-text {
     font-size: 16px;
+  }
+  .sale__discount_rb {
+    right: 5px;
+    bottom: 5px;
+  }
+  .sale__discount_lt {
+    left: 5px;
+    top: 5px;
   }
 }

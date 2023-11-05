@@ -1,7 +1,9 @@
 .sale__item-2022 {
   background-image: url(../../../image/2022.jpg);
-  padding: 20.05vw 24.32vw 2.6vw 2.6vw;
-  /* min-height: 28.65vw; */
+
+  padding: 2.6vw;
+  display: flex;
+  align-items: flex-end;
 }
 
 .sale__2022-text-wrap {
@@ -52,7 +54,7 @@
 @media (max-width: 730px) {
   .sale__2022-text-wrap {
     border-radius: 8px;
-    padding: 2.19vw 0 2.81vw 0;
+    padding: 2.19vw 12.81vw 2.81vw 12.81vw;
     text-align: center;
   }
   .sale__2022-text {
@@ -60,5 +62,6 @@
   }
   .sale__item-2022 {
     padding: 25.94vw 4.69vw 3.13vw 4.69vw;
+    justify-content: center;
   }
 }

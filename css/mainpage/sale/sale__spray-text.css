@@ -5,10 +5,6 @@
   padding: 7.66vw 2.5vw 1.04vw 1.04vw;
 }
 
-.sale__discount-spray {
-  top: 1.04vw;
-  left: 1.04vw;
-}
 .sale__spray-text {
   color: #fff;
   font-family: 'Lato';
@@ -50,9 +46,7 @@
     font-size: 3.75vw;
     display: inline;
   }
-  .sale__spray-text-wrap {
-    top: 33.13vw;
-  }
+
   .sale__item-spray {
     padding: 33.13vw 3.13vw 3.13vw 2.81vw;
   }

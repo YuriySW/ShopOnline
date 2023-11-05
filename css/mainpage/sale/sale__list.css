@@ -4,10 +4,6 @@
   grid-template-rows: repeat(4, 1fr);
   gap: 60px;
   padding-top: 60px;
-  /* grid-template-columns: repeat(auto-fit, 245px);
-  justify-content: space-between;
-  grid-auto-rows: 245px;
-  grid-auto-flow: dense; */
 }
 
 @media (max-width: 1620px) {
@@ -50,13 +46,7 @@
 
 @media (max-width: 770px) {
   .sale__list {
-    /* grid-template-columns: repeat(2, 140px) 220px 140px span;
-    grid-template-rows: repeat(2, 140px) repeat(4, 60px) 337px span; */
-    /* grid-template-columns: repeat(2, 140px) 220px 140px span;
-    grid-template-rows: repeat(2, 140px) repeat(4, 60px) 337px span; */
-    /* grid-template-rows: repeat(2, 140px) repeat(4, 60px) 337px span; */
     grid-template-columns: repeat(2, 1fr) 220px 1fr;
-    /* grid-template-rows: repeat(2, 1fr); */
     grid-template-rows: repeat(2, 140px) repeat(4, 60px) 337px;
     gap: 20px;
     padding-top: 40px;
@@ -67,7 +57,7 @@
   .sale__list {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: none;
-    /* grid-template-rows: 130px 118px 280px 118px 118px 130px 130px 123px; */
+
     padding-top: 20px;
   }
 }

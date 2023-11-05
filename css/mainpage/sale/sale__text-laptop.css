@@ -14,35 +14,13 @@
   line-height: 120%; /* 14.4px */
 }
 
-.sale__discount-laptop {
-  top: 7.14vw;
-  right: 1.04vw;
-  bottom: 1.04vw;
-}
-
-@media (max-width: 1567px) {
-  .sale__discount-laptop {
-    top: 6.14vw;
-  }
-}
-
 @media (max-width: 1220px) {
   .sale__text-laptop {
     font-size: 2.93vw;
   }
-  .sale__discount-laptop {
-    top: 11.62vw;
-    right: 0.98vw;
-    bottom: 0.98vw;
-  }
+
   .sale__item-laptop {
     padding: 15.43vw 15.43vw 1.95vw 1.95vw;
-  }
-}
-
-@media (max-width: 920px) {
-  .sale__discount-laptop {
-    top: 10.62vw;
   }
 }
 
@@ -61,12 +39,7 @@
   }
 
   .sale__item-laptop {
+    background-image: url(../../../image/laptop-320.jpg);
     padding: 31.51vw 49.38vw 5vw 3.13vw;
-  }
-
-  .sale__discount-laptop {
-    top: 19.69vw;
-    right: 1.56vw;
-    bottom: 1.56vw;
   }
 }

@@ -4,11 +4,6 @@
   /* min-height: 28.65vw; */
 }
 
-.sale__discount-dress {
-  right: 1.04vw;
-  bottom: 1.04vw;
-}
-
 @media (max-width: 770px) {
   .sale__item-dress {
     background-image: url(../../../image/dress-768.jpg);
@@ -16,10 +11,6 @@
 }
 
 @media (max-width: 730px) {
-  .sale__discount-dress {
-    right: 3.13vw;
-    bottom: 3.13vw;
-  }
   .sale__item-dress {
     background-image: url(../../../image/dress-320.jpg);
     min-height: 87.5vw;
