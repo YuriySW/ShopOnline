@@ -24,11 +24,11 @@ const getTimeRemaining = (endtime) => {
 const getDeclension = (num, singular, few, many) => {
   if (num % 10 === 1 && num % 100 !== 11) {
     return singular;
-  } else if ([2, 3, 4].includes(num % 10) && ![12, 13, 14].includes(num % 100)) {
-    return few;
-  } else {
-    return many;
   }
+  if ([2, 3, 4].includes(num % 10) && ![12, 13, 14].includes(num % 100)) {
+    return few;
+  }
+  return many;
 };
 
 const getDaysWord = (days) => getDeclension(days, 'день', 'дня', 'дней');
