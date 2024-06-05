@@ -53,7 +53,7 @@ export const start = (endtime) => {
   const timerHoursWord = document.querySelector('.timer-hours-word');
   const timerNumMinute = document.querySelector('.timer-num-minute');
   const timerMinuteWord = document.querySelector('.timer-minute-word');
-
+  let timeinterval;
   const updateTimer = () => {
     const t = getTimeRemaining(endtime);
 
@@ -74,18 +74,19 @@ export const start = (endtime) => {
       timerMinuteWord.textContent = 'секунд';
     }
     if (t.total <= 0 || t.days < 0 || t.hours < 0 || t.minutes < 0 || t.seconds < 0) {
-      bannerText.style.display = 'none';
-      endPromotion.style.display = 'none';
-      timerNumDays.style.display = 'none';
-      timerDaysWord.style.display = 'none';
-      timerNumHours.style.display = 'none';
-      timerHoursWord.style.display = 'none';
-      timerNumMinute.style.display = 'none';
-      timerMinuteWord.style.display = 'none';
+      clearInterval(timeinterval);
+      bannerText.style.visibility = 'hidden';
+      endPromotion.style.visibility = 'hidden';
+      timerNumDays.style.visibility = 'hidden';
+      timerDaysWord.style.visibility = 'hidden';
+      timerNumHours.style.visibility = 'hidden';
+      timerHoursWord.style.visibility = 'hidden';
+      timerNumMinute.style.visibility = 'hidden';
+      timerMinuteWord.style.visibility = 'hidden';
     }
   };
 
   updateTimer();
-  const timeinterval = setInterval(updateTimer, 1000);
+  timeinterval = setInterval(updateTimer, 1000);
 };
 start(deadlineDate);
