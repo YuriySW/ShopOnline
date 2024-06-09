@@ -34,6 +34,7 @@ const getDeclension = (num, singular, few, many) => {
 const getDaysWord = (days) => getDeclension(days, 'день', 'дня', 'дней');
 const getHoursWord = (hours) => getDeclension(hours, 'час', 'часа', 'часов');
 const getMinutesWord = (minutes) => getDeclension(minutes, 'минута', 'минуты', 'минут');
+const getSecondsWord = (seconds) => getDeclension(seconds, 'секунда', 'секунды', 'секунд');
 
 export const start = (endtime) => {
   timer.innerHTML = `
@@ -71,7 +72,7 @@ export const start = (endtime) => {
       timerNumHours.textContent = String(t.minutes).padStart(2, '0');
       timerHoursWord.textContent = getMinutesWord(t.minutes);
       timerNumMinute.textContent = String(t.seconds).padStart(2, '0');
-      timerMinuteWord.textContent = 'секунд';
+      timerMinuteWord.textContent = getSecondsWord(t.seconds);
     }
     if (t.total <= 0 || t.days < 0 || t.hours < 0 || t.minutes < 0 || t.seconds < 0) {
       clearInterval(timeinterval);
