@@ -10,3 +10,12 @@
 @import 'main/section/section.css';
 @import 'main/section/__subtitle/section__subtitle.css';
 @import 'main/section/__text/section__text.css';
+@import 'blogs/blogs__title.css';
+@import 'blogs/blogs__container.css';
+@import 'blogs/blogs__list.css';
+@import 'blogs/blogs__item.css';
+@import 'blogs/select-pages.css';
+@import 'article-page/title-page.css';
+@import 'article-page/container-article.css';
+@import 'article-page/text-page.css';
+@import 'article-page/back-btn.css';

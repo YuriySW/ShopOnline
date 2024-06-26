@@ -1,0 +1,16 @@
+.back-btn {
+  display: flex;
+  justify-content: space-between;
+  max-width: 154px;
+  cursor: pointer;
+}
+
+.btn-text {
+  color: rgb(45, 45, 45);
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+}

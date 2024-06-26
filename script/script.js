@@ -1,4 +1,5 @@
 import {start, deadlineDate} from './modules/timer.js';
+import './modules/data.js';
 
 {
   const init = () => {

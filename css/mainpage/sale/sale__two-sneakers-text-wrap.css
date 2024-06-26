@@ -3,15 +3,12 @@
   padding: 1.04vw;
   display: flex;
   align-items: flex-end;
-  /* min-height: 28.65vw; */
 }
 
 .sale__two-sneakers-text-wrap {
   background-color: #38c0eb;
   border-radius: 20px;
   padding: 1.49vw 1.25vw 1.75vw 1.2vw;
-
-  /* padding: 26px 28px 26px 23px; */
 }
 
 .sale__two-sneakers-text {
