@@ -1,10 +1,11 @@
-import {start, deadlineDate} from './modules/timer.js';
-import './modules/data.js';
+// import {start, deadlineDate} from './modules/timer.js';
+import './modules/timer.js';
+import './modules/render.js';
 
-{
-  const init = () => {
-    start(deadlineDate);
-  };
+// {
+//   const init = () => {
+//     start(deadlineDate);
+//   };
 
-  window.timerInit = init;
-}
+//   window.timerInit = init;
+// }

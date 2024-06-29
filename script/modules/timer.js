@@ -1,6 +1,7 @@
 const bannerText = document.querySelector('.banner-text');
 const endPromotion = document.querySelector('.end-promotion');
 const timer = document.querySelector('.timer');
+
 const deadline = timer.getAttribute('data-timer-deadline');
 export const deadlineDate = new Date(deadline);
 deadlineDate.setHours(deadlineDate.getHours() + 3);

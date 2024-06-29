@@ -1,5 +1,6 @@
 .blogs__item {
   display: flex;
   column-gap: 30px;
-  max-width: 645px;
+  cursor: pointer;
+  /* max-width: 645px; */
 }
