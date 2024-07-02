@@ -18,9 +18,6 @@ const loadBlogs = async () => {
     if (titles[index]) {
       titles[index].textContent = post.title;
     }
-    if (texts[index]) {
-      texts[index].textContent = post.body;
-    }
   });
 
   items.forEach((item, index) => {
