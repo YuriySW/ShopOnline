@@ -1,35 +1,40 @@
 const items = document.querySelectorAll('.blogs__item');
-const titles = document.querySelectorAll('.blogs__title');
-const texts = document.querySelectorAll('.blogs__text');
 const backBtn = document.querySelector('.back-btn');
-const imgs = document.querySelectorAll('.blogs__img');
 
-const loadImg = () => {
-  imgs.forEach((img, index) => {
-    img.src = `https://loremflickr.com/400/400?${index + 1}`;
+const clearItem = () => {
+  items.forEach((item) => {
+    item.remove();
   });
 };
 
+clearItem();
+
 const loadBlogs = async () => {
   const result = await fetch('https://gorest.co.in/public-api/posts');
-  const data = await result.json();
+  const response = await result.json();
+  const blogsData = response.data;
 
-  data.data.forEach((post, index) => {
-    if (titles[index]) {
-      titles[index].textContent = post.title;
-    }
+  blogsData.forEach((post, index) => {
+    const li = document.createElement('li');
+    li.className = 'blogs__item';
+    li.innerHTML = `
+      <img class="blogs__img" src="https://loremflickr.com/400/400?${index + 1}" alt="" />
+      <h2 class="blogs__title">${post.title}</h2>
+     
+    `;
+    document.querySelector('.blogs__list').appendChild(li);
   });
+
+  const items = document.querySelectorAll('.blogs__item');
 
   items.forEach((item, index) => {
     item.addEventListener('click', (e) => {
-      if (index < data.data.length) {
-        const selectedTitle = data.data[index].title;
-        const selectedText = data.data[index].body;
+      e.preventDefault();
+      if (index < blogsData.length) {
+        const selectedTitle = blogsData[index].title;
+        const selectedText = blogsData[index].body;
         sessionStorage.setItem('selectedTitle', selectedTitle);
         sessionStorage.setItem('selectedText', selectedText);
-      } else {
-        sessionStorage.removeItem('selectedTitle');
-        sessionStorage.removeItem('selectedText');
       }
       window.location.href = 'articlePage.html';
     });
@@ -59,6 +64,5 @@ const renderArticlePage = () => {
   }
 };
 
-loadImg();
 loadBlogs();
 renderArticlePage();
