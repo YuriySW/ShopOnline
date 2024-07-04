@@ -14,31 +14,34 @@ const loadBlogs = async () => {
   const response = await result.json();
   const blogsData = response.data;
 
-  blogsData.forEach((post, index) => {
-    const li = document.createElement('li');
-    li.className = 'blogs__item';
-    li.innerHTML = `
-      <img class="blogs__img" src="https://loremflickr.com/400/400?${index + 1}" alt="" />
-      <h2 class="blogs__title">${post.title}</h2>
-     
-    `;
-    document.querySelector('.blogs__list').appendChild(li);
-  });
+  const blogsList = document.querySelector('.blogs__list');
 
-  const items = document.querySelectorAll('.blogs__item');
-
-  items.forEach((item, index) => {
-    item.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (index < blogsData.length) {
-        const selectedTitle = blogsData[index].title;
-        const selectedText = blogsData[index].body;
-        sessionStorage.setItem('selectedTitle', selectedTitle);
-        sessionStorage.setItem('selectedText', selectedText);
-      }
-      window.location.href = 'articlePage.html';
+  if (blogsList) {
+    blogsData.forEach((post, index) => {
+      const li = document.createElement('li');
+      li.className = 'blogs__item';
+      li.innerHTML = `
+        <img class="blogs__img" src="https://loremflickr.com/400/400?${index + 1}" alt="" />
+        <h2 class="blogs__title">${post.title}</h2>
+      `;
+      blogsList.appendChild(li);
     });
-  });
+
+    const items = document.querySelectorAll('.blogs__item');
+
+    items.forEach((item, index) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (index < blogsData.length) {
+          const selectedTitle = blogsData[index].title;
+          const selectedText = blogsData[index].body;
+          sessionStorage.setItem('selectedTitle', selectedTitle);
+          sessionStorage.setItem('selectedText', selectedText);
+        }
+        window.location.href = 'articlePage.html';
+      });
+    });
+  }
 };
 
 const renderArticlePage = () => {
