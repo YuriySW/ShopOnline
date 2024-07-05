@@ -13,7 +13,6 @@ const loadBlogs = async () => {
   const result = await fetch('https://gorest.co.in/public-api/posts');
   const response = await result.json();
   const blogsData = response.data;
-
   const blogsList = document.querySelector('.blogs__list');
 
   if (blogsList) {
@@ -32,12 +31,12 @@ const loadBlogs = async () => {
     items.forEach((item, index) => {
       item.addEventListener('click', (e) => {
         e.preventDefault();
-        if (index < blogsData.length) {
-          const selectedTitle = blogsData[index].title;
-          const selectedText = blogsData[index].body;
-          sessionStorage.setItem('selectedTitle', selectedTitle);
-          sessionStorage.setItem('selectedText', selectedText);
-        }
+
+        const selectedTitle = blogsData[index].title;
+        const selectedText = blogsData[index].body;
+        sessionStorage.setItem('selectedTitle', selectedTitle);
+        sessionStorage.setItem('selectedText', selectedText);
+
         window.location.href = 'articlePage.html';
       });
     });
