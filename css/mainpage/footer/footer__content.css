@@ -1,0 +1,88 @@
+.footer__content {
+  display: grid;
+  grid-template-columns: 190px minmax(300px, 480px) minmax(150px, 307px) minmax(150px, 307px);
+  /* justify-content: space-between; */
+  column-gap: 118px;
+}
+
+.footer__logo {
+  padding-top: 5px;
+}
+
+.footer__title {
+  color: var(--1, #fff);
+
+  /* H3 bold */
+  font-family: Lato;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 41.6px */
+  margin-bottom: 40px;
+}
+
+.footer__item {
+  min-width: 253px;
+}
+
+.footer__link {
+  color: #fff;
+  display: block;
+  font-family: Lato;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 33px */
+}
+
+.footer__link-contact {
+  color: #fff;
+
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 20.8px */
+}
+
+.footer__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 253px));
+
+  row-gap: 15px;
+  column-gap: 30px;
+}
+
+.footer__list_buyer {
+  grid-template-columns: minmax(100px, 225px);
+}
+
+.address {
+  margin-bottom: 36px;
+}
+
+.footer__link:hover {
+  color: #3670c7;
+}
+
+@media (max-width: 1545px) {
+  .footer__content {
+    grid-template-columns: 190px minmax(300px, 480px) minmax(150px, 307px) minmax(150px, 307px);
+    /* justify-content: space-between; */
+    column-gap: 20px;
+  }
+}
+
+@media (max-width: 1270px) {
+  .footer__content {
+    grid-template-columns: 190px minmax(300px, 480px) minmax(150px, 307px);
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+  .footer__block {
+    margin-bottom: 50px;
+  }
+  .contact {
+    grid-column: 2;
+  }
+}

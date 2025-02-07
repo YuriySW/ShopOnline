@@ -21,3 +21,12 @@
 @import 'sale/sale__spray-text.css';
 @import 'sale/sale__2022-text-wrap.css';
 @import 'sale/sale__item-balls.css';
+@import 'product/product__title.css';
+@import 'product/product__discount.css';
+@import 'product/product__card.css';
+@import 'product/product__cards.css';
+@import 'product/product.css';
+@import 'footer/footer.css';
+@import 'footer/footer__content.css';
+@import 'footer/footer__author.css';
+@import 'footer/navigation.css';

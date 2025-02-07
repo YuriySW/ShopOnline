@@ -3,7 +3,8 @@
 
   /* min-height: 12.76vw; */
 
-  padding: 4.06vw 1.3vw 6.67vw 0.8vw;
+  /* padding: 4.06vw 1.3vw 6.67vw 0.8vw; */
+  padding: min(4.06vw, 78px) min(1.3vw, 25px) min(6.67vw, 128px) min(0.8vw, 15px);
 }
 
 .sale__text-watch {

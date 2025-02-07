@@ -1,0 +1,40 @@
+.footer__author {
+}
+
+.footer__author-block {
+  display: grid;
+  /* grid-template-columns: 211px 211px; */
+  grid-template-columns: 1fr 1fr;
+  /* justify-content: space-between; */
+  /* column-gap: 1120px; */
+  column-gap: 300px;
+}
+
+.footer__author-text {
+  color: #fff;
+
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+}
+
+.footer__author-text-block_sub {
+  justify-items: center;
+}
+
+.footer__link-contact:hover,
+.footer__author-text_sub:hover {
+  color: #3670c7;
+}
+
+@media (max-width: 1590px) {
+  .footer__author-block {
+    justify-content: space-between;
+  }
+  .footer__author-text-block_sub {
+    justify-items: end;
+  }
+}

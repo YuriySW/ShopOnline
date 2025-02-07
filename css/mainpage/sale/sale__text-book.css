@@ -1,7 +1,8 @@
 .sale__item-book {
   background-image: url(../../../image/book.jpg);
 
-  padding: 5.05vw 1.82vw 1.04vw 1.04vw;
+  /* padding: 5.05vw 1.82vw 1.04vw 1.04vw; */
+  padding: min(5.05vw, 97px) min(1.82vw, 35px) min(1.04vw, 20px) min(1.04vw, 20px);
 }
 
 .sale__text-book-wrap {
@@ -11,6 +12,7 @@
 .sale__text-book {
   color: #fff;
   font-family: 'Lato';
+
   font-size: 1.56vw;
   font-style: normal;
   font-weight: 400;
@@ -22,7 +24,7 @@
   font-size: 2.08vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 130%; /* 52px */
+  line-height: 130%;
 }
 
 @media (max-width: 1220px) {
