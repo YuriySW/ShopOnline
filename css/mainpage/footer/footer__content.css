@@ -114,7 +114,7 @@
 @media (max-width: 830px) {
   .footer__content {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 259px 207px;
+    grid-template-rows: 1fr 300px 207px;
   }
   .footer__logo {
     position: absolute;
