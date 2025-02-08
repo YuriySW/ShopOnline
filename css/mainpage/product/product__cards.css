@@ -6,6 +6,10 @@
   row-gap: 50px;
 }
 
+.product__wrap {
+  cursor: pointer;
+}
+
 @media (max-width: 1220px) {
   .product__cards {
     grid-template-columns: 1fr 1fr 1fr;

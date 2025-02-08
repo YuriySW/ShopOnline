@@ -38,3 +38,9 @@
     justify-items: end;
   }
 }
+
+@media (max-width: 663px) {
+  .footer__author-block {
+    column-gap: unset;
+  }
+}
