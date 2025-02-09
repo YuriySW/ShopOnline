@@ -80,7 +80,7 @@
     justify-content: space-between;
     column-gap: 20px;
   }
-  .footer__block {
+  .footer__block:not(:last-child) {
     margin-bottom: 50px;
   }
   .contact {
