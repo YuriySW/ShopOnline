@@ -1,0 +1,34 @@
+@import 'global.css';
+@import 'fonts.css';
+@import '../normalize.css';
+
+@import 'header/header.css';
+@import 'header/search-input.css';
+@import 'header/menu.css';
+@import 'header/menu-btn.css';
+
+@import 'sale/sale.css';
+@import 'sale/sale__banner.css';
+@import 'sale/sale__list.css';
+@import 'sale/sale__item.css';
+
+@import 'sale/sale__text-book.css';
+@import 'sale/sale__discount.css';
+@import 'sale/sale__text-watch.css';
+@import 'sale/sale__item-red-sneakers.css';
+@import 'sale/sale__two-sneakers-text-wrap.css';
+@import 'sale/sale__gift-ideas-text.css';
+@import 'sale/sale__text-laptop.css';
+@import 'sale/sale__item-dress.css';
+@import 'sale/sale__spray-text.css';
+@import 'sale/sale__2022-text-wrap.css';
+@import 'sale/sale__item-balls.css';
+@import 'product/product__title.css';
+@import 'product/product__discount.css';
+@import 'product/product__card.css';
+@import 'product/product__cards.css';
+@import 'product/product.css';
+@import 'footer/footer.css';
+@import 'footer/footer__content.css';
+@import 'footer/footer__author.css';
+@import 'footer/navigation.css';
