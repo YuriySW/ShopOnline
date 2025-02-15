@@ -1,0 +1,8 @@
+.main__text {
+   margin: 0 0 33px;
+   font-size: 22px;
+ }
+ 
+ .main__text:last-child {
+  margin: 0;
+ }

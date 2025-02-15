@@ -1,0 +1,27 @@
+.navigation__social {
+  display: flex;
+  gap: 20px;
+}
+
+.navigation__link-ico:hover svg {
+  transform: scale(105%);
+  transition-duration: 0.2s;
+}
+
+.navigation__link-ico:hover svg path {
+  fill: #3670c7;
+  transition-duration: 0.2s;
+}
+
+.navigation__link a:active svg path {
+  fill: #eadeed;
+  transition-duration: 0.2s;
+}
+
+.navigation__link-ico:focus svg path {
+  fill: #3670c7;
+}
+
+.navigation__link-ico:focus svg {
+  outline: 1px solid #eadeed;
+}

@@ -1,0 +1,11 @@
+.footer {
+  background: var(--3, #2d2d2d);
+  padding-top: 80px;
+  padding-bottom: 81px;
+}
+
+@media (max-width: 830px) {
+  .footer {
+    padding-bottom: 30px;
+  }
+}
