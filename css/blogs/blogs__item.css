@@ -24,21 +24,22 @@
 }
 
 @media (max-width: 1277px) {
-  .blogs__item {
+  .blogs__link {
     column-gap: 10px;
   }
 }
 
 @media (max-width: 710px) {
-  .blogs__item {
+  .blogs__link {
     display: grid;
     grid-template-columns: 100px 300px;
+
     justify-content: center;
   }
 }
 
 @media (max-width: 463px) {
-  .blogs__item {
+  .blogs__link {
     grid-template-columns: 100px 1fr;
   }
 }
