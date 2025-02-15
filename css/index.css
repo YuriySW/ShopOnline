@@ -502,7 +502,7 @@ ol {
   display: grid;
   justify-content: space-between;
   grid-template-areas: 'logo menu-btn search  menu';
-
+  /* grid-template-rows: 65px; */
   align-items: center;
 }
 
@@ -738,9 +738,9 @@ input[type='search' i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-s
   transition: 0.3s;
 }
 
-.menu-wrap_blogs {
+/* .menu-wrap_blogs {
   margin-bottom: 60px;
-}
+} */
 
 @media (max-width: 1580px) {
   .menu {
@@ -926,11 +926,70 @@ input[type='search' i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-s
   margin-bottom: 192px;
 }
 
+@media (max-width: 1490px) {
+  .blogs__list {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1277px) {
+  .blogs__list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 710px) {
+  .blogs__list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .blogs__item {
+  /* display: flex;
+  column-gap: 30px;
+  cursor: pointer;
+   */
+}
+
+.blogs__link {
   display: flex;
   column-gap: 30px;
   cursor: pointer;
-  /* max-width: 645px; */
+}
+
+@media (max-width: 1400px) {
+  .blogs__title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1277px) {
+  .blogs__title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1277px) {
+  .blogs__item {
+    column-gap: 10px;
+  }
+}
+
+@media (max-width: 710px) {
+  .blogs__item {
+    display: grid;
+    grid-template-columns: 100px 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 463px) {
+  .blogs__item {
+    grid-template-columns: 100px 1fr;
+  }
 }
 
 .select-pages-wrap {
@@ -1001,6 +1060,11 @@ input[type='search' i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-s
   margin: 0 auto;
 }
 
+.article {
+  padding-top: 80px;
+  padding-bottom: 150px;
+}
+
 .text-page {
   font-family: 'Lato';
   font-style: normal;
@@ -1052,10 +1116,25 @@ input[type='search' i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-s
 
 .blogs__img {
   border-radius: 20px;
-  width: 195px;
-  height: 195px;
+  /* max-width: 195px; */
+  max-height: 195px;
+  display: block;
   object-fit: cover;
   object-position: center;
+}
+
+@media (max-width: 1400px) {
+  .blogs__img {
+    /* width: 100px; */
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 1277px) {
+  .blogs__img {
+    /* width: 100px; */
+    max-height: 100px;
+  }
 }
 
 .body {
@@ -1302,6 +1381,7 @@ input[type='search' i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-s
 }
 
 .link-wrap {
+  padding-top: 60px;
   display: inline-flex;
   gap: 10px;
 }

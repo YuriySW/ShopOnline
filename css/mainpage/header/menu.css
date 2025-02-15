@@ -22,9 +22,9 @@
   transition: 0.3s;
 }
 
-.menu-wrap_blogs {
+/* .menu-wrap_blogs {
   margin-bottom: 60px;
-}
+} */
 
 @media (max-width: 1580px) {
   .menu {

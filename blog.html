@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="header">
-      <!-- <h1 class="title">Новогодняя распродажа</h1> -->
+      <h1 class="title">Новогодняя распродажа</h1>
       <div class="container holder">
         <img src="image/logo.svg" alt="Логотип магазина «Шопонлайн»" class="logo" />
 
@@ -243,13 +243,19 @@
             </button>
           </div>
         </div>
-        <div class="link-wrap">
-          <a href="index.html" class="page-link">Главная</a>
-          <span class="arrow-link">></span>
-          <span class="page-link">Блог</span>
-        </div>
       </div>
     </header>
+    <div class="container">
+      <div class="container">
+        <nav class="link-wrap" aria-label="Навигация по сайту">
+          <a href="index.html" class="page-link" aria-label="Переход на главную страницу"
+            >Главная</a
+          >
+          <span class="arrow-link" aria-hidden="true">></span>
+          <span class="page-link" aria-current="page">Блог</span>
+        </nav>
+      </div>
+    </div>
     <main class="main">
       <div class="blogs blogs_container">
         <ul class="blogs__list">

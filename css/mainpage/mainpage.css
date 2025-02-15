@@ -467,7 +467,7 @@ template {
   display: grid;
   justify-content: space-between;
   grid-template-areas: 'logo menu-btn search  menu';
-
+  /* grid-template-rows: 65px; */
   align-items: center;
 }
 
@@ -703,9 +703,9 @@ input[type='search' i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-s
   transition: 0.3s;
 }
 
-.menu-wrap_blogs {
+/* .menu-wrap_blogs {
   margin-bottom: 60px;
-}
+} */
 
 @media (max-width: 1580px) {
   .menu {
