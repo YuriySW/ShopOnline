@@ -869,7 +869,7 @@ input[type='search' i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-s
 
 @media (max-width: 1220px) {
   .banner-wrap {
-    background-image: url(../../../image/banner-1024.jpg);
+    background-image: url(../../image/banner-1024.jpg);
     padding-top: 8.11vw;
     padding-bottom: 3.52vw;
     border-radius: 16px;
@@ -899,7 +899,7 @@ input[type='search' i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-s
 
 @media (max-width: 860px) {
   .banner-wrap {
-    background-image: url(../../../image/banner-768.jpg);
+    background-image: url(../../image/banner-768.jpg);
     padding-top: 8.63vw;
     padding-bottom: 3.91vw;
   }
@@ -927,7 +927,7 @@ input[type='search' i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-s
 
 @media (max-width: 730px) {
   .banner-wrap {
-    background-image: url(../../../image/banner-320.jpg);
+    background-image: url(../../image/banner-320.jpg);
     padding-top: 15.63vw;
     padding-bottom: 9.38vw;
     border-radius: 8px;
@@ -1616,7 +1616,7 @@ input[type='search' i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-s
   }
 
   .sale__item-gift-ideas {
-    background-image: url(../../../image/gift-ideas-320.jpg);
+    background-image: url(../../image/gift-ideas-320.jpg);
     padding: 27.5vw 27.81vw 5vw 3.13vw;
   }
 }
@@ -1788,7 +1788,7 @@ input[type='search' i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-s
     font-size: 2.6vw;
   }
   .sale__item-2022 {
-    background-image: url(../../../image/2022-768.jpg);
+    background-image: url(../../image/2022-768.jpg);
     padding: 31.64vw 42.58vw 3.39vw 3.39vw;
   }
 }
