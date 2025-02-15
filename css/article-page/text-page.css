@@ -1,0 +1,27 @@
+.text-page {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+  color: #2d2d2d;
+  margin-bottom: 20px;
+}
+
+.text-page-wrap {
+  margin-bottom: 130px;
+}
+
+.autor-text {
+  color: rgb(0, 0, 0);
+  font-family: Lato;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+.text-wrap {
+  display: flex;
+  justify-content: space-between;
+}

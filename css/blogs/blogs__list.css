@@ -1,0 +1,8 @@
+.blogs__list {
+  display: grid;
+  grid-template-columns: repeat(2, 645px);
+  justify-content: space-around;
+  /* column-gap: 143px; */
+  row-gap: 50px;
+  margin-bottom: 192px;
+}

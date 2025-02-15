@@ -1,0 +1,50 @@
+.select-pages-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.select-pages {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 254px;
+}
+
+.pages-num {
+  color: rgb(45, 45, 45);
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+  padding: 7px 13px 8px;
+  border: 2px solid rgb(45, 45, 45);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pages-num:not(:last-child) {
+  margin-right: 6px;
+}
+
+.pages-num:first-child {
+  color: rgb(54, 112, 199);
+
+  border: 2px solid rgb(54, 112, 199);
+  border-radius: 4px;
+}
+
+.click-right {
+  justify-self: end;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1830px;
+  padding: 0 30px;
+  margin: 0 auto;
+}

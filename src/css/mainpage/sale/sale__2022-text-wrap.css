@@ -1,0 +1,67 @@
+.sale__item-2022 {
+  background-image: url(../../image/2022.jpg);
+
+  padding: 2.6vw;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sale__2022-text-wrap {
+  border-radius: 20px;
+  background: #fff;
+  padding: 1.67vw 2.14vw 1.67vw 2.19vw;
+}
+
+.sale__2022-text {
+  color: #f91155;
+  font-family: 'Lato';
+  font-size: 2.08vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 48px */
+  text-transform: uppercase;
+}
+
+@media (max-width: 1220px) {
+  .sale__2022-text {
+    font-size: 2.93vw;
+  }
+  .sale__2022-text-wrap {
+    padding: 24px 46px 23px 47px;
+
+    border-radius: 16px;
+  }
+  .sale__item-2022 {
+    padding: 28.91vw 38.77vw 3.81vw 2.93vw;
+  }
+}
+
+@media (max-width: 770px) {
+  .sale__2022-text-wrap {
+    border-radius: 12px;
+    padding: 2.86vw 4.3vw 2.86vw 4.43vw;
+    text-align: center;
+  }
+  .sale__2022-text {
+    font-size: 2.6vw;
+  }
+  .sale__item-2022 {
+    background-image: url(../../../image/2022-768.jpg);
+    padding: 31.64vw 42.58vw 3.39vw 3.39vw;
+  }
+}
+
+@media (max-width: 730px) {
+  .sale__2022-text-wrap {
+    border-radius: 8px;
+    padding: 2.19vw 12.81vw 2.81vw 12.81vw;
+    text-align: center;
+  }
+  .sale__2022-text {
+    font-size: 3.75vw;
+  }
+  .sale__item-2022 {
+    padding: 25.94vw 4.69vw 3.13vw 4.69vw;
+    justify-content: center;
+  }
+}

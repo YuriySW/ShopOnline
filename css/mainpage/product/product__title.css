@@ -1,0 +1,17 @@
+.product__title {
+  color: var(--3, #2d2d2d);
+  font-family: 'Lato';
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 65px */
+  margin-bottom: 50px;
+}
+
+@media (max-width: 730px) {
+  .product__title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}

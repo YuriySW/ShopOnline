@@ -1,0 +1,10 @@
+.sale__item-red-sneaker {
+  background-image: url(../../image/red-sneaker.jpg);
+}
+
+@media (max-width: 730px) {
+  .sale__item-red-sneaker {
+    background-image: url(../../image/red-sneaker-320.jpg);
+    min-height: 39.88vw;
+  }
+}

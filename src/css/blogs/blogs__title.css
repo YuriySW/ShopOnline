@@ -1,0 +1,20 @@
+/* .blogs__title {
+  color: rgb(45, 45, 45);
+  font-family: 'Lato';
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+  padding-top: 10px;
+} */
+.blogs__title {
+  color: rgb(45, 45, 45);
+  font-family: 'Lato';
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 130%;
+  max-width: 420px;
+  text-align: left;
+  padding-top: 10px;
+}

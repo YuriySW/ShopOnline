@@ -1,0 +1,7 @@
+.blogs__img {
+  border-radius: 20px;
+  width: 195px;
+  height: 195px;
+  object-fit: cover;
+  object-position: center;
+}
