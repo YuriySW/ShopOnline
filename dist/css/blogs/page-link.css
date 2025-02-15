@@ -10,6 +10,7 @@
 }
 
 .link-wrap {
+  padding-top: 60px;
   display: inline-flex;
   gap: 10px;
 }
