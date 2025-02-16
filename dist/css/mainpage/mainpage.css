@@ -2105,6 +2105,7 @@ input[type='search' i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-s
     grid-template-rows: 1fr 300px 207px;
   }
   .footer__logo {
+    padding: 0;
     position: absolute;
     top: 10px;
     right: 10px;
