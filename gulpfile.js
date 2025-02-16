@@ -1,70 +1,70 @@
-import gulp from 'gulp';
-import browserSync from 'browser-sync';
-import gulpCssimport from 'gulp-cssimport';
-import {deleteAsync} from 'del';
-// задачи
+// import gulp from 'gulp';
+// import browserSync from 'browser-sync';
+// import gulpCssimport from 'gulp-cssimport';
+// import {deleteAsync} from 'del';
+// // задачи
 
-export const favicon = () =>
-  gulp
-    .src('src/favicon_io/**/*')
-    .pipe(gulp.dest('dist/favicon_io'))
-    .pipe(browserSync.stream({once: true}));
+// export const favicon = () =>
+//   gulp
+//     .src('src/favicon_io/**/*')
+//     .pipe(gulp.dest('dist/favicon_io'))
+//     .pipe(browserSync.stream({once: true}));
 
-export const html = () => gulp.src('src/*.html').pipe(gulp.dest('dist')).pipe(browserSync.stream());
+// export const html = () => gulp.src('src/*.html').pipe(gulp.dest('dist')).pipe(browserSync.stream());
 
-export const css = () =>
-  gulp
-    .src('src/css/**/*.css')
-    .pipe(
-      gulpCssimport({
-        extensions: ['css'],
-      })
-    )
-    .pipe(gulp.dest('dist/css'))
-    .pipe(browserSync.stream());
+// export const css = () =>
+//   gulp
+//     .src('src/css/**/*.css')
+//     .pipe(
+//       gulpCssimport({
+//         extensions: ['css'],
+//       })
+//     )
+//     .pipe(gulp.dest('dist/css'))
+//     .pipe(browserSync.stream());
 
-export const js = () =>
-  gulp.src('src/script/**/*.js').pipe(gulp.dest('dist/script')).pipe(browserSync.stream());
+// export const js = () =>
+//   gulp.src('src/script/**/*.js').pipe(gulp.dest('dist/script')).pipe(browserSync.stream());
 
-export const copy = () =>
-  gulp
-    .src(['src/fonts/**/*', 'src/image/**/*'], {
-      base: 'src',
-    })
-    .pipe(gulp.dest('dist'))
-    .pipe(browserSync.stream({once: true}));
+// export const copy = () =>
+//   gulp
+//     .src(['src/fonts/**/*', 'src/image/**/*'], {
+//       base: 'src',
+//     })
+//     .pipe(gulp.dest('dist'))
+//     .pipe(browserSync.stream({once: true}));
 
-export const server = () => {
-  browserSync.init({
-    ui: false,
-    notify: false,
-    //  tunnel: true,
-    server: {
-      baseDir: 'dist',
-    },
-  });
+// export const server = () => {
+//   browserSync.init({
+//     ui: false,
+//     notify: false,
+//     //  tunnel: true,
+//     server: {
+//       baseDir: 'dist',
+//     },
+//   });
 
-  gulp.watch('./src/**/*.html', html);
-  gulp.watch('./src/css/**/*.css', css);
-  gulp.watch('./src/script/**/*.js', js);
-  gulp.watch(['./src/image/**/*', './src/fonts/**/*'], copy);
-  gulp.watch('./src/favicon_io/**/*', favicon);
-};
+//   gulp.watch('./src/**/*.html', html);
+//   gulp.watch('./src/css/**/*.css', css);
+//   gulp.watch('./src/script/**/*.js', js);
+//   gulp.watch(['./src/image/**/*', './src/fonts/**/*'], copy);
+//   gulp.watch('./src/favicon_io/**/*', favicon);
+// };
 
-export const clear = (done) => {
-  return deleteAsync(['dist/**/*'], {
-    force: true,
-  }).then(() => done());
-};
+// export const clear = (done) => {
+//   return deleteAsync(['dist/**/*'], {
+//     force: true,
+//   }).then(() => done());
+// };
 
-// запуск
+// // запуск
 
-export const base = gulp.parallel(html, css, js, copy, favicon);
+// export const base = gulp.parallel(html, css, js, copy, favicon);
 
-export const build = gulp.series(clear, base);
+// export const build = gulp.series(clear, base);
 
-export default gulp.series(base, server);
-
+// export default gulp.series(base, server);
+////////////////////////////////////////////////////////////
 // import gulp from 'gulp';
 // import browserSync from 'browser-sync';
 // import gulpCssimport from 'gulp-cssimport';
@@ -141,3 +141,71 @@ export default gulp.series(base, server);
 // export const build = gulp.series(clear, base);
 
 // export default gulp.series(base, server);
+
+///////////////////////////
+import gulp from 'gulp';
+import browserSync from 'browser-sync';
+import gulpCssimport from 'gulp-cssimport';
+import {deleteAsync} from 'del';
+// задачи
+
+export const favicon = () =>
+  gulp
+    .src('src/favicon_io/**/*')
+    .pipe(gulp.dest('docs/favicon_io'))
+    .pipe(browserSync.stream({once: true}));
+
+export const html = () => gulp.src('src/*.html').pipe(gulp.dest('docs')).pipe(browserSync.stream());
+
+export const css = () =>
+  gulp
+    .src('src/css/**/*.css')
+    .pipe(
+      gulpCssimport({
+        extensions: ['css'],
+      })
+    )
+    .pipe(gulp.dest('docs/css'))
+    .pipe(browserSync.stream());
+
+export const js = () =>
+  gulp.src('src/script/**/*.js').pipe(gulp.dest('docs/script')).pipe(browserSync.stream());
+
+export const copy = () =>
+  gulp
+    .src(['src/fonts/**/*', 'src/image/**/*'], {
+      base: 'src',
+    })
+    .pipe(gulp.dest('docs'))
+    .pipe(browserSync.stream({once: true}));
+
+export const server = () => {
+  browserSync.init({
+    ui: false,
+    notify: false,
+    //  tunnel: true,
+    server: {
+      baseDir: 'docs',
+    },
+  });
+
+  gulp.watch('./src/**/*.html', html);
+  gulp.watch('./src/css/**/*.css', css);
+  gulp.watch('./src/script/**/*.js', js);
+  gulp.watch(['./src/image/**/*', './src/fonts/**/*'], copy);
+  gulp.watch('./src/favicon_io/**/*', favicon);
+};
+
+export const clear = (done) => {
+  return deleteAsync(['docs/**/*'], {
+    force: true,
+  }).then(() => done());
+};
+
+// запуск
+
+export const base = gulp.parallel(html, css, js, copy, favicon);
+
+export const build = gulp.series(clear, base);
+
+export default gulp.series(base, server);
