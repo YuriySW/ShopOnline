@@ -151,8 +151,8 @@ import {deleteAsync} from 'del';
 
 export const favicon = () =>
   gulp
-    .src('src/favicon_io/**/*')
-    .pipe(gulp.dest('docs/favicon_io'))
+    .src('src/favicon/**/*')
+    .pipe(gulp.dest('docs/favicon'))
     .pipe(browserSync.stream({once: true}));
 
 export const html = () => gulp.src('src/*.html').pipe(gulp.dest('docs')).pipe(browserSync.stream());
@@ -193,7 +193,7 @@ export const server = () => {
   gulp.watch('./src/css/**/*.css', css);
   gulp.watch('./src/script/**/*.js', js);
   gulp.watch(['./src/image/**/*', './src/fonts/**/*'], copy);
-  gulp.watch('./src/favicon_io/**/*', favicon);
+  gulp.watch('./src/favicon/**/*', favicon);
 };
 
 export const clear = (done) => {
