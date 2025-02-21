@@ -10,7 +10,6 @@
   display: grid;
   justify-content: space-between;
   grid-template-areas: 'logo menu-btn search  menu';
-  /* grid-template-rows: 65px; */
   align-items: center;
 }
 

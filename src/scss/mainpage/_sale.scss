@@ -1,0 +1,761 @@
+@use '../utils/var' as *;
+@use '../base/fonts' as *;
+
+.sale {
+  padding-top: 90px;
+  padding-bottom: 100px;
+
+  @media (max-width: 1620px) {
+    padding-top: 60px;
+  }
+  @media (max-width: 860px) {
+    padding-top: 50px;
+  }
+  @media (max-width: 730px) {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+}
+
+.banner-wrap {
+  background-image: url(../../image/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 25vw;
+  border-radius: 20px;
+  padding-top: 7.55vw;
+  padding-bottom: 2.08vw;
+  max-width: 1770px;
+
+  @media (max-width: 1220px) {
+    background-image: url(../../image/banner-1024.jpg);
+    padding-top: 8.11vw;
+    padding-bottom: 3.52vw;
+    border-radius: 16px;
+  }
+
+  @media (max-width: 860px) {
+    background-image: url(../../image/banner-768.jpg);
+    padding-top: 8.63vw;
+    padding-bottom: 3.91vw;
+  }
+
+  @media (max-width: 730px) {
+    background-image: url(../../image/banner-320.jpg);
+    padding-top: 15.63vw;
+    padding-bottom: 9.38vw;
+    border-radius: 8px;
+  }
+}
+
+.banner-text {
+  padding-left: 5.83vw;
+  margin-bottom: 5.21vw;
+  color: $color-text;
+  font-family: $font-lato;
+  font-size: 3.65vw;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: 130%; /* 91px */
+  @media (max-width: 1220px) {
+    max-width: 39.06vw;
+    font-size: 3.91vw;
+    margin-bottom: 1.17vw;
+    padding-left: 8.81vw;
+  }
+  @media (max-width: 860px) {
+    font-size: 3.91vw;
+    max-width: none;
+    margin-bottom: 11.88vw;
+    padding-left: 10.42vw;
+  }
+
+  @media (max-width: 730px) {
+    font-size: 6.88vw;
+    padding-left: 9.38vw;
+    margin-bottom: 59.06vw;
+  }
+}
+.end-promotion {
+  text-align: center;
+  color: #fff;
+  font-family: $font-lato;
+  font-size: 0.83vw;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: 130%; /* 20.8px */
+  margin-bottom: 5px;
+  @media (max-width: 1220px) {
+    font-size: 1.56vw;
+    margin-bottom: 1.21vw;
+  }
+
+  @media (max-width: 860px) {
+    margin-bottom: 1.3vw;
+  }
+  @media (max-width: 730px) {
+    font-size: 2.5vw;
+  }
+}
+
+.timer {
+  display: block;
+  text-align: center;
+  color: $color-text;
+  font-family: $font-lato;
+  font-size: 1.67vw;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: 130%; /* 41.6px */
+  word-spacing: 30px;
+  @media (max-width: 1220px) {
+    word-spacing: 20px;
+    font-size: 1.95vw;
+  }
+  @media (max-width: 860px) {
+    word-spacing: 10px;
+    font-size: 2.08vw;
+  }
+
+  @media (max-width: 730px) {
+    word-spacing: 8px;
+    font-size: 3.75vw;
+  }
+}
+.timer-num {
+  color: $color-text;
+  font-family: $font-lato;
+  font-size: 3.13vw;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: 130%; /* 78px */
+  margin-right: 6px;
+  @media (max-width: 1220px) {
+    margin-right: 5px;
+    font-size: 3.91vw;
+  }
+  @media (max-width: 860px) {
+    margin-right: 3px;
+    font-size: 3.91vw;
+  }
+
+  @media (max-width: 730px) {
+    margin-right: 0;
+    font-size: 6.25vw;
+  }
+}
+
+.sale__list {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 245px));
+  grid-template-rows: repeat(4, minmax(0, 245px));
+  gap: 60px;
+  padding-top: 60px;
+  @media (max-width: 1620px) {
+    gap: 40px;
+    padding-top: 40px;
+  }
+
+  @media (max-width: 1320px) {
+    gap: 30px;
+    padding-top: 30px;
+  }
+
+  @media (max-width: 1290px) {
+    gap: 24px;
+    padding-top: 20px;
+  }
+  @media (max-width: 1220px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 920px) {
+    grid-template-rows: repeat(4, 20.33vw);
+  }
+
+  @media (max-width: 860px) {
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  @media (max-width: 770px) {
+    grid-template-columns: repeat(2, 1fr) 220px 1fr;
+    grid-template-rows: repeat(2, 140px) repeat(4, 60px) 337px;
+    gap: 20px;
+    padding-top: 40px;
+  }
+
+  @media (max-width: 730px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+
+    padding-top: 20px;
+  }
+}
+.sale__item {
+  position: relative;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  &:hover {
+    transform: scale(1.06);
+    transition: 0.5s;
+  }
+
+  @media (max-width: 1220px) {
+    border-radius: 16px;
+  }
+  @media (max-width: 992px) {
+    &:hover {
+      transform: none;
+      transition: none;
+    }
+  }
+
+  @media (max-width: 770px) {
+    border-radius: 12px;
+  }
+
+  @media (max-width: 730px) {
+    border-radius: 8px;
+  }
+}
+.sale__item-book {
+  background-image: url(../../image/book.jpg);
+  /* padding: 5.05vw 1.82vw 1.04vw 1.04vw; */
+  padding: min(5.05vw, 97px) min(1.82vw, 35px) min(1.04vw, 20px) min(1.04vw, 20px);
+  grid-row: 1;
+
+  @media (max-width: 1220px) {
+    padding: 12.01vw 1.76vw 1.95vw 0.88vw;
+    grid-row: 1;
+  }
+
+  @media (max-width: 770px) {
+    padding: 6.25vw 0.52vw 1.95vw 1.3vw;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  @media (max-width: 730px) {
+    background-image: url(../../image/book-320.jpg);
+    min-height: 40.63vw;
+    padding: 23.75vw 17.19vw 3.13vw 3.13vw;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+.sale__text-book-wrap {
+  max-width: 9.9vw;
+}
+
+.sale__text-book {
+  color: $color-text;
+  font-family: $font-lato;
+
+  font-size: 1.56vw;
+  font-style: normal;
+  font-weight: $font-regular;
+  line-height: 130%;
+  @media (max-width: 1220px) {
+    font-size: 2.34vw;
+    max-width: 18.55vw;
+  }
+  @media (max-width: 770px) {
+    font-size: 2.6vw;
+  }
+  @media (max-width: 730px) {
+    font-size: 3.75vw;
+  }
+  @media (max-width: 346px) {
+    max-width: 62px;
+  }
+}
+.sale__text-book-word {
+  color: $color-text;
+  font-family: $font-lato;
+  font-size: 2.08vw;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: 130%;
+  @media (max-width: 1220px) {
+    font-size: 2.93vw;
+  }
+
+  @media (max-width: 770px) {
+    font-size: 3.39vw;
+  }
+
+  @media (max-width: 730px) {
+    font-size: 5vw;
+  }
+}
+
+.sale__item-watch {
+  background-image: url(../../image/watch.jpg);
+  padding: min(4.06vw, 78px) min(1.3vw, 25px) min(6.67vw, 128px) min(0.8vw, 15px);
+  grid-row: 1/2;
+
+  @media (max-width: 1650px) {
+    padding-top: 2vw;
+  }
+
+  @media (max-width: 1220px) {
+    padding-top: 5.66vw;
+    padding-left: 1.39vw;
+    grid-row: 1/2;
+  }
+
+  @media (max-width: 770px) {
+    padding: 2.15vw 3.26vw 13.54vw 0.65vw;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  @media (max-width: 730px) {
+    background-image: url(../../image/watch-320.jpg);
+    padding: 8.75vw 11.56vw 26.88vw 3.13vw;
+
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+.sale__text-watch {
+  color: $color-text;
+  font-family: $font-lato;
+  font-size: 1.56vw;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: 130%; /* 39px */
+  @media (max-width: 1220px) {
+    font-size: 2.34vw;
+  }
+  @media (max-width: 770px) {
+    font-size: 2.08vw;
+  }
+  @media (max-width: 730px) {
+    font-size: 4.19vw;
+  }
+
+  @media (max-width: 430px) {
+    font-size: 3.75vw;
+  }
+}
+
+.sale__item-red-sneaker {
+  background-image: url(../../image/red-sneaker.jpg);
+  grid-column: 1/3;
+  @media (max-width: 1220px) {
+    grid-column: 1/3;
+  }
+
+  @media (max-width: 770px) {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  @media (max-width: 730px) {
+    background-image: url(../../image/red-sneaker-320.jpg);
+    min-height: 39.88vw;
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+}
+
+.sale__item-two-sneakers {
+  background-image: url(../../image/two-sneakers.jpg);
+  padding: 1.04vw;
+  display: flex;
+  align-items: flex-end;
+  grid-column: 3/5;
+  grid-row: 1/3;
+  @media (max-width: 1220px) {
+    padding: 2.15vw;
+    min-height: 44.73vw;
+    grid-column: 3/5;
+    grid-row: 1/3;
+  }
+
+  @media (max-width: 770px) {
+    background-image: url(../../image/two-sneakers-768.jpg);
+    padding: 1.3vw;
+    grid-column: 3/5;
+    grid-row: 1/4;
+  }
+  @media (max-width: 730px) {
+    background-image: url(../../image/two-sneakers-320.jpg);
+    padding: 3.13vw;
+    min-height: 87.5vw;
+    justify-content: center;
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+}
+
+.sale__two-sneakers-text-wrap {
+  background-color: #38c0eb;
+  border-radius: 20px;
+  padding: 1.49vw 1.25vw 1.75vw 1.2vw;
+
+  @media (max-width: 1220px) {
+    padding: 2.83vw 2.44vw 2.83vw 2.44vw;
+  }
+  @media (max-width: 770px) {
+    padding: 2.08vw 3.65vw 2.08vw 3.65vw;
+    border-radius: 12px;
+  }
+
+  @media (max-width: 730px) {
+    border-radius: 8px;
+    padding: 2.81vw 7.81vw 2.81vw 7.81vw;
+  }
+}
+
+.sale__two-sneakers-text {
+  color: $color-text;
+  font-family: $font-lato;
+  font-size: 2.08vw;
+  font-style: normal;
+  font-weight: $font-regular;
+  line-height: 120%; /* 48px */
+  max-width: 24vw;
+
+  @media (max-width: 1220px) {
+    font-size: 2.93vw;
+    max-width: 33.15vw;
+  }
+  @media (max-width: 770px) {
+    max-width: none;
+    font-size: 2.08vw;
+  }
+
+  @media (max-width: 730px) {
+    font-size: 3.75vw;
+    text-align: center;
+  }
+}
+.sale__two-sneakers-text-sub {
+  color: $color-text;
+  font-family: $font-lato;
+  font-size: 2.92vw;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: 120%;
+
+  @media (max-width: 1220px) {
+    font-size: 3.91vw;
+  }
+
+  @media (max-width: 770px) {
+    font-size: 3.39vw;
+  }
+
+  @media (max-width: 730px) {
+    font-size: 5vw;
+  }
+}
+
+.sale__item-gift-ideas {
+  background-image: url(../../image/gift-ideas.jpg);
+  padding: 5.42vw 9.38vw 1.56vw 1.56vw;
+  grid-column: 5/7;
+  grid-row: 1/2;
+  @media (max-width: 1220px) {
+    padding: 10.74vw 18.26vw 1.95vw 1.95vw;
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+
+  @media (max-width: 770px) {
+    grid-column: 1/3;
+    grid-row: 3/5;
+  }
+  @media (max-width: 730px) {
+    background-image: url(../../image/gift-ideas-320.jpg);
+    padding: 27.5vw 27.81vw 5vw 3.13vw;
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+}
+.sale__gift-ideas-text {
+  color: $color-text;
+  font-family: $font-lato;
+  font-size: 2.08vw;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: 130%; /* 52px */
+  @media (max-width: 1220px) {
+    font-size: 2.93vw;
+  }
+  @media (max-width: 770px) {
+    font-size: 2.08vw;
+    line-height: 120%;
+  }
+  @media (max-width: 730px) {
+    font-size: 3.75vw;
+    display: inline;
+  }
+}
+
+.sale__item-laptop {
+  background-image: url(../../image/laptop.jpg);
+  padding: 8.33vw 7.66vw 1.56vw 1.56vw;
+  grid-column: 5/7;
+  grid-row: 2/3;
+  @media (max-width: 1220px) {
+    padding: 15.43vw 15.43vw 1.95vw 1.95vw;
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+
+  @media (max-width: 770px) {
+    padding: 13.15vw 17.06vw 2.6vw 2.6vw;
+    grid-column: 1/3;
+    grid-row: 5/7;
+  }
+  @media (max-width: 730px) {
+    background-image: url(../../image/laptop-320.jpg);
+    padding: 31.51vw 49.38vw 5vw 3.13vw;
+    grid-column: 1/3;
+    grid-row: 5/6;
+  }
+}
+
+.sale__text-laptop {
+  color: $color-text;
+  font-family: $font-lato;
+  font-size: 2.08vw;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: 120%; /* 14.4px */
+  @media (max-width: 1220px) {
+    font-size: 2.93vw;
+  }
+  @media (max-width: 770px) {
+    font-size: 2.08vw;
+  }
+  @media (max-width: 730px) {
+    font-size: 3.75vw;
+  }
+}
+
+.sale__item-2022 {
+  background-image: url(../../image/2022.jpg);
+  padding: 2.6vw;
+  display: flex;
+  align-items: flex-end;
+
+  grid-column: 1/5;
+  grid-row: 3/5;
+
+  @media (max-width: 1220px) {
+    padding: 28.91vw 38.77vw 3.81vw 2.93vw;
+    grid-column: 1/5;
+    grid-row: 5/7;
+  }
+
+  @media (max-width: 770px) {
+    background-image: url(../../image/2022-768.jpg);
+    padding: 31.64vw 42.58vw 3.39vw 3.39vw;
+    grid-column: 1/5;
+    grid-row: 7/8;
+  }
+  @media (max-width: 730px) {
+    padding: 25.94vw 4.69vw 3.13vw 4.69vw;
+    justify-content: center;
+    grid-column: 1/3;
+    grid-row: 8/9;
+  }
+}
+
+.sale__2022-text-wrap {
+  border-radius: 20px;
+  background: $color-text;
+  padding: 1.67vw 2.14vw 1.67vw 2.19vw;
+  @media (max-width: 1220px) {
+    padding: 24px 46px 23px 47px;
+    border-radius: 16px;
+  }
+  @media (max-width: 770px) {
+    border-radius: 12px;
+    padding: 2.86vw 4.3vw 2.86vw 4.43vw;
+    text-align: center;
+  }
+  @media (max-width: 730px) {
+    border-radius: 8px;
+    padding: 2.19vw 12.81vw 2.81vw 12.81vw;
+    text-align: center;
+  }
+}
+
+.sale__2022-text {
+  color: $color-secondary;
+  font-family: $font-lato;
+  font-size: 2.08vw;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: 120%; /* 48px */
+  text-transform: uppercase;
+  @media (max-width: 1220px) {
+    font-size: 2.93vw;
+  }
+  @media (max-width: 770px) {
+    font-size: 2.6vw;
+  }
+  @media (max-width: 730px) {
+    font-size: 3.75vw;
+  }
+}
+
+.sale__item-dress {
+  background-image: url(../../image/dress.jpg);
+  grid-column: 5/6;
+  grid-row: 3/5;
+  @media (max-width: 1220px) {
+    grid-column: 3/4;
+    grid-row: 3/5;
+  }
+
+  @media (max-width: 770px) {
+    background-image: url(../../image/dress-768.jpg);
+    grid-column: 3/4;
+    grid-row: 4/7;
+  }
+  @media (max-width: 730px) {
+    background-image: url(../../image/dress-320.jpg);
+    min-height: 87.5vw;
+    grid-column: 1/2;
+    grid-row: 6/8;
+  }
+}
+
+.sale__item-spray {
+  background-image: url(../../image/spray.jpg);
+  padding: 7.66vw 2.5vw 1.04vw 1.04vw;
+
+  grid-column: 6/7;
+  grid-row: 3/4;
+  @media (max-width: 1220px) {
+    padding: 17.29vw 1.86vw 1.95vw 1.95vw;
+    grid-column: 4/5;
+    grid-row: 3/4;
+  }
+
+  @media (max-width: 920px) {
+    padding-top: 14.29vw;
+  }
+
+  @media (max-width: 770px) {
+    background-image: url(../../image/spray-768.jpg);
+    padding: 11.46vw 3.39vw 1.82vw 1.82vw;
+    grid-column: 4/5;
+    grid-row: 4/6;
+  }
+  @media (max-width: 730px) {
+    padding: 33.13vw 3.13vw 3.13vw 2.81vw;
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+}
+
+.sale__spray-text {
+  color: $color-text;
+  font-family: $font-lato;
+  font-size: 1.56vw;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: 130%; /* 39px */
+  @media (max-width: 1220px) {
+    display: inline;
+    font-size: 1.95vw;
+  }
+  @media (max-width: 770px) {
+    display: block;
+    font-size: 2.08vw;
+  }
+  @media (max-width: 730px) {
+    font-size: 3.75vw;
+    display: inline;
+  }
+}
+
+.sale__item-balls {
+  background-image: url(../../image/balls.jpg);
+  grid-column: 6/7;
+  grid-row: 4/5;
+  @media (max-width: 1220px) {
+    grid-column: 4/5;
+    grid-row: 4/5;
+  }
+
+  @media (max-width: 770px) {
+    background-image: url(../../image/balls-768.jpg);
+    grid-column: 4/5;
+    grid-row: 6/7;
+  }
+  @media (max-width: 730px) {
+    background-image: url(../../image/balls-320.jpg);
+    min-height: 40.63vw;
+    grid-column: 2/3;
+    grid-row: 7/8;
+  }
+}
+
+.sale__discount {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  background-color: $color-yellow;
+  border-radius: 50%;
+  padding: 24px 8px 25px 9px;
+  @media (max-width: 935px) {
+    width: 78px;
+    height: 78px;
+  }
+  @media (max-width: 770px) {
+    width: 50px;
+    height: 50px;
+    padding: 15px 6px 14px 6px;
+  }
+}
+
+.sale__discount_rb {
+  right: 20px;
+  bottom: 20px;
+  @media (max-width: 1420px) {
+    right: 10px;
+    bottom: 10px;
+  }
+  @media (max-width: 770px) {
+    right: 5px;
+    bottom: 5px;
+  }
+}
+
+.sale__discount_lt {
+  left: 20px;
+  top: 20px;
+  @media (max-width: 1420px) {
+    left: 10px;
+    top: 10px;
+  }
+  @media (max-width: 770px) {
+    left: 5px;
+    top: 5px;
+  }
+}
+
+.sale__discount-text {
+  color: $color-text;
+  font-family: $font-lato;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: $font-bold;
+  line-height: 130%; /* 39px */
+  text-align: center;
+  @media (max-width: 935px) {
+    font-size: 20px;
+    text-align: center;
+  }
+  @media (max-width: 770px) {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,226 @@
+@use '../utils/var' as *;
+@use '../base/fonts' as *;
+
+.footer {
+  background: $color-main;
+  padding-top: 80px;
+  padding-bottom: 81px;
+  @media (max-width: 830px) {
+    padding-bottom: 30px;
+  }
+
+  .footer__content {
+    display: grid;
+    grid-template-columns: 190px minmax(300px, 480px) minmax(150px, 307px) minmax(150px, 307px);
+
+    column-gap: 118px;
+    margin-bottom: 50px;
+    position: relative;
+
+    @media (max-width: 1545px) {
+      grid-template-columns: 190px minmax(300px, 480px) minmax(150px, 307px) minmax(150px, 307px);
+
+      column-gap: 20px;
+    }
+
+    @media (max-width: 1270px) {
+      grid-template-columns: 190px minmax(300px, 480px) minmax(150px, 307px);
+      justify-content: space-between;
+      column-gap: 20px;
+    }
+
+    @media (max-width: 1068px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 830px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 300px 207px;
+    }
+  }
+
+  .footer__logo {
+    padding-top: 5px;
+    @media (max-width: 830px) {
+      padding: 0;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+  .footer__block {
+    &.catalog {
+      @media (max-width: 1068px) {
+        grid-column: 2/5;
+      }
+      @media (max-width: 830px) {
+        grid-column: unset;
+      }
+    }
+
+    &.buyer {
+      @media (max-width: 1068px) {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      @media (max-width: 830px) {
+        grid-column: unset;
+        grid-row: unset;
+      }
+    }
+
+    &.contact {
+      @media (max-width: 1270px) {
+        grid-column: 3;
+      }
+      @media (max-width: 1068px) {
+        grid-row: 2;
+      }
+      @media (max-width: 830px) {
+        grid-column: unset;
+        grid-row: unset;
+      }
+    }
+
+    .footer__title {
+      color: $color-text;
+
+      font-family: $font-lato;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: $font-bold;
+      line-height: 130%;
+      margin-bottom: 40px;
+    }
+
+    .footer__list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(10px, 253px));
+
+      row-gap: 15px;
+      column-gap: 30px;
+
+      .footer__item {
+        min-width: 253px;
+        .footer__link {
+          color: $color-text;
+          display: block;
+          font-family: $font-lato;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: $font-regular;
+          line-height: 150%; /* 33px */
+          &:hover {
+            color: $color-primary;
+          }
+        }
+
+        .footer__link-contact {
+          color: $color-text;
+          font-family: $font-lato;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: $font-bold;
+          line-height: 130%; /* 20.8px */
+        }
+      }
+    }
+
+    .footer__list_catalog {
+      @media (max-width: 830px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer__list_buyer {
+      grid-template-columns: minmax(100px, 225px);
+    }
+    .address {
+      margin-bottom: 36px;
+    }
+  }
+
+  .footer__block:not(:last-child) {
+    @media (max-width: 1270px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .navigation {
+    &__social {
+      display: flex;
+      gap: 20px;
+    }
+
+    &__link-ico {
+      &:hover {
+        svg {
+          transform: scale(105%);
+          transition-duration: 0.2s;
+
+          path {
+            fill: $color-primary;
+            transition-duration: 0.2s;
+          }
+        }
+      }
+
+      &:focus {
+        svg {
+          outline: 1px solid #eadeed;
+
+          path {
+            fill: $color-primary;
+          }
+        }
+      }
+    }
+
+    &__link {
+      a:active {
+        svg path {
+          fill: #eadeed;
+          transition-duration: 0.2s;
+        }
+      }
+    }
+  }
+
+  .footer__author-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 300px;
+    @media (max-width: 1590px) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: 663px) {
+      column-gap: unset;
+    }
+
+    .footer__author-text {
+      color: $color-text;
+
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: $font-regular;
+      line-height: 16px;
+      text-align: left;
+    }
+
+    .footer__author-text-block_sub {
+      justify-items: center;
+      @media (max-width: 1590px) {
+        justify-items: end;
+      }
+    }
+    .footer__link-contact:hover,
+    .footer__author-text_sub:hover {
+      color: #3670c7;
+    }
+  }
+}

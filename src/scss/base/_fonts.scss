@@ -1,0 +1,8 @@
+@use '../utils/mixins';
+
+$font-lato: 'Lato';
+$font-regular: 400;
+$font-bold: 700;
+
+@include mixins.font($font-lato, $font-regular, 'regular');
+@include mixins.font($font-lato, $font-bold, 'bold');

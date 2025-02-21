@@ -1,6 +1,5 @@
 .blogs__img {
   border-radius: 20px;
-  /* max-width: 195px; */
   max-height: 195px;
   display: block;
   object-fit: cover;
