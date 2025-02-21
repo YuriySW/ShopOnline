@@ -1,0 +1,139 @@
+.search-input {
+  display: flex;
+  max-height: 54px;
+  min-width: 757px;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  max-width: 656px;
+  padding: 15px 0 18px 40px;
+  font-size: 16px;
+  font-family: 'Lato';
+  background-color: #efefef;
+  border: none;
+  outline: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  position: relative;
+  left: 30px;
+}
+input[type='search' i]:enabled:read-write:-webkit-any(
+    :focus,
+    :hover
+  )::-webkit-search-cancel-button {
+  opacity: 0;
+  pointer-events: auto;
+}
+
+.search-but {
+  position: relative;
+}
+
+.search-btn {
+  outline: none;
+}
+
+.search-but:hover rect {
+  fill: #2d2d2d;
+  transition: 0.3s;
+}
+
+.search-but:active rect {
+  fill: #3670c7;
+  transition: 0.3s;
+}
+
+@media (max-width: 1580px) {
+  .search-input {
+  }
+}
+
+@media (max-width: 1040px) {
+  .search-input:hover,
+  .search-input:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 1005px) {
+  .input {
+    padding: 11px 0 15px 30px;
+    max-width: 458px;
+  }
+  .search-input {
+    max-height: 42px;
+    justify-content: end;
+    min-width: 540px;
+  }
+}
+
+@media (max-width: 812px) {
+  .input {
+    font-size: 12px;
+  }
+
+  .search-btn {
+    background-color: #efefef;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-input {
+    min-width: 580px;
+  }
+
+  .input {
+    max-width: 580px;
+  }
+}
+
+@media (max-width: 692px) {
+  .search-input {
+    min-width: 580px;
+  }
+
+  .input {
+    max-width: 580px;
+    left: 0;
+  }
+}
+
+@media (max-width: 610px) {
+  .search-input {
+    min-width: 280px;
+    max-height: 30px;
+  }
+  .input {
+    font-size: 8px;
+    padding: 9px 0 11px 16px;
+  }
+  .search-but {
+    max-width: 50px;
+    height: 30px;
+  }
+}
+/* .search-but {
+  position: relative;
+  top: 0;
+  right: 0px;
+
+  border: none;
+  background: #7ba7ab;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+} */
+
+/* .search-but:before {
+  content: '';
+  display: block;
+  width: 101px;
+  height: 54px;
+  background-image: url('../../../image/icon/search.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+} */

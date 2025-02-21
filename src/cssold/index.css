@@ -1,0 +1,36 @@
+@import 'style.css';
+@import 'normalize.css';
+@import 'mainpage/global.css';
+
+@import 'mainpage/header/header.css';
+@import 'mainpage/header/search-input.css';
+@import 'mainpage/header/menu.css';
+@import 'mainpage/header/menu-btn.css';
+
+@import 'main/__title/main__title.css';
+@import 'main/__text/main__text.css';
+@import 'main/navigation/navigation.css';
+@import 'main/navigation/__list/navigation__list.css';
+@import 'main/navigation/__link/navigation__link.css';
+@import 'main/section/__title/section__title.css';
+@import 'main/section/__img/main__img.css';
+@import 'main/section/section.css';
+@import 'main/section/__subtitle/section__subtitle.css';
+@import 'main/section/__text/section__text.css';
+@import 'blogs/blogs__title.css';
+@import 'blogs/blogs_container.css';
+@import 'blogs/blogs__list.css';
+@import 'blogs/blogs__item.css';
+@import 'blogs/select-pages.css';
+@import 'article-page/title-page.css';
+@import 'article-page/container-article.css';
+@import 'article-page/text-page.css';
+@import 'article-page/back-btn.css';
+@import 'blogs/blogs__img.css';
+@import 'blogs/body.css';
+
+@import 'mainpage/footer/footer.css';
+@import 'mainpage/footer/footer__content.css';
+@import 'mainpage/footer/footer__author.css';
+@import 'mainpage/footer/navigation.css';
+@import 'blogs/page-link.css';
