@@ -1,2 +1,55 @@
 @use '../utils/var' as *;
 @use '../base/fonts' as *;
+
+.main {
+  &__title {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+
+  &__text {
+    margin: 0 0 33px;
+    font-size: 22px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__img {
+    margin-bottom: 50px;
+    padding-top: 27px;
+  }
+}
+
+.navigation {
+  padding-top: 17px;
+  padding-bottom: 33px;
+
+  &__link {
+    color: $color-main;
+  }
+}
+
+.section {
+  margin-bottom: 33px;
+  &__title {
+    font-size: 24px;
+  }
+
+  &__subtitle {
+    font-weight: inherit;
+    font-size: 22px;
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 22px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &:last-child {
+    margin: 0;
+  }
+}
