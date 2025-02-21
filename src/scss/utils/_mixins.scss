@@ -1,0 +1,9 @@
+@mixin font($name, $weight, $filename) {
+  @font-face {
+    font-family: $name;
+    src: url('../../fonts/lato-#{$filename}.woff2') format('woff2'),
+      url('../../fonts/lato-#{$filename}.woff') format('woff');
+    font-weight: $weight;
+    font-display: swap;
+  }
+}
