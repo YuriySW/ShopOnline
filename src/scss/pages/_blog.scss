@@ -5,8 +5,23 @@
   padding-top: 60px;
   display: inline-flex;
   gap: 10px;
+  @media (max-width: 400px) {
+    gap: 3px;
+  }
   .page-link {
+    color: #525252;
+    font-family: $font-lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: $font-bold;
+    line-height: 130%; /* 20.8px */
     align-self: center;
+    @media (max-width: 580px) {
+      font-size: 10px;
+    }
+    @media (max-width: 400px) {
+      font-size: 7px;
+    }
   }
   .arrow-link {
     color: $color-main;
@@ -15,6 +30,9 @@
     font-style: normal;
     font-weight: $font-bold;
     line-height: 130%;
+    @media (max-width: 580px) {
+      font-size: 10px;
+    }
   }
 }
 
@@ -99,6 +117,9 @@
     }
     @media (max-width: 1277px) {
       font-size: 20px;
+    }
+    @media (max-width: 370px) {
+      font-size: 15px;
     }
   }
 }
