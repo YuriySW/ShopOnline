@@ -4,6 +4,20 @@
 .article {
   padding-top: 80px;
   padding-bottom: 150px;
+  @media (max-width: 850px) {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 580px) {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+
+  @media (max-width: 400px) {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
 
   .container-article {
     max-width: 1860px;
@@ -20,6 +34,17 @@
     margin: 0;
     margin-bottom: 40px;
     color: $color-main;
+    @media (max-width: 850px) {
+      font-size: 40px;
+    }
+    @media (max-width: 580px) {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 400px) {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
   }
   .text-page {
     font-family: 'Lato';
@@ -28,7 +53,16 @@
     font-size: 22px;
     line-height: 150%;
     color: #2d2d2d;
-    margin-bottom: 20px;
+
+    @media (max-width: 850px) {
+      font-size: 18px;
+    }
+    @media (max-width: 580px) {
+      font-size: 15px;
+    }
+    @media (max-width: 400px) {
+      font-size: 12px;
+    }
   }
 
   .text-page-wrap {
@@ -46,6 +80,12 @@
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0%;
+    @media (max-width: 850px) {
+      font-size: 17px;
+    }
+    @media (max-width: 400px) {
+      font-size: 13px;
+    }
   }
   .back-btn {
     display: flex;
@@ -62,6 +102,9 @@
     line-height: 130%;
     letter-spacing: 0%;
     align-self: center;
+    @media (max-width: 850px) {
+      font-size: 10px;
+    }
   }
 
   .arrow {

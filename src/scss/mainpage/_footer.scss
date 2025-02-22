@@ -47,6 +47,10 @@
       position: absolute;
       top: 10px;
       right: 10px;
+      @media (max-width: 500px) {
+        height: 20px;
+        top: 7px;
+      }
     }
   }
 
@@ -94,6 +98,10 @@
       font-weight: $font-bold;
       line-height: 130%;
       margin-bottom: 40px;
+      @media (max-width: 500px) {
+        margin-bottom: 20px;
+        font-size: 22px;
+      }
     }
 
     .footer__list {
@@ -115,6 +123,9 @@
           line-height: 150%; /* 33px */
           &:hover {
             color: $color-primary;
+          }
+          @media (max-width: 500px) {
+            font-size: 15px;
           }
         }
 
