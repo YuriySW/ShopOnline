@@ -1937,6 +1937,52 @@ input[type=search i]:enabled:read-write:-webkit-any(:focus,
   cursor: pointer;
 }
 
+.main__title {
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+.main__text {
+  margin: 0 0 33px;
+  font-size: 22px;
+}
+.main__text:last-child {
+  margin: 0;
+}
+.main__img {
+  margin-bottom: 50px;
+  padding-top: 27px;
+}
+
+.navigation {
+  padding-top: 17px;
+  padding-bottom: 33px;
+}
+.navigation__link {
+  color: #2d2d2d;
+}
+
+.section {
+  margin-bottom: 33px;
+}
+.section__title {
+  font-size: 24px;
+}
+.section__subtitle {
+  font-weight: inherit;
+  font-size: 22px;
+  margin: 0;
+}
+.section__text {
+  font-size: 22px;
+}
+.section__text:last-child {
+  margin: 0;
+}
+.section:last-child {
+  margin: 0;
+}
+
 .article {
   padding-top: 80px;
   padding-bottom: 150px;
