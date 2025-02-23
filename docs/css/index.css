@@ -1804,7 +1804,8 @@ input[type=search i]:enabled:read-write:-webkit-any(:focus,
 }
 @media (max-width: 400px) {
   .link-wrap {
-    gap: 3px;
+    padding-top: 30px;
+    gap: 1.5px;
   }
 }
 .link-wrap .page-link {
@@ -1823,7 +1824,7 @@ input[type=search i]:enabled:read-write:-webkit-any(:focus,
 }
 @media (max-width: 400px) {
   .link-wrap .page-link {
-    font-size: 7px;
+    font-size: 6px;
   }
 }
 .link-wrap .arrow-link {
@@ -1862,7 +1863,7 @@ input[type=search i]:enabled:read-write:-webkit-any(:focus,
   grid-template-columns: repeat(2, 645px);
   justify-content: space-around;
   row-gap: 50px;
-  margin-bottom: 192px;
+  margin-bottom: 100px;
 }
 @media (max-width: 1490px) {
   .blogs__list {
@@ -1950,6 +1951,7 @@ input[type=search i]:enabled:read-write:-webkit-any(:focus,
 .select-pages-wrap {
   display: flex;
   justify-content: center;
+  min-height: 36px;
 }
 
 .select-pages {
@@ -1966,7 +1968,6 @@ input[type=search i]:enabled:read-write:-webkit-any(:focus,
   font-weight: 700;
   line-height: 130%;
   letter-spacing: 0%;
-  text-align: left;
   padding: 7px 13px 8px;
   border: 2px solid rgb(45, 45, 45);
   border-radius: 4px;
@@ -2059,11 +2060,6 @@ input[type=search i]:enabled:read-write:-webkit-any(:focus,
     padding-bottom: 50px;
   }
 }
-.article .container-article {
-  max-width: 1860px;
-  padding: 0 30px;
-  margin: 0 auto;
-}
 .article .title-page {
   font-family: "Lato";
   font-style: normal;
@@ -2123,8 +2119,8 @@ input[type=search i]:enabled:read-write:-webkit-any(:focus,
   justify-content: space-between;
 }
 .text-wrap .autor-text {
-  color: rgb(0, 0, 0);
-  font-family: Lato;
+  color: #2d2d2d;
+  font-family: "Lato";
   font-size: 22px;
   font-weight: 400;
   line-height: 150%;
@@ -2147,8 +2143,8 @@ input[type=search i]:enabled:read-write:-webkit-any(:focus,
   cursor: pointer;
 }
 .text-wrap .btn-text {
-  color: rgb(45, 45, 45);
-  font-family: Lato;
+  color: #2d2d2d;
+  font-family: "Lato";
   font-size: 16px;
   font-weight: 700;
   line-height: 130%;
