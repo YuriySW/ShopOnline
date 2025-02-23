@@ -181,13 +181,13 @@ template {
 
 @font-face {
   font-family: "Lato";
-  src: url("../../fonts/lato-regular.woff2") format("woff2"), url("../../fonts/lato-regular.woff") format("woff");
+  src: url("../fonts/lato-regular.woff2") format("woff2"), url("../fonts/lato-regular.woff") format("woff");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: url("../../fonts/lato-bold.woff2") format("woff2"), url("../../fonts/lato-bold.woff") format("woff");
+  src: url("../fonts/lato-bold.woff2") format("woff2"), url("../fonts/lato-bold.woff") format("woff");
   font-weight: 700;
   font-display: swap;
 }
@@ -1843,6 +1843,12 @@ input[type=search i]:enabled:read-write:-webkit-any(:focus,
 .main {
   padding-top: 60px;
   padding-bottom: 150px;
+}
+@media (max-width: 580px) {
+  .main {
+    padding-top: 40px;
+    padding-bottom: 110px;
+  }
 }
 
 .blogs_container {
