@@ -590,7 +590,7 @@ input[type=search i]:enabled:read-write:-webkit-any(:focus,
 }
 @media (max-width: 860px) {
   .banner-wrap {
-    background-image: url(../../image/banner-768.jpg);
+    background-image: url(../image/banner-768.jpg);
     padding-top: 8.63vw;
     padding-bottom: 3.91vw;
   }
