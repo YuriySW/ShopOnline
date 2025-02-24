@@ -92,10 +92,10 @@
 }
 
 .search-input {
-  display: flex;
-  max-height: 54px;
-  min-width: 757px;
   position: relative;
+  display: inline-flex;
+  height: 54px;
+  min-width: 757px;
   grid-area: search;
 
   @media (max-width: 1040px) {
@@ -107,68 +107,51 @@
 
   @media (max-width: 1005px) {
     max-height: 42px;
-    justify-content: end;
     min-width: 540px;
-  }
-
-  @media (max-width: 812px) {
-    .input {
-      font-size: 12px;
-    }
-
-    .search-btn {
-      background-color: #efefef;
-      border-top-right-radius: 30px;
-      border-bottom-right-radius: 30px;
-    }
   }
 
   @media (max-width: 768px) {
     min-width: 580px;
-
-    .input {
-      max-width: 580px;
-    }
   }
 
   @media (max-width: 692px) {
     min-width: 580px;
-
-    .input {
-      max-width: 580px;
-      left: 0;
-    }
   }
 
   @media (max-width: 610px) {
     min-width: 280px;
     max-height: 30px;
-
-    .input {
-      font-size: 8px;
-      padding: 9px 0 11px 16px;
-    }
-
-    .search-but {
-      max-width: 50px;
-      height: 30px;
-    }
   }
 }
 
 .input {
   width: 100%;
-  max-width: 656px;
+  max-width: 757px;
   padding: 15px 0 18px 40px;
   font-size: 16px;
-  font-family: 'Lato';
+  font-family: $font-lato;
   background-color: #efefef;
   border: none;
   outline: none;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-radius: 30px;
   position: relative;
-  left: 30px;
+  @media (max-width: 812px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 692px) {
+    max-width: 580px;
+    left: 0;
+  }
+
+  @media (max-width: 610px) {
+    font-size: 8px;
+    padding: 9px 0 11px 16px;
+  }
 }
 
 input[type='search' i]:enabled:read-write:-webkit-any(
@@ -179,13 +162,23 @@ input[type='search' i]:enabled:read-write:-webkit-any(
   pointer-events: auto;
 }
 
-.search-but {
-  position: relative;
-}
-
 .search-btn {
+  position: absolute;
+  border-radius: 30px;
+  height: 54px;
   outline: none;
-
+  right: 0;
+  @media (max-width: 1005px) {
+    max-height: 42px;
+  }
+  @media (max-width: 812px) {
+    background-color: #efefef;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  @media (max-width: 610px) {
+    height: 30px;
+  }
   &:hover rect {
     fill: #2d2d2d;
     transition: 0.3s;
@@ -194,6 +187,18 @@ input[type='search' i]:enabled:read-write:-webkit-any(
   &:active rect {
     fill: #3670c7;
     transition: 0.3s;
+  }
+}
+
+.search-but {
+  position: relative;
+  @media (max-width: 1005px) {
+    max-width: 78.56px;
+  }
+
+  @media (max-width: 610px) {
+    height: 30px;
+    max-width: 56.11px;
   }
 }
 
