@@ -1,7 +1,6 @@
 const items = document.querySelectorAll('.blogs__item');
-const backBtn = document.querySelector('.back-btn');
 
-const clearItem = () => {
+export const clearItem = () => {
   items.forEach((item) => {
     item.remove();
   });
@@ -9,7 +8,7 @@ const clearItem = () => {
 
 clearItem();
 
-const loadBlogs = async () => {
+export const loadBlogs = async () => {
   const result = await fetch('https://gorest.co.in/public-api/posts');
   const response = await result.json();
   const blogsData = response.data;
@@ -48,13 +47,14 @@ const loadBlogs = async () => {
   }
 };
 
-const renderArticlePage = () => {
+export const renderArticlePage = () => {
   document.addEventListener('DOMContentLoaded', () => {
     const titlePage = document.querySelector('.title-page');
     const selectedTitle = sessionStorage.getItem('selectedTitle');
     const selectedText = sessionStorage.getItem('selectedText');
     const pageLinkTitle = document.querySelector('.page-link-title');
     const textPageWrap = document.querySelector('.text-page-wrap');
+    const backBtn = document.querySelector('.back-btn');
 
     document.querySelectorAll('.text-page').forEach((item) => item.remove());
 
@@ -69,48 +69,14 @@ const renderArticlePage = () => {
       p.textContent = selectedText;
       textPageWrap.appendChild(p);
     }
-  });
 
-  if (backBtn) {
-    backBtn.addEventListener('click', () => {
-      window.location.href = 'blog.html';
-    });
-  }
+    if (backBtn) {
+      backBtn.addEventListener('click', () => {
+        window.location.href = 'blog.html';
+      });
+    }
+  });
 };
 
 loadBlogs();
 renderArticlePage();
-
-// const loadBlogs = async () => {
-//   const result = await fetch('https://gorest.co.in/public-api/posts');
-//   const response = await result.json();
-//   const blogsData = response.data;
-//   const blogsList = document.querySelector('.blogs__list');
-
-//   if (blogsList) {
-//     blogsData.forEach((post, index) => {
-//       const li = document.createElement('li');
-//       li.className = 'blogs__item';
-//       li.innerHTML = `
-//         <img class="blogs__img" src="https://loremflickr.com/400/400?${index + 1}" alt="" />
-//         <h2 class="blogs__title">${post.title}</h2>
-//       `;
-//       blogsList.appendChild(li);
-//     });
-
-//     const items = document.querySelectorAll('.blogs__item');
-
-//     items.forEach((item, index) => {
-//       item.addEventListener('click', (e) => {
-//         e.preventDefault();
-
-//         const selectedTitle = blogsData[index].title;
-//         const selectedText = blogsData[index].body;
-//         sessionStorage.setItem('selectedTitle', selectedTitle);
-//         sessionStorage.setItem('selectedText', selectedText);
-
-//         window.location.href = 'articlePage.html';
-//       });
-//     });
-//   }
-// };
