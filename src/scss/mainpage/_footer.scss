@@ -131,7 +131,7 @@
       font-style: normal;
       font-weight: $font-bold;
       line-height: 130%;
-      margin-bottom: 40px;
+      margin-bottom: 33px;
       @media (max-width: 1024px) {
         margin-bottom: 30px;
       }
@@ -147,7 +147,7 @@
 
     .footer__title_dr {
       @media (max-width: 632px) {
-        margin-bottom: 0;
+        margin-bottom: 0 !important;
       }
     }
 
@@ -402,6 +402,13 @@
   .footer__link_bm {
     color: $color-main !important;
   }
+
+  // .footer__title_bm {
+  //   @media (max-width: 632px) {
+  //     cursor: pointer;
+  //   }
+  // }
+
   .footer__content_bm {
     display: grid;
     grid-template-columns: minmax(300px, 533px) minmax(150px, 307px) minmax(150px, 307px);
