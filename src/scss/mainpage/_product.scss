@@ -15,10 +15,17 @@
     font-weight: $font-bold;
     line-height: 130%; /* 65px */
     margin-bottom: 50px;
-    @media (max-width: 730px) {
-      text-align: center;
+    @media (max-width: 1024px) {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 768px) {
       font-size: 30px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 500px) {
+      font-size: 20px;
+      margin-bottom: 26px;
     }
   }
 
@@ -33,14 +40,21 @@
       grid-template-rows: 1fr 1fr 1fr;
     }
 
-    @media (max-width: 980px) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+    @media (max-width: 1024px) {
+      column-gap: 20px;
+      row-gap: 50px;
+    }
+    @media (max-width: 768px) {
+      row-gap: 40px;
     }
 
-    @media (max-width: 730px) {
-      grid-template-columns: 1fr;
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr 1fr;
       justify-items: center;
+    }
+
+    @media (max-width: 500px) {
+      row-gap: 30px;
     }
 
     .product__card {
@@ -87,6 +101,37 @@
           text-align: center;
           left: 20px;
           bottom: 20px;
+
+          @media (max-width: 768px) {
+            padding: 16px 5px 18px 7px;
+
+            font-size: 20px;
+            width: 60px;
+            height: 60px;
+          }
+          @media (max-width: 500px) {
+            padding: 13px 5px 13px 6px;
+            font-size: 12px;
+            width: 40px;
+            height: 40px;
+          }
+        }
+        .product__img {
+          @media (max-width: 1024px) {
+            border-radius: 14px;
+            object-fit: cover;
+            width: 300px;
+            height: 295px;
+          }
+          @media (max-width: 768px) {
+            border-radius: 12px;
+            width: 220px;
+            height: 216px;
+          }
+          @media (max-width: 500px) {
+            width: 130px;
+            height: 130px;
+          }
         }
       }
 
@@ -102,6 +147,10 @@
           font-weight: $font-bold;
           line-height: normal;
           margin-right: 28px;
+
+          @media (max-width: 500px) {
+            font-size: 16px;
+          }
         }
 
         .product__old-price {
@@ -113,6 +162,9 @@
           line-height: normal;
           text-decoration: line-through;
           align-self: center;
+          @media (max-width: 500px) {
+            font-size: 12px;
+          }
         }
       }
 
@@ -125,6 +177,9 @@
         font-style: normal;
         font-weight: $font-regular;
         line-height: 150%; /* 33px */
+        @media (max-width: 500px) {
+          font-size: 12px;
+        }
       }
     }
   }
