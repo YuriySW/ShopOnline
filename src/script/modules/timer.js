@@ -1,4 +1,4 @@
-if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
+if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith('index.html')) {
   const timer = document.querySelector('.timer');
   if (timer) {
     const bannerText = document.querySelector('.banner-text');
