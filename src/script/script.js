@@ -1,11 +1,4 @@
-// import {start, deadlineDate} from './modules/timer.js';
 import './modules/timer.js';
 import './modules/render.js';
-
-// {
-//   const init = () => {
-//     start(deadlineDate);
-//   };
-
-//   window.timerInit = init;
-// }
+import './modules/burger-menu.js';
+import './modules/dropdownMenu.js';

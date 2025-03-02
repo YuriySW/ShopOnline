@@ -24,8 +24,11 @@
       font-size: 6px;
     }
   }
+
   .page-link-title {
-    max-width: 270px;
+    @media (max-width: 580px) {
+      max-width: 270px;
+    }
   }
   .arrow-link {
     color: $color-main;

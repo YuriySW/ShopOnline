@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin />
-    <script type="module" src="script/modules/render.js"></script>
+    <script defer type="module" src="script/index.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -46,7 +46,34 @@
             </clippath>
           </defs>
         </svg>
-
+        <svg
+          aria-label="Открыть меню "
+          tabindex="0"
+          role="button"
+          class="menu-btn menu-btn_bm"
+          width="151"
+          height="54"
+          viewBox="0 0 151 54"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="151" height="54" rx="10" fill="#3670C7" />
+          <path
+            d="M79.414 18.237V34H77.544V22.417C77.544 22.263 77.5477 22.098 77.555 21.922C77.5697 21.746 77.5843 21.5663 77.599 21.383L72.187 31.239C72.0183 31.569 71.7617 31.734 71.417 31.734H71.109C70.7643 31.734 70.5077 31.569 70.339 31.239L64.817 21.339C64.861 21.7277 64.883 22.087 64.883 22.417V34H63.013V18.237H64.586C64.7767 18.237 64.9233 18.2553 65.026 18.292C65.1287 18.3287 65.2277 18.4313 65.323 18.6L70.768 28.302C70.856 28.478 70.9403 28.6613 71.021 28.852C71.109 29.0427 71.1897 29.237 71.263 29.435C71.3363 29.237 71.4133 29.0427 71.494 28.852C71.5747 28.654 71.6627 28.467 71.758 28.291L77.104 18.6C77.192 18.4313 77.2873 18.3287 77.39 18.292C77.5 18.2553 77.6503 18.237 77.841 18.237H79.414ZM90.0969 27.213C90.0969 26.7583 90.0309 26.344 89.8989 25.97C89.7742 25.5887 89.5872 25.2623 89.3379 24.991C89.0959 24.7123 88.7989 24.4997 88.4469 24.353C88.0949 24.199 87.6952 24.122 87.2479 24.122C86.3092 24.122 85.5649 24.397 85.0149 24.947C84.4722 25.4897 84.1349 26.245 84.0029 27.213H90.0969ZM91.6809 32.438C91.4389 32.7313 91.1492 32.988 90.8119 33.208C90.4746 33.4207 90.1116 33.5967 89.7229 33.736C89.3416 33.8753 88.9456 33.978 88.5349 34.044C88.1242 34.1173 87.7172 34.154 87.3139 34.154C86.5439 34.154 85.8326 34.0257 85.1799 33.769C84.5346 33.505 83.9736 33.1237 83.4969 32.625C83.0276 32.119 82.6609 31.4957 82.3969 30.755C82.1329 30.0143 82.0009 29.1637 82.0009 28.203C82.0009 27.4257 82.1182 26.6997 82.3529 26.025C82.5949 25.3503 82.9396 24.7673 83.3869 24.276C83.8342 23.7773 84.3806 23.3887 85.0259 23.11C85.6712 22.824 86.3972 22.681 87.2039 22.681C87.8712 22.681 88.4872 22.7947 89.0519 23.022C89.6239 23.242 90.1152 23.5647 90.5259 23.99C90.9439 24.408 91.2702 24.9287 91.5049 25.552C91.7396 26.168 91.8569 26.872 91.8569 27.664C91.8569 27.972 91.8239 28.1773 91.7579 28.28C91.6919 28.3827 91.5672 28.434 91.3839 28.434H83.9369C83.9589 29.138 84.0542 29.7503 84.2229 30.271C84.3989 30.7917 84.6409 31.228 84.9489 31.58C85.2569 31.9247 85.6236 32.185 86.0489 32.361C86.4742 32.5297 86.9509 32.614 87.4789 32.614C87.9702 32.614 88.3919 32.559 88.7439 32.449C89.1032 32.3317 89.4112 32.207 89.6679 32.075C89.9246 31.943 90.1372 31.822 90.3059 31.712C90.4819 31.5947 90.6322 31.536 90.7569 31.536C90.9182 31.536 91.0429 31.5983 91.1309 31.723L91.6809 32.438ZM103.546 22.857V34H101.577V28.786H96.2309V34H94.2619V22.857H96.2309V27.301H101.577V22.857H103.546ZM116.316 32.625C117.343 32.625 118.109 32.2583 118.615 31.525C119.121 30.7843 119.374 29.754 119.374 28.434C119.374 27.1067 119.121 26.0727 118.615 25.332C118.109 24.5913 117.343 24.221 116.316 24.221C115.29 24.221 114.523 24.5913 114.017 25.332C113.511 26.0727 113.258 27.1067 113.258 28.434C113.258 29.754 113.511 30.7843 114.017 31.525C114.523 32.2583 115.29 32.625 116.316 32.625ZM111.333 27.664C111.399 26.9013 111.557 26.212 111.806 25.596C112.063 24.98 112.404 24.4557 112.829 24.023C113.262 23.5903 113.768 23.2603 114.347 23.033C114.934 22.7983 115.59 22.681 116.316 22.681C117.094 22.681 117.794 22.8167 118.417 23.088C119.048 23.3593 119.583 23.7443 120.023 24.243C120.463 24.7417 120.801 25.3467 121.035 26.058C121.277 26.762 121.398 27.5503 121.398 28.423C121.398 29.303 121.277 30.095 121.035 30.799C120.793 31.503 120.449 32.1043 120.001 32.603C119.554 33.1017 119.019 33.4867 118.395 33.758C117.772 34.022 117.079 34.154 116.316 34.154C115.576 34.154 114.908 34.0367 114.314 33.802C113.728 33.5673 113.222 33.2337 112.796 32.801C112.371 32.361 112.03 31.8293 111.773 31.206C111.524 30.5827 111.374 29.8787 111.322 29.094H108.627V34H106.658V22.857H108.627V27.664H111.333Z"
+            fill="white"
+          />
+          <g clip-path="url(#clip0_1978_191)">
+            <path
+              d="M49 21.41L47.59 20L42 25.59L36.41 20L35 21.41L40.59 27L35 32.59L36.41 34L42 28.41L47.59 34L49 32.59L43.41 27L49 21.41Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1978_191">
+              <rect width="24" height="24" fill="white" transform="translate(30 15)" />
+            </clipPath>
+          </defs>
+        </svg>
         <form
           role="search"
           class="search-input"
@@ -250,6 +277,122 @@
         </div>
       </div>
     </header>
+    <div class="footer burger-menu">
+      <div class="container">
+        <div class="footer__content footer__content_bm">
+          <div class="footer__block catalog">
+            <h2 class="footer__title footer__title_dr footer__title_bm">
+              Каталог
+              <button class="footer__button" aria-label="открыть каталог">
+                <svg
+                  class="footer__button-svg footer__button-svg_bm"
+                  width="15"
+                  height="6"
+                  viewBox="0 0 15 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="footer__svg-open"
+                    d="M7.5 6L0.138784 0H14.8612L7.5 6Z"
+                    fill="black"
+                  />
+                  <path
+                    class="footer__svg-close"
+                    d="M7.5 0L0.138784 6H14.8612L7.5 0Z"
+                    fill="black"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <ul class="footer__list footer__list_catalog">
+              <li class="footer__item">
+                <a href="" class="footer__link footer__link_bm">Смартфоны</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link footer__link_bm">Ноутбуки</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link footer__link_bm">Ювелирные изделия</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link footer__link_bm">Одежда</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link footer__link_bm">Бытовая техника</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link footer__link_bm">Бытовая химия</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link footer__link_bm">Книги и журналы</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link footer__link_bm">Домашний текстиль</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link footer__link_bm">Электроника</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link footer__link_bm">Косметика</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__block buyer">
+            <h2 class="footer__title footer__title_dr footer__title_bm">
+              Покупателям
+              <button class="footer__button footer__button_bm" aria-label="открыть покупателям">
+                <svg
+                  class="footer__button-svg footer__button-svg_bm"
+                  width="15"
+                  height="6"
+                  viewBox="0 0 15 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="footer__svg-open"
+                    d="M7.5 6L0.138784 0H14.8612L7.5 6Z"
+                    fill="black"
+                  />
+                  <path
+                    class="footer__svg-close"
+                    d="M7.5 0L0.138784 6H14.8612L7.5 0Z"
+                    fill="black"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <ul class="footer__list footer__list_buyer">
+              <li class="footer__item">
+                <a href="" class="footer__link footer__link_bm">Оплата заказа</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link footer__link_bm">Условия доставки</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link footer__link_bm"> Условия возврата заказа</a>
+              </li>
+              <li class="footer__item">
+                <a href="blog.html" class="footer__link footer__link_bm">Блог</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__block footer__block_bm contact">
+            <h2 class="footer__title footer__title_bm">Связаться с нами</h2>
+
+            <div class="footer__list">
+              <div class="footer__item">
+                <a href="#footer" class="footer__link footer__link_bm">Контакты</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <nav class="link-wrap" aria-label="Хлебные крошки">
         <a href="index.html" class="page-link" aria-label="Переход на главную страницу">Главная</a>
@@ -308,13 +451,36 @@
         </div>
       </div>
     </article>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <div class="footer__content">
-          <img class="footer__logo" src="image/logo-ft.svg" alt="logo" />
+          <img class="footer__logo" src="image/logo-ft.svg" alt="logo" width="188" height="36" />
 
           <div class="footer__block catalog">
-            <h2 class="footer__title">Каталог</h2>
+            <h2 class="footer__title footer__title_dr">
+              Каталог
+              <button class="footer__button" aria-label="открыть каталог">
+                <svg
+                  class="footer__button-svg"
+                  width="15"
+                  height="6"
+                  viewBox="0 0 15 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="footer__svg-open"
+                    d="M7.5 6L0.138784 0H14.8612L7.5 6Z"
+                    fill="white"
+                  />
+                  <path
+                    class="footer__svg-close"
+                    d="M7.5 0L0.138784 6H14.8612L7.5 0Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </h2>
             <ul class="footer__list footer__list_catalog">
               <li class="footer__item"><a href="" class="footer__link">Смартфоны</a></li>
               <li class="footer__item"><a href="" class="footer__link">Ноутбуки</a></li>
@@ -330,21 +496,44 @@
           </div>
 
           <div class="footer__block buyer">
-            <h2 class="footer__title">Покупателям</h2>
+            <h2 class="footer__title footer__title_dr">
+              Покупателям
+              <button class="footer__button" aria-label="открыть покупателям">
+                <svg
+                  class="footer__button-svg"
+                  width="15"
+                  height="6"
+                  viewBox="0 0 15 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="footer__svg-open"
+                    d="M7.5 6L0.138784 0H14.8612L7.5 6Z"
+                    fill="white"
+                  />
+                  <path
+                    class="footer__svg-close"
+                    d="M7.5 0L0.138784 6H14.8612L7.5 0Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </h2>
             <ul class="footer__list footer__list_buyer">
               <li class="footer__item"><a href="" class="footer__link">Оплата заказа</a></li>
               <li class="footer__item"><a href="" class="footer__link">Условия доставки</a></li>
               <li class="footer__item">
                 <a href="" class="footer__link"> Условия возврата заказа</a>
               </li>
-              <li class="footer__item"><a href="" class="footer__link">Блог</a></li>
+              <li class="footer__item"><a href="blog.html" class="footer__link">Блог</a></li>
             </ul>
           </div>
 
           <div class="footer__block contact">
             <h2 class="footer__title">Контакты</h2>
             <address class="address">
-              <ul class="footer__list footer__list_buyer">
+              <ul class="footer__list footer__list_buyer_sub">
                 <li class="footer__item">
                   <a href="tel:89378392361" class="footer__link-contact">Тел: +7 937 839 23-61</a>
                 </li>
@@ -355,12 +544,12 @@
                 </li>
               </ul>
             </address>
-            <nav class="navigation">
-              <ul class="navigation__social">
-                <li class="navigation__link">
+            <nav class="navigation-ft">
+              <ul class="navigation-ft__social">
+                <li class="navigation-ft__link">
                   <a
                     href="whatsapp.com"
-                    class="navigation__link-ico"
+                    class="navigation-ft__link-ico"
                     target="_blank"
                     title="Перейти в WhatsApp"
                   >
@@ -376,10 +565,10 @@
                     </svg>
                   </a>
                 </li>
-                <li class="navigation__link">
+                <li class="navigation-ft__link">
                   <a
                     href="instagram.com"
-                    class="navigation__link-ico"
+                    class="navigation-ft__link-ico"
                     target="_blank"
                     title="Перейти в instagram"
                   >
@@ -397,10 +586,10 @@
                     </svg>
                   </a>
                 </li>
-                <li class="navigation__link">
+                <li class="navigation-ft__link">
                   <a
                     href="youtube.com"
-                    class="navigation__link-ico"
+                    class="navigation-ft__link-ico"
                     target="_blank"
                     title="Перейти в youtube"
                   >
@@ -418,10 +607,10 @@
                     </svg>
                   </a>
                 </li>
-                <li class="navigation__link">
+                <li class="navigation-ft__link">
                   <a
                     href="facebook.com"
-                    class="navigation__link-ico"
+                    class="navigation-ft__link-ico"
                     target="_blank"
                     title="Перейти в facebook"
                   >
@@ -443,10 +632,10 @@
                   </a>
                 </li>
 
-                <li class="navigation__link">
+                <li class="navigation-ft__link">
                   <a
                     href="telegram.com"
-                    class="navigation__link-ico"
+                    class="navigation-ft__link-ico"
                     target="_blank"
                     title="Перейти в telegram"
                   >

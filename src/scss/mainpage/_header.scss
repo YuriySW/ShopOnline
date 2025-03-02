@@ -48,10 +48,12 @@
   grid-area: logo;
 
   @media (max-width: 1005px) {
+    width: 165px;
     max-height: 28px;
   }
 
-  @media (max-width: 601px) {
+  @media (max-width: 632px) {
+    width: 114px;
     max-height: 19px;
   }
 }
@@ -59,20 +61,17 @@
 .menu-btn {
   grid-area: menu-btn;
   cursor: pointer;
+  transition: 0.5s;
 
   &:hover rect {
-    fill: #2d2d2d;
-    transition: 0.3s;
+    fill: #5d92e0;
   }
 
   &:active rect {
-    fill: #3670c7;
-    transition: 0.3s;
+    fill: #5d92e0;
   }
-
-  &:active path {
-    fill: #fff;
-    transition: 0.3s;
+  &:focus rect {
+    fill: #3b65a5;
   }
 
   @media (max-width: 1580px) {
@@ -88,6 +87,10 @@
   @media (max-width: 601px) {
     height: 30px;
     width: 79px;
+  }
+  &_bm {
+    display: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
   }
 }
 
@@ -168,6 +171,7 @@ input[type='search' i]:enabled:read-write:-webkit-any(
   height: 54px;
   outline: none;
   right: 0;
+  transition: 0.3s;
   @media (max-width: 1005px) {
     max-height: 42px;
   }
@@ -180,13 +184,14 @@ input[type='search' i]:enabled:read-write:-webkit-any(
     height: 30px;
   }
   &:hover rect {
-    fill: #2d2d2d;
-    transition: 0.3s;
+    fill: #5d92e0;
   }
 
   &:active rect {
-    fill: #3670c7;
-    transition: 0.3s;
+    fill: #5d92e0;
+  }
+  &:focus rect {
+    fill: #3b65a5;
   }
 }
 
@@ -246,14 +251,16 @@ input[type='search' i]:enabled:read-write:-webkit-any(
 
 .menu-icon {
   cursor: pointer;
+  transition: 0.3s;
 
   &:hover path {
-    transition: 0.3s;
-    fill: #3670c7;
+    fill: #5d92e0;
   }
 
   &:active path {
-    fill: #2d2d2d;
-    transition: 0.3s;
+    fill: #5d92e0;
+  }
+  &:focus path {
+    fill: #3b65a5;
   }
 }
