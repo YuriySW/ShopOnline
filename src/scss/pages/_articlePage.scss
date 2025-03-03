@@ -4,18 +4,18 @@
 .article {
   padding-top: 80px;
   padding-bottom: 150px;
-  @media (max-width: 850px) {
-    padding-top: 50px;
+  @media (max-width: 1024px) {
+    padding-top: 60px;
     padding-bottom: 100px;
   }
 
-  @media (max-width: 580px) {
-    padding-top: 30px;
-    padding-bottom: 70px;
+  @media (max-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 80px;
   }
 
-  @media (max-width: 400px) {
-    padding-top: 20px;
+  @media (max-width: 500px) {
+    padding-top: 30px;
     padding-bottom: 50px;
   }
 
@@ -28,15 +28,15 @@
     margin: 0;
     margin-bottom: 40px;
     color: $color-main;
-    @media (max-width: 850px) {
+    @media (max-width: 1024px) {
       font-size: 40px;
     }
-    @media (max-width: 580px) {
-      font-size: 25px;
+    @media (max-width: 768px) {
+      font-size: 28px;
       margin-bottom: 20px;
     }
-    @media (max-width: 400px) {
-      font-size: 22px;
+    @media (max-width: 500px) {
+      font-size: 18px;
       margin-bottom: 10px;
     }
   }
@@ -49,13 +49,13 @@
     line-height: 150%;
     color: #2d2d2d;
 
-    @media (max-width: 850px) {
+    @media (max-width: 1024px) {
       font-size: 18px;
     }
-    @media (max-width: 580px) {
-      font-size: 15px;
+    @media (max-width: 768px) {
+      font-size: 16px;
     }
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
       font-size: 12px;
     }
   }
@@ -104,5 +104,16 @@
 
   .arrow {
     margin-right: 15px;
+    @media (max-width: 1024px) {
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      margin-right: 7px;
+    }
+
+    @media (max-width: 500px) {
+      margin-right: 5px;
+    }
   }
 }
