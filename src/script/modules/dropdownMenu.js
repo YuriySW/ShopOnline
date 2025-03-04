@@ -13,6 +13,12 @@ function handleToggle(event) {
         openList.classList.remove('footer__list-open');
       });
 
+      document.querySelectorAll('.footer__title_dr.active').forEach((btn) => {
+        btn.classList.remove('active');
+        btn.querySelector('.footer__svg-open').style.display = 'block';
+        btn.querySelector('.footer__svg-close').style.display = 'none';
+      });
+
       if (!isOpened) {
         button.classList.add('active');
         list.classList.add('footer__list-open');
