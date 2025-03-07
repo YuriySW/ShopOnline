@@ -1,52 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main Page</title>
+    <title>Card</title>
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png" />
     <link rel="manifest" href="favicon/site.webmanifest" />
-    <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin />
-
-    <link
-      rel="preload"
-      as="image"
-      href="/image/banner-320.avif"
-      type="image/avif"
-      media="(max-width: 730px)"
-    />
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const createLink = (url) => {
-          const link = document.createElement('link');
-          link.rel = 'stylesheet';
-          link.href = url;
-          document.head.append(link);
-        };
-        createLink('css/index.css');
-      });
-    </script>
 
     <script type="module" src="script/index.min.js"></script>
-    <!-- <link rel="stylesheet" href="css/index.css" /> -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <header class="header">
       <h1 class="title">Новогодняя распродажа</h1>
       <div class="container holder">
-        <img
-          src="image/logo.svg"
-          alt="Логотип магазина «Шопонлайн»"
-          class="logo"
-          width="188"
-          height="31"
-        />
+        <img src="image/logo.svg" alt="Логотип магазина «Шопонлайн»" class="logo" />
 
         <svg
           aria-label="Открыть меню"
@@ -64,7 +38,6 @@
             d="M79.414 18.237V34H77.544V22.417C77.544 22.263 77.5477 22.098 77.555 21.922C77.5697 21.746 77.5843 21.5663 77.599 21.383L72.187 31.239C72.0183 31.569 71.7617 31.734 71.417 31.734H71.109C70.7643 31.734 70.5077 31.569 70.339 31.239L64.817 21.339C64.861 21.7277 64.883 22.087 64.883 22.417V34H63.013V18.237H64.586C64.7767 18.237 64.9233 18.2553 65.026 18.292C65.1287 18.3287 65.2277 18.4313 65.323 18.6L70.768 28.302C70.856 28.478 70.9403 28.6613 71.021 28.852C71.109 29.0427 71.1897 29.237 71.263 29.435C71.3363 29.237 71.4133 29.0427 71.494 28.852C71.5747 28.654 71.6627 28.467 71.758 28.291L77.104 18.6C77.192 18.4313 77.2873 18.3287 77.39 18.292C77.5 18.2553 77.6503 18.237 77.841 18.237H79.414ZM90.0969 27.213C90.0969 26.7583 90.0309 26.344 89.8989 25.97C89.7742 25.5887 89.5872 25.2623 89.3379 24.991C89.0959 24.7123 88.7989 24.4997 88.4469 24.353C88.0949 24.199 87.6952 24.122 87.2479 24.122C86.3092 24.122 85.5649 24.397 85.0149 24.947C84.4722 25.4897 84.1349 26.245 84.0029 27.213H90.0969ZM91.6809 32.438C91.4389 32.7313 91.1492 32.988 90.8119 33.208C90.4746 33.4207 90.1116 33.5967 89.7229 33.736C89.3416 33.8753 88.9456 33.978 88.5349 34.044C88.1242 34.1173 87.7172 34.154 87.3139 34.154C86.5439 34.154 85.8326 34.0257 85.1799 33.769C84.5346 33.505 83.9736 33.1237 83.4969 32.625C83.0276 32.119 82.6609 31.4957 82.3969 30.755C82.1329 30.0143 82.0009 29.1637 82.0009 28.203C82.0009 27.4257 82.1182 26.6997 82.3529 26.025C82.5949 25.3503 82.9396 24.7673 83.3869 24.276C83.8342 23.7773 84.3806 23.3887 85.0259 23.11C85.6712 22.824 86.3972 22.681 87.2039 22.681C87.8712 22.681 88.4872 22.7947 89.0519 23.022C89.6239 23.242 90.1152 23.5647 90.5259 23.99C90.9439 24.408 91.2702 24.9287 91.5049 25.552C91.7396 26.168 91.8569 26.872 91.8569 27.664C91.8569 27.972 91.8239 28.1773 91.7579 28.28C91.6919 28.3827 91.5672 28.434 91.3839 28.434H83.9369C83.9589 29.138 84.0542 29.7503 84.2229 30.271C84.3989 30.7917 84.6409 31.228 84.9489 31.58C85.2569 31.9247 85.6236 32.185 86.0489 32.361C86.4742 32.5297 86.9509 32.614 87.4789 32.614C87.9702 32.614 88.3919 32.559 88.7439 32.449C89.1032 32.3317 89.4112 32.207 89.6679 32.075C89.9246 31.943 90.1372 31.822 90.3059 31.712C90.4819 31.5947 90.6322 31.536 90.7569 31.536C90.9182 31.536 91.0429 31.5983 91.1309 31.723L91.6809 32.438ZM103.546 22.857V34H101.577V28.786H96.2309V34H94.2619V22.857H96.2309V27.301H101.577V22.857H103.546ZM116.316 32.625C117.343 32.625 118.109 32.2583 118.615 31.525C119.121 30.7843 119.374 29.754 119.374 28.434C119.374 27.1067 119.121 26.0727 118.615 25.332C118.109 24.5913 117.343 24.221 116.316 24.221C115.29 24.221 114.523 24.5913 114.017 25.332C113.511 26.0727 113.258 27.1067 113.258 28.434C113.258 29.754 113.511 30.7843 114.017 31.525C114.523 32.2583 115.29 32.625 116.316 32.625ZM111.333 27.664C111.399 26.9013 111.557 26.212 111.806 25.596C112.063 24.98 112.404 24.4557 112.829 24.023C113.262 23.5903 113.768 23.2603 114.347 23.033C114.934 22.7983 115.59 22.681 116.316 22.681C117.094 22.681 117.794 22.8167 118.417 23.088C119.048 23.3593 119.583 23.7443 120.023 24.243C120.463 24.7417 120.801 25.3467 121.035 26.058C121.277 26.762 121.398 27.5503 121.398 28.423C121.398 29.303 121.277 30.095 121.035 30.799C120.793 31.503 120.449 32.1043 120.001 32.603C119.554 33.1017 119.019 33.4867 118.395 33.758C117.772 34.022 117.079 34.154 116.316 34.154C115.576 34.154 114.908 34.0367 114.314 33.802C113.728 33.5673 113.222 33.2337 112.796 32.801C112.371 32.361 112.03 31.8293 111.773 31.206C111.524 30.5827 111.374 29.8787 111.322 29.094H108.627V34H106.658V22.857H108.627V27.664H111.333Z"
             fill="white"
           />
-
           <g clip-path="url(#clip0_5105_11)">
             <path d="M33 33H39V31H33V33ZM33 21V23H51V21H33ZM33 28H45V26H33V28Z" fill="white" />
           </g>
@@ -74,7 +47,6 @@
             </clippath>
           </defs>
         </svg>
-
         <svg
           aria-label="Открыть меню "
           tabindex="0"
@@ -103,10 +75,9 @@
             </clipPath>
           </defs>
         </svg>
-
         <form
           role="search"
-          class="form-search search-input"
+          class="search-input"
           name="search"
           action="https://jsonplaceholder.typicode.com/posts"
           method="POST"
@@ -122,6 +93,7 @@
           />
 
           <button class="search-btn" type="submit" tabindex="0" aria-label="Начать поиск">
+            <!-- <img src="image/icon/search.svg" alt="" class="search-but" /> -->
             <svg
               class="search-but"
               width="101"
@@ -146,7 +118,7 @@
           </button>
         </form>
 
-        <div class="menu-wrap">
+        <div class="menu-wrap menu-wrap_blogs">
           <div class="menu">
             <button class="profile" aria-label="открыть профиль">
               <svg
@@ -306,7 +278,6 @@
         </div>
       </div>
     </header>
-
     <div class="footer burger-menu">
       <div class="container">
         <div class="footer__content footer__content_bm">
@@ -423,71 +394,213 @@
       </div>
     </div>
 
+    <div class="container">
+      <nav class="link-wrap" aria-label="Хлебные крошки">
+        <a href="index.html" class="page-link" aria-label="Переход на главную страницу">Главная</a>
+        <span class="arrow-link" aria-hidden="true">></span>
+        <a href="#footer" class="page-link" aria-label="Переход на главную страницу">Каталог</a>
+        <span class="arrow-link" aria-hidden="true">></span>
+        <a href="#footer" class="page-link" aria-label="Переход в блог">Ноутбуки</a>
+        <span class="arrow-link" aria-hidden="true">></span>
+        <span class="page-link page-link-title" aria-current="page">ASUS</span>
+      </nav>
+    </div>
     <main>
-      <section class="sale">
-        <div class="container">
-          <div class="banner-wrap">
-            <h2 class="banner-text">-50% на все ноутбуки</h2>
-            <p class="end-promotion">До конца акции:</p>
-            <span
-              class="timer"
-              data-timer-deadline="2026-08-19T13:01:00Z"
-              aria-live="polite"
-              role="timer"
-            ></span>
+      <div class="container">
+        <div class="card">
+          <h1 class="card__title">15.6" Игровой ноутбук ASUS G513IE-HN004T</h1>
+          <div class="card__stripe"></div>
+          <div class="card__wrapper">
+            <div class="card__img-wrap">
+              <span class="card__discount-cr" aria-live="polite">-15%</span>
+              <picture>
+                <source srcset="image/laptop-card.avif" type="image/avif" />
+                <source srcset="image/laptop-card.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  class="card__image"
+                  src="image/laptop-card.jpg"
+                  alt="ноутбук"
+                  width="757"
+                  height="427"
+                />
+              </picture>
+            </div>
+            <div class="card__shadow">
+              <div class="card__product-card">
+                <div class="card__price-wrap">
+                  <span class="card__product-price">109 090 ₽</span>
+                  <span class="card__product-price-sub">140 590 ₽</span>
+                </div>
+                <a href="" class="card__credit-link">В кредит от 5600 ₽ </a>
+                <div class="card__favorite-wrap">
+                  <button class="card__add-basket-btn" aria-label="добавить в корзину">
+                    Добавить в корзину
+                  </button>
+                  <svg
+                    class="card__favorite-ico"
+                    aria-label="добавить в избранное"
+                    tabindex="0"
+                    width="33"
+                    height="33"
+                    viewBox="0 0 33 33"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_901_1437)">
+                      <path
+                        d="M22.6875 4.125C20.295 4.125 17.9987 5.23875 16.5 6.99875C15.0012 5.23875 12.705 4.125 10.3125 4.125C6.0775 4.125 2.75 7.4525 2.75 11.6875C2.75 16.885 7.425 21.12 14.5062 27.555L16.5 29.3563L18.4937 27.5413C25.575 21.12 30.25 16.885 30.25 11.6875C30.25 7.4525 26.9225 4.125 22.6875 4.125ZM16.6375 25.5062L16.5 25.6437L16.3625 25.5062C9.8175 19.58 5.5 15.6613 5.5 11.6875C5.5 8.9375 7.5625 6.875 10.3125 6.875C12.43 6.875 14.4925 8.23625 15.2212 10.12H17.7925C18.5075 8.23625 20.57 6.875 22.6875 6.875C25.4375 6.875 27.5 8.9375 27.5 11.6875C27.5 15.6613 23.1825 19.58 16.6375 25.5062Z"
+                        fill="#3670C7"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_901_1437">
+                        <rect width="33" height="33" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+
+                <div class="card__delivery-wrap">
+                  <div class="card__delivery-wrap-sub">
+                    <span class="card__delivery-text">Доставка</span>
+                    <span class="card__delivery-text-sub">1-3 января</span>
+                  </div>
+                  <div class="card__delivery-wrap-sub">
+                    <span class="card__delivery-text">Продавец</span>
+                    <span class="card__delivery-text-sub">ShopOnline</span>
+                  </div>
+                </div>
+                <div class="card__notice-wrap">
+                  <svg
+                    class="card__notice-ico"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M19 13.586V10C19 6.783 16.815 4.073 13.855 3.258C13.562 2.52 12.846 2 12 2C11.154 2 10.438 2.52 10.145 3.258C7.185 4.074 5 6.783 5 10V13.586L3.293 15.293C3.19996 15.3857 3.12617 15.4959 3.07589 15.6172C3.0256 15.7386 2.99981 15.8687 3 16V18C3 18.2652 3.10536 18.5196 3.29289 18.7071C3.48043 18.8946 3.73478 19 4 19H20C20.2652 19 20.5196 18.8946 20.7071 18.7071C20.8946 18.5196 21 18.2652 21 18V16C21.0002 15.8687 20.9744 15.7386 20.9241 15.6172C20.8738 15.4959 20.8 15.3857 20.707 15.293L19 13.586ZM19 17H5V16.414L6.707 14.707C6.80004 14.6143 6.87383 14.5041 6.92412 14.3828C6.9744 14.2614 7.00019 14.1313 7 14V10C7 7.243 9.243 5 12 5C14.757 5 17 7.243 17 10V14C17 14.266 17.105 14.52 17.293 14.707L19 16.414V17ZM12 22C12.6193 22.0008 13.2235 21.8086 13.7285 21.4502C14.2335 21.0917 14.6143 20.5849 14.818 20H9.182C9.38566 20.5849 9.76648 21.0917 10.2715 21.4502C10.7765 21.8086 11.3807 22.0008 12 22Z"
+                      fill="#3670C7"
+                    />
+                  </svg>
+                  <span class="card__notice-text">Узнать о снижении цены</span>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <ul class="sale__list" role="presentation">
-            <li class="sale__item sale__item-book">
-              <p class="sale__text-book">
-                <span class="sale__text-book-word">Книга &ndash;</span>лучший подарок
-              </p>
-            </li>
-            <li class="sale__item sale__item-watch">
-              <p class="sale__text-watch">Время скидок!</p>
-
-              <p class="sale__discount sale__discount_rb sale__discount-text">-25%</p>
-            </li>
-            <li class="sale__item sale__item-red-sneaker">
-              <p class="sale__discount sale__discount_lt sale__discount-text">-45%</p>
-            </li>
-            <li class="sale__item sale__item-two-sneakers">
-              <div class="sale__two-sneakers-text-wrap">
-                <p class="sale__two-sneakers-text">
-                  Вторая пара кроссовок <span class="sale__two-sneakers-text-sub">в подарок!</span>
-                </p>
-              </div>
-            </li>
-            <li class="sale__item sale__item-gift-ideas">
-              <p class="sale__gift-ideas-text">Идеи новогодних подарков</p>
-            </li>
-            <li class="sale__item sale__item-laptop">
-              <p class="sale__text-laptop">Выгодно в декабре!</p>
-
-              <p class="sale__discount sale__discount_rb sale__discount-text">-15%</p>
-            </li>
-            <li class="sale__item sale__item-2022">
-              <div class="sale__2022-text-wrap">
-                <p class="sale__2022-text">Новогодние украшения</p>
-              </div>
-            </li>
-            <li class="sale__item sale__item-dress">
-              <p class="sale__discount sale__discount_rb sale__discount-text">-55%</p>
-            </li>
-            <li class="sale__item sale__item-spray">
-              <p class="sale__spray-text">На бытовую химию</p>
-
-              <p class="sale__discount sale__discount_lt sale__discount-text">-25%</p>
-            </li>
-            <li class="sale__item sale__item-balls"></li>
-          </ul>
+          <div class="card__description">
+            <h2 class="card__description-title">Описание:</h2>
+            <p class="card__description-text">
+              ROG Strix G15/17 – это игровая платформа для массового пользователя, работающая на
+              базе операционной системы Windows 10 Pro. Благодаря мощной конфигурации, которая может
+              включать в себя процессор AMD Ryzen 9 5900HX и видеокарту GeForce RTX 3070, этот
+              ноутбук подходит для широкого спектра задач. Его дисплей доступен в двух вариантах: с
+              киберспортивного уровня частотой обновления в 300 Гц или с высоким разрешением WQHD.
+              Оба варианта обладают низким временем отклика (3 мс) и поддерживают адаптивную
+              синхронизацию Adaptive-Sync. Оптимизированная система охлаждения гарантирует
+              стабильную работу устройства под тяжелыми нагрузками, поэтому ROG Strix G15/17
+              позволит вам проявить все свое мастерство в любой игровой ситуации!
+            </p>
+          </div>
         </div>
-      </section>
+        <div class="product recommend">
+          <h2 class="product__title">Рекомендуем также</h2>
+          <ul class="product__cards product__cards_card">
+            <li class="product__card">
+              <a class="product__link" href="">
+                <div class="product__wrap">
+                  <picture>
+                    <source srcset="image/dell.avif" type="image/avif" />
+                    <source srcset="image/dell.webp" type="image/webp" />
+                    <img
+                      loading="lazy"
+                      class="product__img"
+                      src="image/dell.jpg"
+                      alt="ноутбук"
+                      width="420"
+                      height="295"
+                    />
+                  </picture>
+                </div>
+                <div class="product__price-wrap">
+                  <span class="product__price">96 320 ₽</span>
+                </div>
+                <span class="product__name">Ноутбук Dell</span>
+              </a>
+            </li>
 
-      <section class="product">
-        <div class="container">
-          <h2 class="product__title">Это выгодно!</h2>
-          <ul class="product__cards">
+            <li class="product__card">
+              <a class="product__link" href="">
+                <div class="product__wrap">
+                  <picture>
+                    <source srcset="image/hp-250.avif" type="image/avif" />
+                    <source srcset="image/hp-250.webp" type="image/webp" />
+                    <img
+                      loading="lazy"
+                      class="product__img"
+                      src="image/hp-250.jpg"
+                      alt="ноутбук"
+                      width="420"
+                      height="295"
+                    />
+                  </picture>
+                </div>
+                <div class="product__price-wrap">
+                  <span class="product__price">64 949 ₽</span>
+                </div>
+                <span class="product__name">Ноутбук HP 250</span>
+              </a>
+            </li>
+
+            <li class="product__card">
+              <a class="product__link" href="">
+                <div class="product__wrap">
+                  <picture>
+                    <source srcset="image/hp-15.avif" type="image/avif" />
+                    <source srcset="image/hp-15.webp" type="image/webp" />
+                    <img
+                      loading="lazy"
+                      class="product__img"
+                      src="image/hp-15.jpg"
+                      alt="ноутбук"
+                      width="420"
+                      height="295"
+                    />
+                  </picture>
+                </div>
+                <div class="product__price-wrap">
+                  <span class="product__price">37 980 ₽</span>
+                </div>
+                <span class="product__name">Ноутбук HP 15</span>
+              </a>
+            </li>
+
+            <li class="product__card">
+              <a class="product__link" href="">
+                <div class="product__wrap">
+                  <span class="product__discount" aria-live="polite">-10%</span>
+                  <picture>
+                    <source srcset="image/asus-zenbook-pro.avif" type="image/avif" />
+                    <source srcset="image/asus-zenbook-pro.webp" type="image/webp" />
+                    <img
+                      loading="lazy"
+                      class="product__img"
+                      src="image/asus-zenbook-pro.jpg"
+                      alt="ноутбук"
+                      width="420"
+                      height="295"
+                    />
+                  </picture>
+                </div>
+                <div class="product__price-wrap">
+                  <span class="product__price">102 680 ₽</span>
+                  <span class="product__old-price">105 999 ₽</span>
+                </div>
+                <span class="product__name">Фен</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="product__cards product__cards_card-sub">
             <li class="product__card">
               <a class="product__link" href="">
                 <div class="product__wrap">
@@ -638,60 +751,9 @@
                 <span class="product__name">Фен</span>
               </a>
             </li>
-
-            <li class="product__card">
-              <a class="product__link" href="">
-                <div class="product__wrap">
-                  <span class="product__discount" aria-live="polite">-50%</span>
-                  <picture>
-                    <source srcset="image/mittens.avif" type="image/avif" />
-                    <source srcset="image/mittens.webp" type="image/webp" />
-                    <img
-                      loading="lazy"
-                      class="product__img"
-                      src="image/mittens.jpg"
-                      alt="Варежки-мишки"
-                      width="420"
-                      height="295"
-                    />
-                  </picture>
-                </div>
-                <div class="product__price-wrap">
-                  <span class="product__price">540 ₽</span>
-                  <span class="product__old-price">890 ₽</span>
-                </div>
-                <span class="product__name">Варежки-мишки</span>
-              </a>
-            </li>
-
-            <li class="product__card">
-              <a class="product__link" href="">
-                <div class="product__wrap">
-                  <span class="product__discount" aria-live="polite">-50%</span>
-
-                  <picture>
-                    <source srcset="image/two-footballs.avif" type="image/avif" />
-                    <source srcset="image/two-footballs.webp" type="image/webp" />
-                    <img
-                      loading="lazy"
-                      class="product__img"
-                      src="image/two-footballs.jpg"
-                      alt="две футболки"
-                      width="420"
-                      height="295"
-                    />
-                  </picture>
-                </div>
-                <div class="product__price-wrap">
-                  <span class="product__price">1299 ₽</span>
-                  <span class="product__old-price">2598 ₽</span>
-                </div>
-                <span class="product__name">Пара футболок</span>
-              </a>
-            </li>
           </ul>
         </div>
-      </section>
+      </div>
     </main>
     <footer class="footer" id="footer">
       <div class="container">
