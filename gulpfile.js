@@ -18,6 +18,8 @@ import gulpImg from 'gulp-image';
 import gulpWebp from 'gulp-webp';
 import gulpAvif from 'gulp-avif';
 import {stream as critical} from 'critical';
+import autoPrefixer from 'gulp-autoprefixer';
+import babel from 'gulp-babel';
 
 let dev = false;
 const prepros = true;
@@ -73,6 +75,7 @@ export const style = () => {
       .src('src/scss/**/*.scss')
       .pipe(gulpif(dev, sourсemaps.init()))
       .pipe(sass().on('error', sass.logError))
+      .pipe(autoPrefixer())
       .pipe(
         cleanCSS({
           2: {
@@ -92,6 +95,7 @@ export const style = () => {
         extensions: ['css'],
       })
     )
+    .pipe(autoPrefixer())
     .pipe(
       cleanCSS({
         2: {
@@ -108,6 +112,12 @@ export const js = () =>
   gulp
     .src('src/script/**/*.js')
     .pipe(gulpif(dev, sourсemaps.init()))
+    .pipe(
+      babel({
+        presets: ['@babel/preset-env'],
+        ignore: ['src/script/**/*.min.js'],
+      })
+    )
     .pipe(plumber())
     .pipe(webpackStream(webpackConf, webpack))
     // .pipe(gulpif(!dev, gulp.dest('dist/script')))
