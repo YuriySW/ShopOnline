@@ -121,29 +121,37 @@ const checkBoxChange = () => {
     });
   });
 
-  const deleteBtn = document.querySelector('.basket__delete-btn');
+  const deleteBtn = document.querySelectorAll('.basket__delete-btn');
 
-  deleteBtn.addEventListener('click', function () {
-    const checkedItems = document.querySelectorAll('.basket__checkbox-choose:checked');
-    let basket = JSON.parse(localStorage.getItem('basket')) || [];
+  deleteBtn.forEach((item) => {
+    item.addEventListener('click', function () {
+      const checkedItems = document.querySelectorAll('.basket__checkbox-choose:checked');
+      let basket = JSON.parse(localStorage.getItem('basket')) || [];
 
-    checkedItems.forEach((checkbox) => {
-      const itemElement = checkbox.closest('.basket__item');
-      const itemId = itemElement.dataset.id;
+      checkedItems.forEach((checkbox) => {
+        const itemElement = checkbox.closest('.basket__item');
+        const itemId = itemElement.dataset.id;
 
-      basket = basket.filter((item) => item.id !== itemId);
+        const stripe = itemElement.nextElementSibling;
 
-      itemElement.remove();
+        basket = basket.filter((item) => item.id !== itemId);
 
-      const imageItem = document.querySelector(`.basket__delivery-image[data-id="${itemId}"]`);
-      if (imageItem) {
-        imageItem.closest('.basket__delivery-image-item').remove();
-      }
+        if (stripe && stripe.classList.contains('basket__stripe--sub')) {
+          stripe.remove();
+        }
+
+        itemElement.remove();
+
+        const imageItem = document.querySelector(`.basket__delivery-image[data-id="${itemId}"]`);
+        if (imageItem) {
+          imageItem.closest('.basket__delivery-image-item').remove();
+        }
+      });
+
+      localStorage.setItem('basket', JSON.stringify(basket));
+      basketTotalSum();
+      updateBasketCount();
     });
-
-    localStorage.setItem('basket', JSON.stringify(basket));
-    basketTotalSum();
-    updateBasketCount();
   });
 };
 
@@ -197,6 +205,12 @@ const imageSub = () => {
     basketTotalSum();
     loadDeliveryImages();
   }
+};
+const updateBasketCount = () => {
+  const basket = JSON.parse(localStorage.getItem('basket')) || [];
+  const itemCount = basket.length;
+  basketTitle.setAttribute('data-number', itemCount);
+  basketGoodsCount.textContent = itemCount;
 };
 
 const clearBasketIfEmpty = () => {
@@ -345,12 +359,6 @@ if (window.location.pathname.includes('basket.html')) {
       document.addEventListener('DOMContentLoaded', countGood);
       checkBoxChange();
 
-      const updateBasketCount = () => {
-        const basket = JSON.parse(localStorage.getItem('basket')) || [];
-        const itemCount = basket.length;
-        basketTitle.setAttribute('data-number', itemCount);
-        basketGoodsCount.textContent = itemCount;
-      };
       updateBasketCount();
     });
   }
