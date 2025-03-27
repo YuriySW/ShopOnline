@@ -151,6 +151,7 @@ const checkBoxChange = () => {
       localStorage.setItem('basket', JSON.stringify(basket));
       basketTotalSum();
       updateBasketCount();
+      selectAllCheckbox.checked = false;
     });
   });
 };
