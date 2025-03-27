@@ -8,6 +8,14 @@ if (window.location.pathname.includes('card.html')) {
   if (productId) {
     const loadCardGood = async (productId) => {
       try {
+        const card = document.querySelector('.card');
+        const pageLinkCategory = document.querySelector('.page-link-category');
+        const pageLinkTitle = document.querySelector('.page-link-title');
+
+        if (card) card.innerHTML = '';
+        if (pageLinkCategory) pageLinkCategory.textContent = '';
+        if (pageLinkTitle) pageLinkTitle.textContent = '';
+
         const good = await getGoodById(productId);
 
         if (!good) {
@@ -15,24 +23,22 @@ if (window.location.pathname.includes('card.html')) {
           return;
         }
 
-        let pageLinkCategory = document.querySelector('.page-link-category');
-        let pageLinkTitle = document.querySelector('.page-link-title');
+        if (pageLinkCategory) {
+          pageLinkCategory.textContent = good.category;
+          pageLinkCategory.style.cursor = 'pointer';
+          pageLinkCategory.addEventListener('click', () => {
+            window.location.href = `category.html?category=${encodeURIComponent(good.category)}`;
+          });
+        }
 
-        pageLinkCategory.addEventListener('click', () => {
-          window.location.href = `category.html?category=${encodeURIComponent(good.category)}`;
-        });
+        if (pageLinkTitle) {
+          pageLinkTitle.textContent = good.title;
+        }
 
-        pageLinkCategory.style.cursor = 'pointer';
-
-        pageLinkCategory.textContent = good.category;
-        pageLinkTitle.textContent = good.title;
-
-        const card = document.querySelector('.card');
         if (!card) {
           console.error('Контейнер карточки не найден');
           return;
         }
-        card.innerHTML = '';
 
         renderCard(good);
 
@@ -40,7 +46,6 @@ if (window.location.pathname.includes('card.html')) {
         if (addToBasketBtn) {
           checkBasketStatus(good.id, addToBasketBtn);
           addToBasketBtn.addEventListener('click', () => addToBasket(good, addToBasketBtn));
-        } else {
         }
       } catch (error) {
         console.error('Ошибка при загрузке товара:', error);
@@ -54,7 +59,6 @@ if (window.location.pathname.includes('card.html')) {
 const checkBasketStatus = (productId, button) => {
   let basket = JSON.parse(localStorage.getItem('basket')) || [];
   const isInBasket = basket.some((item) => item.id === productId);
-
   if (isInBasket) {
     button.textContent = 'Товар в корзине';
     button.disabled = true;
@@ -63,7 +67,6 @@ const checkBasketStatus = (productId, button) => {
 
 const addToBasket = (good, button) => {
   let basket = JSON.parse(localStorage.getItem('basket')) || [];
-
   const isInBasket = basket.some((item) => item.id === good.id);
   if (isInBasket) return;
 
@@ -80,7 +83,6 @@ const addToBasket = (good, button) => {
 
   basket.push(product);
   localStorage.setItem('basket', JSON.stringify(basket));
-
   button.textContent = 'Товар в корзине';
   button.disabled = true;
 };
