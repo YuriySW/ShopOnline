@@ -1,4 +1,17 @@
+import {category} from './api.js';
+import {loadGoods} from './api.js';
+import {renderProductCard} from './createElement.js';
+
 const items = document.querySelectorAll('.blogs__item');
+const productCards = document.querySelector('.product__cards');
+const productTitle = document.querySelector('.product__title');
+const logo = document.querySelector('.logo');
+
+logo.addEventListener('click', () => {
+  window.location.href = 'index.html';
+});
+
+const BASE_URL = 'https://excited-evanescent-macaroni.glitch.me';
 
 export const clearItem = () => {
   items.forEach((item) => {
@@ -80,3 +93,89 @@ export const renderArticlePage = () => {
 
 loadBlogs();
 renderArticlePage();
+
+const getCategories = async () => {
+  const categories = await category();
+  const footerListCatalogs = document.querySelectorAll('.footer__list_catalog');
+
+  footerListCatalogs.forEach((list) => {
+    list.innerHTML = '';
+
+    categories.forEach((categoryName) => {
+      const li = document.createElement('li');
+      li.classList.add('footer__item');
+
+      const link = document.createElement('a');
+      link.classList.add('footer__link');
+      link.href = `category.html?category=${encodeURIComponent(categoryName)}`;
+      link.textContent = categoryName;
+
+      if (list.previousElementSibling?.classList.contains('footer__title_bm')) {
+        link.classList.add('footer__link_bm');
+      }
+
+      li.appendChild(link);
+      list.appendChild(li);
+    });
+  });
+};
+
+getCategories();
+
+const getQueryParam = (param) => {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+};
+
+const loadCategoryGoods = async () => {
+  const category = getQueryParam('category');
+  if (!category) {
+    console.error('Категория не найдена в URL');
+    return;
+  }
+
+  productTitle.textContent = category;
+
+  try {
+    const url = `${BASE_URL}/api/goods`;
+    const result = await fetch(url);
+    const response = await result.json();
+
+    productCards.innerHTML = '';
+
+    const filteredGoods = response.goods.filter((item) => item.category === category);
+
+    if (filteredGoods.length === 0) {
+      productCards.innerHTML = '<p>Товары этой категории не найдены.</p>';
+      return;
+    }
+
+    filteredGoods.forEach(renderProductCard);
+  } catch (error) {
+    console.error('Ошибка при загрузке товаров:', error);
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const categoryParam = getQueryParam('category');
+
+  if (categoryParam) {
+    loadCategoryGoods();
+  } else {
+    loadGoods();
+  }
+});
+
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('.product__link');
+  if (!link) return;
+
+  const productCard = link.closest('.product__card');
+  if (!productCard) return;
+
+  const productId = productCard.dataset.id;
+  if (!productId) return;
+  console.log(productId);
+  event.preventDefault();
+  window.location.href = `card.html?id=${productId}`;
+});
