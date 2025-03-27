@@ -140,8 +140,9 @@
           margin-bottom: 10px;
         }
         .product__img {
-          max-height: 295px;
+          height: 295px;
           border-radius: 14px;
+
           @media (max-width: 1024px) {
             border-radius: 14px;
 
