@@ -133,15 +133,17 @@ const loadCategoryGoods = async () => {
     console.error('Категория не найдена в URL');
     return;
   }
-
-  productTitle.textContent = category;
+  if (productTitle) productTitle.textContent = '';
+  if (productCards) productCards.innerHTML = '';
 
   try {
     const url = `${BASE_URL}/api/goods`;
     const result = await fetch(url);
     const response = await result.json();
 
-    productCards.innerHTML = '';
+    if (productTitle) productTitle.textContent = category;
+
+    if (productCards) productCards.innerHTML = '';
 
     const filteredGoods = response.goods.filter((item) => item.category === category);
 
