@@ -259,7 +259,7 @@
 
   &__add-basket-btn {
     padding: 17px 42px;
-    max-width: 234px;
+    width: 234px;
     border-radius: 10px;
     background: $color-primary;
     color: $color-text;
@@ -281,12 +281,12 @@
 
     @media (max-width: 1024px) {
       padding: 12px 26px;
-      max-width: 202px;
+      width: 202px;
     }
     @media (max-width: 700px) {
       font-size: 12px;
       padding: 8px 18px;
-      max-width: 148px;
+      width: 148px;
       border-radius: 8px;
     }
   }
