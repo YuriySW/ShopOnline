@@ -46,6 +46,7 @@
 
 .logo {
   grid-area: logo;
+  cursor: pointer;
 
   @media (max-width: 1005px) {
     width: 165px;

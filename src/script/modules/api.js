@@ -5,6 +5,8 @@ const BASE_URL = 'https://excited-evanescent-macaroni.glitch.me';
 
 export const loadGoods = async () => {
   try {
+    if (productCards) productCards.innerHTML = '';
+
     const url = `${BASE_URL}/api/goods`;
     const result = await fetch(url);
     const response = await result.json();
@@ -14,7 +16,8 @@ export const loadGoods = async () => {
       return;
     }
 
-    productCards.innerHTML = '';
+    if (productCards) productCards.innerHTML = '';
+
     response.goods.forEach(renderProductCard);
   } catch (error) {
     console.error('Ошибка при загрузке товаров:', error);
