@@ -120,9 +120,9 @@
 
   &__image {
     width: 100%;
-    // max-height: 427px;
-    aspect-ratio: 16 / 9; /* Например, 16:9 */
-    object-fit: contain;
+    border-radius: 14px;
+    aspect-ratio: 16 / 9;
+    object-fit: fill;
 
     @media (max-width: 1024px) {
       max-width: 540px;
