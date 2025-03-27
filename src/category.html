@@ -1,40 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main Page</title>
+    <title>Category</title>
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png" />
-    <link defer rel="manifest" href="favicon/site.webmanifest" />
-    <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin />
-
-    <link
-      rel="preload"
-      as="image"
-      href="/image/banner-320.avif"
-      type="image/avif"
-      media="(max-width: 730px)"
-    />
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const createLink = (url) => {
-          const link = document.createElement('link');
-          link.rel = 'stylesheet';
-          link.href = url;
-          document.head.append(link);
-        };
-        createLink('css/index.css');
-      });
-    </script>
+    <link rel="manifest" href="favicon/site.webmanifest" />
 
     <script type="module" src="script/index.min.js"></script>
-    <!-- <link rel="stylesheet" href="css/index.css" /> -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <header class="header">
@@ -424,69 +404,9 @@
     </div>
 
     <main>
-      <section class="sale">
+      <section class="product product--category">
         <div class="container">
-          <div class="banner-wrap">
-            <h2 class="banner-text">-50% на все ноутбуки</h2>
-            <p class="end-promotion">До конца акции:</p>
-            <span
-              class="timer"
-              data-timer-deadline="2026-08-19T13:01:00Z"
-              aria-live="polite"
-              role="timer"
-            ></span>
-          </div>
-
-          <ul class="sale__list" role="presentation">
-            <li class="sale__item sale__item-book">
-              <p class="sale__text-book">
-                <span class="sale__text-book-word">Книга &ndash;</span>лучший подарок
-              </p>
-            </li>
-            <li class="sale__item sale__item-watch">
-              <p class="sale__text-watch">Время скидок!</p>
-
-              <p class="sale__discount sale__discount_rb sale__discount-text">-25%</p>
-            </li>
-            <li class="sale__item sale__item-red-sneaker">
-              <p class="sale__discount sale__discount_lt sale__discount-text">-45%</p>
-            </li>
-            <li class="sale__item sale__item-two-sneakers">
-              <div class="sale__two-sneakers-text-wrap">
-                <p class="sale__two-sneakers-text">
-                  Вторая пара кроссовок <span class="sale__two-sneakers-text-sub">в подарок!</span>
-                </p>
-              </div>
-            </li>
-            <li class="sale__item sale__item-gift-ideas">
-              <p class="sale__gift-ideas-text">Идеи новогодних подарков</p>
-            </li>
-            <li class="sale__item sale__item-laptop">
-              <p class="sale__text-laptop">Выгодно в декабре!</p>
-
-              <p class="sale__discount sale__discount_rb sale__discount-text">-15%</p>
-            </li>
-            <li class="sale__item sale__item-2022">
-              <div class="sale__2022-text-wrap">
-                <p class="sale__2022-text">Новогодние украшения</p>
-              </div>
-            </li>
-            <li class="sale__item sale__item-dress">
-              <p class="sale__discount sale__discount_rb sale__discount-text">-55%</p>
-            </li>
-            <li class="sale__item sale__item-spray">
-              <p class="sale__spray-text">На бытовую химию</p>
-
-              <p class="sale__discount sale__discount_lt sale__discount-text">-25%</p>
-            </li>
-            <li class="sale__item sale__item-balls"></li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="product">
-        <div class="container">
-          <h2 class="product__title">Это выгодно!</h2>
+          <h2 class="product__title">Электроника</h2>
           <ul class="product__cards">
             <li class="product__card">
               <a class="product__link" href="">
