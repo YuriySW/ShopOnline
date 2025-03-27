@@ -2,7 +2,7 @@ const basketBtn = document.querySelector('.basket-btn');
 const basketTitle = document.querySelector('.basket__title');
 const basketGoodsCount = document.querySelector('.basket__goods-count');
 const BASE_URL = 'https://excited-evanescent-macaroni.glitch.me';
-const DEFAULT_IMAGE = `../image/not-img.jpg`;
+const DEFAULT_IMAGE = `image/not-img.jpg`;
 
 basketBtn.addEventListener('click', () => {
   window.location.href = 'basket.html';
@@ -197,7 +197,33 @@ const imageSub = () => {
   }
 };
 
+const clearBasketIfEmpty = () => {
+  const basket = JSON.parse(localStorage.getItem('basket')) || [];
+
+  if (basket.length === 0) {
+    const basketList = document.querySelector('.basket__list');
+    const basketDeliveryImages = document.querySelector('.basket__delivery-images');
+    const basketSummaryPrice = document.querySelector('.basket__summary-price');
+    const basketSummaryValueNotDiscount = document.querySelector(
+      '.basket__summary-value-not-discount'
+    );
+    const basketSummaryDiscount = document.querySelector('.basket__summary-value-all');
+
+    if (basketList) basketList.innerHTML = '';
+    if (basketDeliveryImages) basketDeliveryImages.innerHTML = '';
+
+    if (basketSummaryPrice) basketSummaryPrice.textContent = '0 ₽';
+    if (basketSummaryValueNotDiscount) basketSummaryValueNotDiscount.textContent = '0 ₽';
+    if (basketSummaryDiscount) basketSummaryDiscount.textContent = '0 ₽';
+
+    updateBasketCount();
+  }
+};
+
 if (window.location.pathname.includes('basket.html')) {
+  document.addEventListener('DOMContentLoaded', () => {
+    clearBasketIfEmpty();
+  });
   const data = localStorage.getItem('basket');
   const basket = data ? JSON.parse(data) : [];
 
