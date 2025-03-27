@@ -285,6 +285,7 @@
     }
   }
   &__image {
+    border-radius: 10px;
     width: 130px;
     height: 130px;
 
@@ -640,6 +641,7 @@
   }
 
   &__delivery-image {
+    border-radius: 10px;
     width: 80px;
     height: 80px;
     flex-shrink: 0;

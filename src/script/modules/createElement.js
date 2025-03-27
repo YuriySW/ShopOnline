@@ -2,7 +2,7 @@ const productCards = document.querySelector('.product__cards');
 const card = document.querySelector('.card');
 
 const BASE_URL = 'https://excited-evanescent-macaroni.glitch.me';
-const DEFAULT_IMAGE = `/image/not-img.jpg`;
+const DEFAULT_IMAGE = `../image/not-img.jpg`;
 
 export const renderProductCard = ({id, image, title, price, discount}) => {
   const validDiscount = Number(discount) || 0;
