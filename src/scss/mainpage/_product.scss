@@ -163,15 +163,11 @@
 .product__cards_card {
   grid-template-rows: 1fr;
   @media (max-width: 1024px) {
-    display: none;
+    grid-template-rows: 1fr 1fr;
   }
 }
 .product__cards_card-sub {
   display: none;
-  @media (max-width: 1024px) {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-  }
 }
 .product__price-wrap {
   display: inline-flex;

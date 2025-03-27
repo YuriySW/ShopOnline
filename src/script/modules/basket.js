@@ -1,11 +1,13 @@
-const basketBtn = document.querySelector('.basket-btn');
+const basketBtn = document.querySelectorAll('.basket-btn');
 const basketTitle = document.querySelector('.basket__title');
 const basketGoodsCount = document.querySelector('.basket__goods-count');
 const BASE_URL = 'https://excited-evanescent-macaroni.glitch.me';
 const DEFAULT_IMAGE = `image/not-img.jpg`;
 
-basketBtn.addEventListener('click', () => {
-  window.location.href = 'basket.html';
+basketBtn.forEach((item) => {
+  item.addEventListener('click', () => {
+    window.location.href = 'basket.html';
+  });
 });
 
 const countGood = () => {
