@@ -1,52 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main Page</title>
+    <title>Basket</title>
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png" />
-    <link defer rel="manifest" href="favicon/site.webmanifest" />
-    <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin />
-
-    <link
-      rel="preload"
-      as="image"
-      href="/image/banner-320.avif"
-      type="image/avif"
-      media="(max-width: 730px)"
-    />
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const createLink = (url) => {
-          const link = document.createElement('link');
-          link.rel = 'stylesheet';
-          link.href = url;
-          document.head.append(link);
-        };
-        createLink('css/index.css');
-      });
-    </script>
+    <link rel="manifest" href="favicon/site.webmanifest" />
 
     <script type="module" src="script/index.min.js"></script>
-    <!-- <link rel="stylesheet" href="css/index.css" /> -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <header class="header">
       <h1 class="title">Новогодняя распродажа</h1>
       <div class="container holder">
-        <img
-          src="image/logo.svg"
-          alt="Логотип магазина «Шопонлайн»"
-          class="logo"
-          width="188"
-          height="31"
-        />
+        <img src="image/logo.svg" alt="Логотип магазина «Шопонлайн»" class="logo" />
 
         <svg
           aria-label="Открыть меню"
@@ -64,7 +38,6 @@
             d="M79.414 18.237V34H77.544V22.417C77.544 22.263 77.5477 22.098 77.555 21.922C77.5697 21.746 77.5843 21.5663 77.599 21.383L72.187 31.239C72.0183 31.569 71.7617 31.734 71.417 31.734H71.109C70.7643 31.734 70.5077 31.569 70.339 31.239L64.817 21.339C64.861 21.7277 64.883 22.087 64.883 22.417V34H63.013V18.237H64.586C64.7767 18.237 64.9233 18.2553 65.026 18.292C65.1287 18.3287 65.2277 18.4313 65.323 18.6L70.768 28.302C70.856 28.478 70.9403 28.6613 71.021 28.852C71.109 29.0427 71.1897 29.237 71.263 29.435C71.3363 29.237 71.4133 29.0427 71.494 28.852C71.5747 28.654 71.6627 28.467 71.758 28.291L77.104 18.6C77.192 18.4313 77.2873 18.3287 77.39 18.292C77.5 18.2553 77.6503 18.237 77.841 18.237H79.414ZM90.0969 27.213C90.0969 26.7583 90.0309 26.344 89.8989 25.97C89.7742 25.5887 89.5872 25.2623 89.3379 24.991C89.0959 24.7123 88.7989 24.4997 88.4469 24.353C88.0949 24.199 87.6952 24.122 87.2479 24.122C86.3092 24.122 85.5649 24.397 85.0149 24.947C84.4722 25.4897 84.1349 26.245 84.0029 27.213H90.0969ZM91.6809 32.438C91.4389 32.7313 91.1492 32.988 90.8119 33.208C90.4746 33.4207 90.1116 33.5967 89.7229 33.736C89.3416 33.8753 88.9456 33.978 88.5349 34.044C88.1242 34.1173 87.7172 34.154 87.3139 34.154C86.5439 34.154 85.8326 34.0257 85.1799 33.769C84.5346 33.505 83.9736 33.1237 83.4969 32.625C83.0276 32.119 82.6609 31.4957 82.3969 30.755C82.1329 30.0143 82.0009 29.1637 82.0009 28.203C82.0009 27.4257 82.1182 26.6997 82.3529 26.025C82.5949 25.3503 82.9396 24.7673 83.3869 24.276C83.8342 23.7773 84.3806 23.3887 85.0259 23.11C85.6712 22.824 86.3972 22.681 87.2039 22.681C87.8712 22.681 88.4872 22.7947 89.0519 23.022C89.6239 23.242 90.1152 23.5647 90.5259 23.99C90.9439 24.408 91.2702 24.9287 91.5049 25.552C91.7396 26.168 91.8569 26.872 91.8569 27.664C91.8569 27.972 91.8239 28.1773 91.7579 28.28C91.6919 28.3827 91.5672 28.434 91.3839 28.434H83.9369C83.9589 29.138 84.0542 29.7503 84.2229 30.271C84.3989 30.7917 84.6409 31.228 84.9489 31.58C85.2569 31.9247 85.6236 32.185 86.0489 32.361C86.4742 32.5297 86.9509 32.614 87.4789 32.614C87.9702 32.614 88.3919 32.559 88.7439 32.449C89.1032 32.3317 89.4112 32.207 89.6679 32.075C89.9246 31.943 90.1372 31.822 90.3059 31.712C90.4819 31.5947 90.6322 31.536 90.7569 31.536C90.9182 31.536 91.0429 31.5983 91.1309 31.723L91.6809 32.438ZM103.546 22.857V34H101.577V28.786H96.2309V34H94.2619V22.857H96.2309V27.301H101.577V22.857H103.546ZM116.316 32.625C117.343 32.625 118.109 32.2583 118.615 31.525C119.121 30.7843 119.374 29.754 119.374 28.434C119.374 27.1067 119.121 26.0727 118.615 25.332C118.109 24.5913 117.343 24.221 116.316 24.221C115.29 24.221 114.523 24.5913 114.017 25.332C113.511 26.0727 113.258 27.1067 113.258 28.434C113.258 29.754 113.511 30.7843 114.017 31.525C114.523 32.2583 115.29 32.625 116.316 32.625ZM111.333 27.664C111.399 26.9013 111.557 26.212 111.806 25.596C112.063 24.98 112.404 24.4557 112.829 24.023C113.262 23.5903 113.768 23.2603 114.347 23.033C114.934 22.7983 115.59 22.681 116.316 22.681C117.094 22.681 117.794 22.8167 118.417 23.088C119.048 23.3593 119.583 23.7443 120.023 24.243C120.463 24.7417 120.801 25.3467 121.035 26.058C121.277 26.762 121.398 27.5503 121.398 28.423C121.398 29.303 121.277 30.095 121.035 30.799C120.793 31.503 120.449 32.1043 120.001 32.603C119.554 33.1017 119.019 33.4867 118.395 33.758C117.772 34.022 117.079 34.154 116.316 34.154C115.576 34.154 114.908 34.0367 114.314 33.802C113.728 33.5673 113.222 33.2337 112.796 32.801C112.371 32.361 112.03 31.8293 111.773 31.206C111.524 30.5827 111.374 29.8787 111.322 29.094H108.627V34H106.658V22.857H108.627V27.664H111.333Z"
             fill="white"
           />
-
           <g clip-path="url(#clip0_5105_11)">
             <path d="M33 33H39V31H33V33ZM33 21V23H51V21H33ZM33 28H45V26H33V28Z" fill="white" />
           </g>
@@ -74,7 +47,6 @@
             </clippath>
           </defs>
         </svg>
-
         <svg
           aria-label="Открыть меню "
           tabindex="0"
@@ -103,10 +75,9 @@
             </clipPath>
           </defs>
         </svg>
-
         <form
           role="search"
-          class="form-search search-input"
+          class="search-input"
           name="search"
           action="https://jsonplaceholder.typicode.com/posts"
           method="POST"
@@ -122,6 +93,7 @@
           />
 
           <button class="search-btn" type="submit" tabindex="0" aria-label="Начать поиск">
+            <!-- <img src="image/icon/search.svg" alt="" class="search-but" /> -->
             <svg
               class="search-but"
               width="101"
@@ -146,7 +118,7 @@
           </button>
         </form>
 
-        <div class="menu-wrap">
+        <div class="menu-wrap menu-wrap_blogs">
           <div class="menu">
             <button class="profile" aria-label="открыть профиль">
               <svg
@@ -306,7 +278,6 @@
         </div>
       </div>
     </header>
-
     <div class="footer burger-menu">
       <div class="container">
         <div class="footer__content footer__content_bm">
@@ -423,69 +394,393 @@
       </div>
     </div>
 
+    <div class="container">
+      <nav class="link-wrap" aria-label="Хлебные крошки">
+        <a href="index.html" class="page-link" aria-label="Переход на главную страницу">Главная</a>
+
+        <span class="arrow-link" aria-hidden="true">></span>
+        <span class="page-link page-link-title" aria-current="page">Корзина</span>
+      </nav>
+    </div>
     <main>
-      <section class="sale">
-        <div class="container">
-          <div class="banner-wrap">
-            <h2 class="banner-text">-50% на все ноутбуки</h2>
-            <p class="end-promotion">До конца акции:</p>
-            <span
-              class="timer"
-              data-timer-deadline="2026-08-19T13:01:00Z"
-              aria-live="polite"
-              role="timer"
-            ></span>
+      <div class="container">
+        <div class="basket">
+          <div class="basket__wrapper-gr delivery-el">
+            <div class="basket__product basket__product--add">
+              <h2 class="basket__title" data-number="0">Корзина</h2>
+              <div class="basket__select-all">
+                <div class="basket__checkbox-wrapper">
+                  <input
+                    class="basket__checkbox basket__checkbox--all"
+                    type="checkbox"
+                    name="all"
+                    id="choose-all"
+                  />
+                  <label class="basket__checkbox-label" for="choose-all" tabindex="0"
+                    >Выбрать все</label
+                  >
+                </div>
+                <button class="basket__delete-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_217_1895)">
+                      <path
+                        d="M19.0214 5.35355L19.1679 5.5H19.375H23.25V7H6.75V5.5H10.625H10.8321L10.9786 5.35355L12.0821 4.25H17.9179L19.0214 5.35355ZM10 25.75C8.90114 25.75 8 24.8489 8 23.75V9.25H22V23.75C22 24.8489 21.0989 25.75 20 25.75H10Z"
+                        fill="#C9C9C9"
+                        stroke="#C9C9C9"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_217_1895">
+                        <rect width="30" height="30" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+              <div class="basket__stripe"></div>
+              <ul class="basket__list">
+                <li class="basket__item">
+                  <input
+                    class="basket__checkbox basket__checkbox-choose"
+                    type="checkbox"
+                    name="all"
+                    id="choose-product"
+                  />
+                  <div class="basket__item-content">
+                    <div class="basket__product-info">
+                      <!-- <div class="basket__product-main"> -->
+                      <picture class="basket__picture">
+                        <source srcset="image/asus-zenbook-pro.avif" type="image/avif" />
+                        <source srcset="image/asus-zenbook-pro.webp" type="image/webp" />
+                        <img
+                          loading="lazy"
+                          class="basket__image"
+                          src="image/asus-zenbook-pro.jpg"
+                          alt="ноутбук"
+                          width="420"
+                          height="295"
+                        />
+                      </picture>
+                      <div class="basket__text">
+                        <h2 class="basket__product-title">
+                          15.6" Игровой ноутбук ASUS G513IE-HN004T
+                        </h2>
+                        <span class="basket__product-spec">Цвет: черный </span>
+                        <span class="basket__product-spec">Оперативная память: 16 ГБ</span>
+                      </div>
+                      <!-- </div> -->
+                      <div class="basket__counter">
+                        <svg
+                          class="basket__counter-minus"
+                          aria-label="добавить колличество покупки"
+                          tabindex="0"
+                          width="36"
+                          height="36"
+                          viewBox="0 0 36 36"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="18" cy="18" r="17.5" fill="white" stroke="#E8E8E8" />
+                          <path d="M14.2 18.088H21.08V19.168H14.2V18.088Z" fill="#8F8F8F" />
+                        </svg>
+                        <span class="basket__counter-number">1</span>
+                        <svg
+                          class="basket__counter-plus"
+                          aria-label="уменьшить колличество покупки"
+                          tabindex="0"
+                          width="36"
+                          height="36"
+                          viewBox="0 0 36 36"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="18" cy="18" r="17.5" fill="white" stroke="#E8E8E8" />
+                          <path
+                            d="M21.48 19.168H18.216V22.608H17.056V19.168H13.808V18.088H17.056V14.672H18.216V18.088H21.48V19.168Z"
+                            fill="#2D2D2D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="basket__price">
+                        <span class="basket__price-current">109 090 ₽</span>
+                        <span class="basket__price-old">109 090 ₽</span>
+                        <span class="basket__price-credit">В кредит от 5600 ₽ </span>
+                      </div>
+                      <button class="basket__delete-btn basket__delete-btn--sub">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          viewBox="0 0 30 30"
+                          fill="none"
+                        >
+                          <g clip-path="url(#clip0_217_1895)">
+                            <path
+                              d="M19.0214 5.35355L19.1679 5.5H19.375H23.25V7H6.75V5.5H10.625H10.8321L10.9786 5.35355L12.0821 4.25H17.9179L19.0214 5.35355ZM10 25.75C8.90114 25.75 8 24.8489 8 23.75V9.25H22V23.75C22 24.8489 21.0989 25.75 20 25.75H10Z"
+                              fill="#C9C9C9"
+                              stroke="#C9C9C9"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_217_1895">
+                              <rect width="30" height="30" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <div class="basket__stripe basket__stripe--sub"></div>
+                <li class="basket__item">
+                  <input
+                    class="basket__checkbox basket__checkbox-choose"
+                    type="checkbox"
+                    name="all"
+                  />
+                  <div class="basket__item-content">
+                    <div class="basket__product-info">
+                      <!-- <div class="basket__product-main"> -->
+                      <picture class="basket__picture">
+                        <source srcset="image/asus-zenbook-pro.avif" type="image/avif" />
+                        <source srcset="image/asus-zenbook-pro.webp" type="image/webp" />
+                        <img
+                          loading="lazy"
+                          class="basket__image"
+                          src="image/asus-zenbook-pro.jpg"
+                          alt="ноутбук"
+                          width="420"
+                          height="295"
+                        />
+                      </picture>
+                      <div class="basket__text">
+                        <h2 class="basket__product-title">
+                          15.6" Игровой ноутбук ASUS G513IE-HN004T
+                        </h2>
+                        <span class="basket__product-spec">Цвет: черный </span>
+                        <span class="basket__product-spec">Оперативная память: 16 ГБ</span>
+                      </div>
+                      <!-- </div> -->
+                      <div class="basket__counter">
+                        <svg
+                          class="basket__counter-minus"
+                          aria-label="добавить колличество покупки"
+                          tabindex="0"
+                          width="36"
+                          height="36"
+                          viewBox="0 0 36 36"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="18" cy="18" r="17.5" fill="white" stroke="#E8E8E8" />
+                          <path d="M14.2 18.088H21.08V19.168H14.2V18.088Z" fill="#8F8F8F" />
+                        </svg>
+                        <span class="basket__counter-number">1</span>
+                        <svg
+                          class="basket__counter-plus"
+                          aria-label="уменьшить колличество покупки"
+                          tabindex="0"
+                          width="36"
+                          height="36"
+                          viewBox="0 0 36 36"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="18" cy="18" r="17.5" fill="white" stroke="#E8E8E8" />
+                          <path
+                            d="M21.48 19.168H18.216V22.608H17.056V19.168H13.808V18.088H17.056V14.672H18.216V18.088H21.48V19.168Z"
+                            fill="#2D2D2D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="basket__price">
+                        <span class="basket__price-current">109 090 ₽</span>
+                        <span class="basket__price-old">109 090 ₽</span>
+                        <span class="basket__price-credit">В кредит от 5600 ₽ </span>
+                      </div>
+
+                      <button class="basket__delete-btn basket__delete-btn--sub">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          viewBox="0 0 30 30"
+                          fill="none"
+                        >
+                          <g clip-path="url(#clip0_217_1895)">
+                            <path
+                              d="M19.0214 5.35355L19.1679 5.5H19.375H23.25V7H6.75V5.5H10.625H10.8321L10.9786 5.35355L12.0821 4.25H17.9179L19.0214 5.35355ZM10 25.75C8.90114 25.75 8 24.8489 8 23.75V9.25H22V23.75C22 24.8489 21.0989 25.75 20 25.75H10Z"
+                              fill="#C9C9C9"
+                              stroke="#C9C9C9"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_217_1895">
+                              <rect width="30" height="30" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="basket__product">
+              <div class="basket__delivery-header">
+                <h2 class="basket__title basket__title--delivery">Способ доставки</h2>
+                <button class="basket__delivery-change">Изменить</button>
+              </div>
+
+              <div class="basket__delivery-content">
+                <div class="basket__delivery-column">
+                  <span class="basket__delivery-label">Пункт выдачи</span>
+                  <span class="basket__delivery-label">Стоимость доставки</span>
+                  <span class="basket__delivery-date">10-13 февраля</span>
+                </div>
+                <div class="basket__delivery-column">
+                  <span class="basket__delivery-value"
+                    >г. Москва (Московская область), улица Павлика Морозова, д. 48, (Пункт выдачи),
+                    Ежедневно 10:00-21:00</span
+                  >
+                  <span class="basket__delivery-value basket__delivery-value--sb">Бесплатно</span>
+                  <span class="basket__delivery-label basket__delivery-label--sb"
+                    >Бесплатная доставка</span
+                  >
+
+                  <div class="basket__stripe basket__stripe--sub"></div>
+
+                  <span class="basket__delivery-date basket__delivery-date--sb">10-13 февраля</span>
+
+                  <ul class="basket__delivery-images">
+                    <li class="basket__delivery-image-item">
+                      <picture>
+                        <source srcset="image/asus-zenbook-pro.avif" type="image/avif" />
+                        <source srcset="image/asus-zenbook-pro.webp" type="image/webp" />
+                        <img
+                          loading="lazy"
+                          class="basket__delivery-image"
+                          src="image/asus-zenbook-pro.jpg"
+                          alt="ноутбук"
+                          width="420"
+                          height="295"
+                        />
+                      </picture>
+                    </li>
+                    <li class="basket__delivery-image-item">
+                      <picture>
+                        <source srcset="image/asus-zenbook-pro.avif" type="image/avif" />
+                        <source srcset="image/asus-zenbook-pro.webp" type="image/webp" />
+                        <img
+                          loading="lazy"
+                          class="basket__delivery-image"
+                          src="image/asus-zenbook-pro.jpg"
+                          alt="ноутбук"
+                          width="420"
+                          height="295"
+                        />
+                      </picture>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <ul class="sale__list" role="presentation">
-            <li class="sale__item sale__item-book">
-              <p class="sale__text-book">
-                <span class="sale__text-book-word">Книга &ndash;</span>лучший подарок
-              </p>
-            </li>
-            <li class="sale__item sale__item-watch">
-              <p class="sale__text-watch">Время скидок!</p>
-
-              <p class="sale__discount sale__discount_rb sale__discount-text">-25%</p>
-            </li>
-            <li class="sale__item sale__item-red-sneaker">
-              <p class="sale__discount sale__discount_lt sale__discount-text">-45%</p>
-            </li>
-            <li class="sale__item sale__item-two-sneakers">
-              <div class="sale__two-sneakers-text-wrap">
-                <p class="sale__two-sneakers-text">
-                  Вторая пара кроссовок <span class="sale__two-sneakers-text-sub">в подарок!</span>
-                </p>
+          <form
+            class="basket__form"
+            name="agree"
+            action="https://jsonplaceholder.typicode.com/posts"
+            method="POST"
+          >
+            <div class="basket__product basket__product--total total-el">
+              <div class="basket__summary-header">
+                <span class="basket__summary-title">Итого: </span>
+                <span class="basket__summary-price">112 992 ₽ </span>
               </div>
-            </li>
-            <li class="sale__item sale__item-gift-ideas">
-              <p class="sale__gift-ideas-text">Идеи новогодних подарков</p>
-            </li>
-            <li class="sale__item sale__item-laptop">
-              <p class="sale__text-laptop">Выгодно в декабре!</p>
+              <div class="basket__summary-details">
+                <div class="basket__summary-column">
+                  <span
+                    class="basket__summary-text basket__summary-label basket__summary-label--left"
+                    >Товары,
+                    <span class="basket__summary-text basket__goods-count">2</span> шт.</span
+                  >
+                  <span
+                    class="basket__summary-text basket__summary-label basket__summary-label--left"
+                    >Скидка</span
+                  >
+                  <span
+                    class="basket__summary-text basket__summary-label basket__summary-label--left"
+                    >Доставка</span
+                  >
+                </div>
 
-              <p class="sale__discount sale__discount_rb sale__discount-text">-15%</p>
-            </li>
-            <li class="sale__item sale__item-2022">
-              <div class="sale__2022-text-wrap">
-                <p class="sale__2022-text">Новогодние украшения</p>
+                <div class="basket__summary-column">
+                  <span
+                    class="basket__summary-text basket__summary-value basket__summary-value-not-discount"
+                    >145 080 ₽
+                  </span>
+                  <span class="basket__summary-text basket__summary-value basket__summary-value-all"
+                    >32 088 ₽</span
+                  >
+                  <span class="basket__summary-text basket__summary-value">Бесплатно</span>
+                </div>
               </div>
-            </li>
-            <li class="sale__item sale__item-dress">
-              <p class="sale__discount sale__discount_rb sale__discount-text">-55%</p>
-            </li>
-            <li class="sale__item sale__item-spray">
-              <p class="sale__spray-text">На бытовую химию</p>
 
-              <p class="sale__discount sale__discount_lt sale__discount-text">-25%</p>
-            </li>
-            <li class="sale__item sale__item-balls"></li>
-          </ul>
+              <div class="basket__summary-delivery">
+                <span class="basket__delivery-heading">Доставка:</span>
+                <span class="basket__delivery-type">Пункт выдачи</span>
+              </div>
+              <div class="basket__delivery-address">
+                <span class="basket__summary-text basket__address-time"
+                  >Ежедневно 10:00 - 21:00</span
+                >
+                <span class="basket__summary-text basket__address-location"
+                  >г. Москва (Московская область), улица Павлика Морозова, д. 48</span
+                >
+              </div>
+              <div class="basket__summary-delivery">
+                <span class="basket__delivery-heading">Дата:</span>
+                <span class="basket__delivery-type">10-13 февраля </span>
+              </div>
+
+              <div class="basket__summary-delivery">
+                <span class="basket__delivery-heading">Оплата:</span>
+                <span class="basket__delivery-type">Картой</span>
+              </div>
+              <div class="basket__order">
+                <button type="submit" class="basket__order-btn" disabled>Заказать</button>
+              </div>
+
+              <div class="basket__agreement">
+                <input
+                  class="basket__agreement-checkbox"
+                  type="checkbox"
+                  name="all"
+                  id="agreement"
+                  required
+                />
+                <label for="agreement" tabindex="0">
+                  <div class="basket__agreement-label">
+                    <p class="basket__agreement-text">
+                      Согласен с условиями
+                      <span class="basket__agreement-terms">
+                        правил пользования торговой площадкой и правилами возврата
+                      </span>
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </form>
         </div>
-      </section>
-
-      <section class="product">
-        <div class="container">
+        <div class="product">
           <h2 class="product__title">Это выгодно!</h2>
           <ul class="product__cards">
             <li class="product__card">
@@ -691,7 +986,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </div>
     </main>
     <footer class="footer" id="footer">
       <div class="container">
