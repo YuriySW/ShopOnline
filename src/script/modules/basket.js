@@ -202,7 +202,46 @@ const imageSub = () => {
     });
   };
 
+  const marginBasketItem = () => {
+    document.addEventListener('DOMContentLoaded', () => {
+      const items = document.querySelectorAll('.basket__list .basket__item');
+
+      function setMargin() {
+        const screenWidth = window.innerWidth;
+        const itemCount = items.length;
+
+        items.forEach((item, index) => {
+          if (itemCount === 1) {
+            item.style.marginBottom = '0px';
+          } else {
+            if (screenWidth < 860) {
+              item.style.marginBottom = index === items.length - 1 ? '0px' : '20px';
+            } else {
+              item.style.marginBottom = index === items.length - 1 ? '0px' : '30px';
+            }
+          }
+        });
+      }
+
+      setMargin();
+
+      window.addEventListener('resize', setMargin);
+    });
+  };
+
+  const deleteLastStripe = () => {
+    document.addEventListener('DOMContentLoaded', () => {
+      const stripes = document.querySelectorAll('.basket__list .basket__stripe--sub');
+
+      if (stripes.length > 0) {
+        stripes[stripes.length - 1].style.display = 'none';
+      }
+    });
+  };
+
   if (window.location.pathname.includes('basket.html')) {
+    deleteLastStripe();
+    marginBasketItem();
     basketTotalSum();
     loadDeliveryImages();
   }
@@ -350,8 +389,8 @@ if (window.location.pathname.includes('basket.html')) {
                       </button>
                     </div>
                   </div>
-                </li>
-                <div class="basket__stripe basket__stripe--sub"></div>
+                  </li>
+                  <div class="basket__stripe basket__stripe--sub"></div>
              
       `;
 

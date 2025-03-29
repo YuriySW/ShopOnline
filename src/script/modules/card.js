@@ -62,6 +62,7 @@ const checkBasketStatus = (productId, button) => {
   if (isInBasket) {
     button.textContent = 'Товар в корзине';
     button.disabled = true;
+    button.style.backgroundColor = '#5D92E0';
   }
 };
 

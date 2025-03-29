@@ -80,12 +80,13 @@ export const renderCard = ({id, image, title, price, discount, description, coun
               <picture>
              
                 <img
-                  loading="lazy"
+                  loading="eager"
                   class="card__image"
                    src="${imageUrl}"
                   alt="${title}"
                   width="757"
                   height="427"
+                   fetchpriority="high"
                 />
               </picture>
             </div>
