@@ -179,6 +179,10 @@
       @media (max-width: 500px) {
         row-gap: 8px;
       }
+      &--header {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
       .footer__item {
         min-width: auto;
         @media (max-width: 848px) {
@@ -253,7 +257,8 @@
     }
     .footer__list_buyer,
     .footer__list_buyer_sub {
-      grid-template-columns: minmax(100px, 225px);
+      // grid-template-columns: minmax(100px, 225px);
+      grid-template-columns: auto;
     }
 
     .footer__list_buyer {
@@ -427,19 +432,24 @@
       grid-template-rows: 1fr;
     }
     @media (max-width: 1270px) {
-      grid-template-columns: minmax(300px, 480px) minmax(150px, 307px);
+      // grid-template-columns: minmax(300px, 480px) minmax(150px, 307px);
+      grid-template-columns: auto auto minmax(150px, 307px);
       justify-content: space-between;
       column-gap: 20px;
     }
 
     @media (max-width: 1068px) {
-      grid-template-columns: 1fr 1fr 1fr;
+      // grid-template-columns: 1fr 1fr 1fr;
       justify-content: space-between;
     }
 
-    @media (max-width: 830px) {
-      grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 0;
+    @media (max-width: 730px) {
+      grid-template-columns: 225px auto 1fr;
+      column-gap: 10px;
+    }
+
+    @media (max-width: 630px) {
+      grid-template-columns: 1fr;
     }
   }
   .footer__block_bm {
