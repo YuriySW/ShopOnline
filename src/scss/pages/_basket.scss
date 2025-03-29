@@ -447,7 +447,9 @@
     }
     @media (max-width: 540px) {
       display: grid;
-      grid-template-columns: 90px 46px;
+      // grid-template-columns: 90px 46px;
+      grid-template-columns: 90px 1fr 1fr;
+      grid-template-rows: auto auto;
       gap: 0;
       row-gap: 9px;
     }
@@ -474,6 +476,7 @@
     @media (max-width: 540px) {
       text-align: start;
       font-size: 16px;
+      grid-row: 1/2;
     }
   }
 
@@ -498,6 +501,8 @@
 
     @media (max-width: 540px) {
       font-size: 10px;
+      grid-row: 1/2;
+      text-align: start;
     }
   }
 
@@ -514,7 +519,9 @@
       font-size: 12px;
     }
     @media (max-width: 540px) {
+      grid-column: 1/2;
       font-size: 10px;
+      width: 90px;
     }
   }
 
