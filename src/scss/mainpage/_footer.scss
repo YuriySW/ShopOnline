@@ -139,7 +139,7 @@
         margin-bottom: 20px;
         font-size: 26px;
       }
-      @media (max-width: 650px) {
+      @media (max-width: 670px) {
         margin-bottom: 9px;
         font-size: 22px;
       }
@@ -448,7 +448,7 @@
       column-gap: 10px;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: 660px) {
       grid-template-columns: 1fr;
     }
   }
