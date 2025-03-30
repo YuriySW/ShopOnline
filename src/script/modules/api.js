@@ -1,7 +1,5 @@
 import {renderProductCard} from './createElement.js';
-
-const productCards = document.querySelector('.product__cards');
-const BASE_URL = 'https://excited-evanescent-macaroni.glitch.me';
+import {productCards, BASE_URL} from './identifier.js';
 
 export const loadGoods = async () => {
   try {
