@@ -6,3 +6,4 @@ import './modules/api.js';
 import './modules/basket.js';
 import './modules/createElement.js';
 import './modules/card.js';
+import './modules/identifier.js';

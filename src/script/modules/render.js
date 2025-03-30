@@ -1,17 +1,14 @@
-import {category} from './api.js';
-import {loadGoods} from './api.js';
+import {category, loadGoods} from './api.js';
 import {renderProductCard} from './createElement.js';
+import {productCards, BASE_URL} from './identifier.js';
 
 const items = document.querySelectorAll('.blogs__item');
-const productCards = document.querySelector('.product__cards');
 const productTitle = document.querySelector('.product__title');
 const logo = document.querySelector('.logo');
 
 logo.addEventListener('click', () => {
   window.location.href = 'index.html';
 });
-
-const BASE_URL = 'https://excited-evanescent-macaroni.glitch.me';
 
 export const clearItem = () => {
   items.forEach((item) => {
@@ -148,7 +145,7 @@ const loadCategoryGoods = async () => {
     const filteredGoods = response.goods.filter((item) => item.category === category);
 
     if (filteredGoods.length === 0) {
-      productCards.innerHTML = '<p>Товары этой категории не найдены.</p>';
+      console.error('Товары этой категории не найдены');
       return;
     }
 
@@ -177,7 +174,7 @@ document.addEventListener('click', (event) => {
 
   const productId = productCard.dataset.id;
   if (!productId) return;
-  console.log(productId);
+
   event.preventDefault();
   window.location.href = `card.html?id=${productId}`;
 });
