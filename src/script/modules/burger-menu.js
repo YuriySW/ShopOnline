@@ -1,6 +1,7 @@
 const menuButton = document.querySelector('.menu-btn');
 const burgerMenu = document.querySelector('.burger-menu');
 const menuBtnBm = document.querySelector('.menu-btn_bm');
+const test = document.querySelector('.footer__list_catalog');
 
 const openMenu = () => {
   menuButton.addEventListener('click', () => {

@@ -1,5 +1,6 @@
 import {getGoodById} from './api.js';
 import {renderCard} from './createElement.js';
+import {updateBasketCountSvg} from './basket.js';
 
 if (window.location.pathname.includes('card.html')) {
   const params = new URLSearchParams(window.location.search);
@@ -12,7 +13,13 @@ if (window.location.pathname.includes('card.html')) {
         const pageLinkCategory = document.querySelector('.page-link-category');
         const pageLinkTitle = document.querySelector('.page-link-title');
 
-        if (card) card.innerHTML = '';
+        if (!card) {
+          console.error('Контейнер карточки не найден');
+          return;
+        }
+
+        card.style.opacity = '0';
+
         if (pageLinkCategory) pageLinkCategory.textContent = '';
         if (pageLinkTitle) pageLinkTitle.textContent = '';
 
@@ -35,12 +42,13 @@ if (window.location.pathname.includes('card.html')) {
           pageLinkTitle.textContent = good.title;
         }
 
-        if (!card) {
-          console.error('Контейнер карточки не найден');
-          return;
-        }
-
+        card.innerHTML = '';
         renderCard(good);
+
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transition = 'opacity 0.3s ease-in-out';
+        }, 50);
 
         const addToBasketBtn = document.querySelector('.card__add-basket-btn');
         if (addToBasketBtn) {
@@ -80,10 +88,12 @@ const addToBasket = (good, button) => {
     description: good.description,
     count: good.count,
     category: good.category,
+    countGood: 1,
   };
 
   basket.push(product);
   localStorage.setItem('basket', JSON.stringify(basket));
   button.textContent = 'Товар в корзине';
+  updateBasketCountSvg();
   button.disabled = true;
 };
