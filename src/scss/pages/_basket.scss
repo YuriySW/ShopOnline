@@ -960,3 +960,20 @@
     margin-bottom: 20px;
   }
 }
+
+.disabled-button {
+  outline: none;
+  cursor: pointer;
+  &:hover circle {
+    stroke: #e8e8e8;
+  }
+  &:active circle {
+    stroke: #8f8f8f;
+  }
+  &:focus circle {
+    stroke: #e8e8e8;
+  }
+  &:focus path {
+    fill: #8f8f8f;
+  }
+}

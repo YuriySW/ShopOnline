@@ -91,13 +91,16 @@ export const renderArticlePage = () => {
 loadBlogs();
 renderArticlePage();
 
-const getCategories = async () => {
-  const categories = await category();
+export const getCategories = async () => {
   const footerListCatalogs = document.querySelectorAll('.footer__list_catalog');
 
   footerListCatalogs.forEach((list) => {
     list.innerHTML = '';
+  });
 
+  const categories = await category();
+
+  footerListCatalogs.forEach((list) => {
     categories.forEach((categoryName) => {
       const li = document.createElement('li');
       li.classList.add('footer__item');
