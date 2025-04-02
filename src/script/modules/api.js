@@ -3,7 +3,8 @@ import {productCards, BASE_URL} from './identifier.js';
 
 export const loadGoods = async () => {
   try {
-    if (productCards) productCards.innerHTML = '';
+    const productSection = document.querySelector('.product');
+    if (productSection) productSection.style.opacity = '0';
 
     const url = `${BASE_URL}/api/goods`;
     const result = await fetch(url);
@@ -14,9 +15,15 @@ export const loadGoods = async () => {
       return;
     }
 
-    if (productCards) productCards.innerHTML = '';
+    if (productCards) {
+      productCards.innerHTML = '';
+      response.goods.forEach(renderProductCard);
+    }
 
-    response.goods.forEach(renderProductCard);
+    if (productSection) {
+      productSection.style.transition = 'opacity 0.3s ease-in';
+      productSection.style.opacity = '1';
+    }
   } catch (error) {
     console.error('Ошибка при загрузке товаров:', error);
   }

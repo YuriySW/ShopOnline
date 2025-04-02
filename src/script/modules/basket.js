@@ -14,6 +14,52 @@ basketBtn.forEach((item) => {
   });
 });
 
+export const updateBasketCountSvg = () => {
+  const basketData = localStorage.getItem('basket');
+  const basket = basketData ? JSON.parse(basketData) : [];
+  const basketCountElements = document.querySelectorAll('.basket-count');
+
+  if (!basketCountElements.length) return;
+
+  let totalCount = 0;
+
+  basket.forEach((item) => {
+    totalCount += item.countGood;
+  });
+
+  basketCountElements.forEach((element) => {
+    element.textContent = totalCount;
+  });
+};
+
+updateBasketCountSvg();
+
+const updateButtonStates = () => {
+  const basketCounterMinus = document.querySelectorAll('.basket__counter-minus');
+  const basketCounterPlus = document.querySelectorAll('.basket__counter-plus');
+  const basketCounterNumbers = document.querySelectorAll('.basket__counter-number');
+
+  const basketData = localStorage.getItem('basket');
+  const basket = basketData ? JSON.parse(basketData) : [];
+
+  basketCounterNumbers.forEach((counterNumber, index) => {
+    const currentValue = parseInt(counterNumber.textContent, 10) || 0;
+    const maxCount = basket[index]?.count || 0;
+
+    if (currentValue <= 1) {
+      basketCounterMinus[index].classList.add('disabled-button');
+    } else {
+      basketCounterMinus[index].classList.remove('disabled-button');
+    }
+
+    if (currentValue >= maxCount) {
+      basketCounterPlus[index].classList.add('disabled-button');
+    } else {
+      basketCounterPlus[index].classList.remove('disabled-button');
+    }
+  });
+};
+
 const countGood = () => {
   const basketCounterMinus = document.querySelectorAll('.basket__counter-minus');
   const basketCounterPlus = document.querySelectorAll('.basket__counter-plus');
@@ -33,15 +79,13 @@ const countGood = () => {
       if (currentValue < maxCount) {
         currentValue += 1;
         counterNumber.textContent = currentValue;
-        basketTotalSum();
 
-        if (!currentItem.countGood) {
-          currentItem.countGood = 2;
-        } else {
-          currentItem.countGood += 1;
-        }
+        currentItem.countGood = currentValue;
 
         localStorage.setItem('basket', JSON.stringify(basket));
+        basketTotalSum();
+        updateBasketCountSvg();
+        updateButtonStates();
       }
     });
   });
@@ -56,15 +100,12 @@ const countGood = () => {
       if (currentValue > 1) {
         currentValue -= 1;
         counterNumber.textContent = currentValue;
-        basketTotalSum();
-
-        if (currentItem.countGood && currentItem.countGood > 1) {
-          currentItem.countGood -= 1;
-        } else {
-          currentItem.countGood = 1;
-        }
+        currentItem.countGood = currentValue;
 
         localStorage.setItem('basket', JSON.stringify(basket));
+        basketTotalSum();
+        updateBasketCountSvg();
+        updateButtonStates();
       }
     });
   });
@@ -155,6 +196,7 @@ const checkBoxChange = () => {
       localStorage.setItem('basket', JSON.stringify(basket));
       basketTotalSum();
       updateBasketCount();
+      updateBasketCountSvg();
       selectAllCheckbox.checked = false;
     });
   });
@@ -240,6 +282,7 @@ const imageSub = () => {
     marginBasketItem();
     basketTotalSum();
     loadDeliveryImages();
+    updateButtonStates();
   }
 };
 const updateBasketCount = () => {
@@ -284,7 +327,8 @@ if (window.location.pathname.includes('basket.html')) {
     basketList.innerHTML = '';
 
     basket.forEach((item) => {
-      const itemGood = item.countGood ? item.countGood : 1;
+      // const itemGood = item.countGood ? item.countGood : 1;
+      const itemGood = item.countGood;
       const imageUrl = item.image ? `${BASE_URL}/${item.image}` : DEFAULT_IMAGE;
       const validDiscount = Number(item.discount) || 0;
 
